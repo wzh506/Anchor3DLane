@@ -1,0 +1,12 @@
+
+[all]
+tqdm==4.64.0
+ujson==5.5.0
+
+[build]
+
+[mim]
+
+[optional]
+
+[tests]

@@ -162,5 +162,6 @@ load_from = None
 resume_from = None
 workflow = [('train', 10000000)]
 cudnn_benchmark = True
-load_from = 'pretrained/apollo_anchor3dlane.pth'  # load weights from the first stage
+# load_from = 'pretrained/apollo_anchor3dlane.pth'  # load weights from the first stage
+load_from = 'pretrained/apollo_anchor3dlane.pth'
 work_dir = 'output/apollosim/anchor3dlane_2stage.pth'

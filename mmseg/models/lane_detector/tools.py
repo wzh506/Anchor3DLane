@@ -187,11 +187,11 @@ class Visualizer:
         self.anchor_y_steps = args.anchor_y_steps
 
         # transformation from ipm to ground region
-        H_ipm2g = cv2.getPerspectiveTransform(np.float32([[0, 0],
+        H_ipm2g = cv2.getPerspectiveTransform(float([[0, 0],
                                                           [self.ipm_w-1, 0],
                                                           [0, self.ipm_h-1],
                                                           [self.ipm_w-1, self.ipm_h-1]]),
-                                              np.float32(args.top_view_region))
+                                              float(args.top_view_region))
         self.H_g2ipm = np.linalg.inv(H_ipm2g)
 
         # probability threshold for choosing visualize lanes
@@ -524,7 +524,7 @@ class Visualizer:
                                                       z_g)
                     ax.plot(x_g, y_g, z_g, color=color)
 
-    def save_result(self, dataset, train_or_val, epoch, batch_i, idx, images, gt, pred, pred_cam_pitch, pred_cam_height, aug_mat=np.identity(3, dtype=np.float), evaluate=False):
+    def save_result(self, dataset, train_or_val, epoch, batch_i, idx, images, gt, pred, pred_cam_pitch, pred_cam_height, aug_mat=np.identity(3, dtype=float), evaluate=False):
         if not dataset.data_aug:
             aug_mat = np.repeat(np.expand_dims(aug_mat, axis=0), idx.shape[0], axis=0)
 
@@ -649,7 +649,7 @@ class Visualizer:
             plt.clf()
             plt.close(fig)
 
-    def save_result_new(self, dataset, train_or_val, epoch, batch_i, idx, images, gt, pred, pred_cam_pitch, pred_cam_height, aug_mat=np.identity(3, dtype=np.float), evaluate=False):
+    def save_result_new(self, dataset, train_or_val, epoch, batch_i, idx, images, gt, pred, pred_cam_pitch, pred_cam_height, aug_mat=np.identity(3, dtype=float), evaluate=False):
         # print(dataset.data_aug);exit()
         if not dataset.data_aug:
             aug_mat = np.repeat(np.expand_dims(aug_mat, axis=0), idx.shape[0], axis=0)
@@ -811,7 +811,7 @@ def resample_laneline_in_y(input_lane, y_steps, out_vis=False):
     y_max = np.max(input_lane[:, 1])+5
 
     if input_lane.shape[1] < 3:
-        input_lane = np.concatenate([input_lane, np.zeros([input_lane.shape[0], 1], dtype=np.float32)], axis=1)
+        input_lane = np.concatenate([input_lane, np.zeros([input_lane.shape[0], 1], dtype=float)], axis=1)
 
     f_x = interp1d(input_lane[:, 1], input_lane[:, 0], fill_value="extrapolate")
     f_z = interp1d(input_lane[:, 1], input_lane[:, 2], fill_value="extrapolate")
@@ -821,7 +821,7 @@ def resample_laneline_in_y(input_lane, y_steps, out_vis=False):
 
     if out_vis:
         output_visibility = np.logical_and(y_steps >= y_min, y_steps <= y_max)
-        return x_values, z_values, output_visibility.astype(np.float32) + 1e-9
+        return x_values, z_values, output_visibility.astype(float) + 1e-9
     return x_values, z_values
 
 
@@ -839,7 +839,7 @@ def resample_laneline_in_y_with_vis(input_lane, y_steps, vis_vec):
     assert(input_lane.shape[0] >= 2)
 
     if input_lane.shape[1] < 3:
-        input_lane = np.concatenate([input_lane, np.zeros([input_lane.shape[0], 1], dtype=np.float32)], axis=1)
+        input_lane = np.concatenate([input_lane, np.zeros([input_lane.shape[0], 1], dtype=float)], axis=1)
 
     f_x = interp1d(input_lane[:, 1], input_lane[:, 0], fill_value="extrapolate")
     f_z = interp1d(input_lane[:, 1], input_lane[:, 2], fill_value="extrapolate")
@@ -887,8 +887,8 @@ def homography_im2ipm_norm(top_view_region, org_img_size, crop_y, resize_img_siz
     # compute the normalized transformation
     border_im[:, 0] = border_im[:, 0] / resize_img_size[1]
     border_im[:, 1] = border_im[:, 1] / resize_img_size[0]
-    border_im = np.float32(border_im)
-    dst = np.float32([[0, 0], [1, 0], [0, 1], [1, 1]])
+    border_im = float(border_im)
+    dst = float([[0, 0], [1, 0], [0, 1], [1, 1]])
     # img to ipm
     H_im2ipm_norm = cv2.getPerspectiveTransform(border_im, dst)
     # ipm to im
@@ -897,8 +897,8 @@ def homography_im2ipm_norm(top_view_region, org_img_size, crop_y, resize_img_siz
 
 
 def homography_ipmnorm2g(top_view_region):
-    src = np.float32([[0, 0], [1, 0], [0, 1], [1, 1]])
-    H_ipmnorm2g = cv2.getPerspectiveTransform(src, np.float32(top_view_region))
+    src = float([[0, 0], [1, 0], [0, 1], [1, 1]])
+    H_ipmnorm2g = cv2.getPerspectiveTransform(src, float(top_view_region))
     return H_ipmnorm2g
 
 

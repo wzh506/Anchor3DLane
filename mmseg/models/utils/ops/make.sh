@@ -10,4 +10,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 # Modified by Bowen Cheng from https://github.com/fundamentalvision/Deformable-DETR
 
+# 奇了怪了，直接make sh居然报错
 python setup.py build install

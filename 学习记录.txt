@@ -1,0 +1,5 @@
+1.运行方法
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+python tools/train.py configs/apollosim/anchor3dlane_iter.py
+2.报错记录
+AttributeError: ‘int‘ object has no attribute ‘type‘
