@@ -22,7 +22,7 @@ from mmseg.core import DistEvalHook, EvalHook, build_optimizer
 from mmseg import digit_version
 from mmseg.apis import init_random_seed, set_random_seed
 from mmseg.datasets import build_dataloader, build_dataset
-from mmseg.models import build_lanedetector
+from mmseg.models import build_lanedetector,build_model2
 from mmseg.utils import build_ddp, build_dp, get_device, setup_multi_processes, get_root_logger, collect_env
 
 
@@ -259,7 +259,7 @@ def main():
         # use config filename as default work_dir if cfg.work_dir is None
         cfg.work_dir = osp.join('./work_dirs',
                                 osp.splitext(osp.basename(args.config))[0])
-    if args.load_from is not None:
+    if args.load_from is not None:#这里应该使用cfg.load_from?
         cfg.load_from = args.load_from
     if args.resume_from is not None:
         cfg.resume_from = args.resume_from
@@ -319,7 +319,7 @@ def main():
     # set random seeds
     cfg.device = get_device()
     seed = init_random_seed(args.seed, device=cfg.device)
-    seed = seed + dist.get_rank() if args.diff_seed else seed
+    seed = seed + dist.get_rank() if args.diff_seed else seed #dist没有定义
     logger.info(f'Set random seed to {seed}, '
                 f'deterministic: {args.deterministic}')
     set_random_seed(seed, deterministic=args.deterministic)
@@ -327,7 +327,8 @@ def main():
     meta['seed'] = seed
     meta['exp_name'] = osp.basename(args.config)
 
-    model = build_lanedetector(cfg.model)
+    # model2 = build_model2(cfg.model2) #学习如何构建使用mmcv构建模型
+    model = build_lanedetector(cfg.model) #这里以及构建模型了
     model.init_weights()
 
     # SyncBN is not support for DP
@@ -341,7 +342,7 @@ def main():
     logger.info(model)
 
     datasets = []
-    dataset = build_dataset(cfg.data.train)
+    dataset = build_dataset(cfg.data.train) #构建训练数据集
     datasets.append(dataset)
     # datasets.append(build_dataset(cfg.data.train))
 

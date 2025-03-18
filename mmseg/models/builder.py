@@ -41,6 +41,9 @@ def build_loss(cfg):
 def build_lanedetector(cfg):
     return LANENET2S.build(cfg)
 
+def build_model2(cfg):
+    return MODELS.build(cfg)
+
 def build_assigner(cfg):
     """Build anchor-gt matching function"""
     return ASSIGNER.build(cfg)

@@ -347,7 +347,7 @@ def main():
 
     datasets = []
     dataset = build_dataset(cfg.data.train)
-    # datasets.append(build_dataset(cfg.data.train))
+    # datasets.append(build_dataset(auto_recfg.data.train))
 
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)

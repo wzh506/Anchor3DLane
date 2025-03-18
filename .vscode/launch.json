@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "Anchor3DLane:Single",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/apollosim/anchor3dlane_iter.py"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}

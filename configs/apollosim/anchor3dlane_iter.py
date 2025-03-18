@@ -54,6 +54,19 @@ data = dict(
         pipeline=test_pipeline,
         test_mode=True))
 
+#测试mmcv使用方法
+model2 = dict(
+    type = 'Anchor4DLane',
+    backbone=dict(
+    type='ResNetV1c',
+    depth=18,
+    num_stages=4,
+    out_indices=(0, 1, 2, 3),
+    dilations=(1, 1, 2, 4),
+    strides=(1, 2, 1, 1),
+    style='pytorch'),
+    pretrained = 'pretrained/resnet18_v1c-b5776b93.pth')
+
 # model setting
 model = dict(
     type = 'Anchor3DLane',
@@ -158,10 +171,11 @@ log_config = dict(
     ])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = None
+# load_from = None #下面明明有值,为什么不写对
 resume_from = None
 workflow = [('train', 10000000)]
 cudnn_benchmark = True
+# auto_resume = True #自动从最新的检查点恢复 #这样传递不了
 # load_from = 'pretrained/apollo_anchor3dlane.pth'  # load weights from the first stage
 load_from = 'pretrained/apollo_anchor3dlane.pth'
 work_dir = 'output/apollosim/anchor3dlane_2stage.pth'

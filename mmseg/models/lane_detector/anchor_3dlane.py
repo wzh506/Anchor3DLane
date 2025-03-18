@@ -41,6 +41,49 @@ class DecodeLayer(nn.Module):
             nn.Linear(mid_channel, out_channel))
     def forward(self, x):
         return self.layer(x)
+# 把这个东西注册为一个模型，type根本没有用上，都是直接调用的,这还需要在__init__.py里面注册
+@LANENET2S.register_module()
+class Anchor4DLane(BaseModule):
+
+    def __init__(self, 
+                 backbone,
+                 neck = None,
+                 pretrained = None,
+                 y_steps = [  5.,  10.,  15.,  20.,  30.,  40.,  50.,  60.,  80.,  100.],
+                 feat_y_steps = [  5.,  10.,  15.,  20.,  30.,  40.,  50.,  60.,  80.,  100.],
+                 anchor_cfg = None,
+                 db_cfg = None,
+                 backbone_dim = 512,
+                 attn_dim = None,
+                 iter_reg = 0,
+                 drop_out = 0.1,
+                 num_heads = None,
+                 enc_layers = 1,
+                 dim_feedforward = None,
+                 pre_norm = None,
+                 anchor_feat_channels = 64,
+                 feat_size = (48, 60),
+                 num_category = 21,
+                 loss_lane = None,
+                 loss_aux = None,
+                 init_cfg = None,
+                 train_cfg = None,
+                 test_cfg = None):
+        super(Anchor4DLane, self).__init__(init_cfg)
+        assert loss_aux is None or len(loss_aux) == iter_reg
+        self.train_cfg = train_cfg
+        self.test_cfg = test_cfg
+        self.db_cfg = db_cfg
+        hidden_dim = attn_dim
+        self.iter_reg = iter_reg
+        self.loss_aux = loss_aux
+        self.anchor_feat_channels = anchor_feat_channels
+        self.feat_size = feat_size
+        self.num_category = num_category
+        self.enc_layers = enc_layers
+        self.fp16_enabled = False
+
+
 
 @LANENET2S.register_module()
 class Anchor3DLane(BaseModule):

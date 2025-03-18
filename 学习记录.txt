@@ -1,5 +1,13 @@
 1.运行方法
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/train.py configs/apollosim/anchor3dlane_iter.py
+bash tools/dist_train.sh configs/apollosim/anchor3dlane_iter.py 2 --auto-resume
+其他的参数放在2后面（作为3：传给.py文件）
 2.报错记录
 AttributeError: ‘int‘ object has no attribute ‘type‘
+train_dist.py: error: unrecognized arguments: --local-rank=0
+
+3.学习目标
+弄明白数据集读取方法，方便后续添加激光雷达和深度数据
+弄明白anchor传递方法，方便后续添加anchor运动模型
+弄明白最终曲线拟合方法，方便后续添加
