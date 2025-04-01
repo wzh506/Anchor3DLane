@@ -1,3 +1,4 @@
 data
-mmseg
 output
+output_apollosim
+output_openlane

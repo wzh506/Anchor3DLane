@@ -47,7 +47,7 @@ PRED_MISS_COLOR = RED
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406])
 IMAGENET_STD = np.array([0.229, 0.224, 0.225])
 
-@DATASETS.register_module()
+@DATASETS.register_module() #在DATASETS中添加注册
 class APOLLOSIMDataset(Dataset):
     def __init__(self, 
                  pipeline,
@@ -171,7 +171,7 @@ class APOLLOSIMDataset(Dataset):
         with open(results['anno_file'], 'rb') as f:
             obj = pickle.load(f)
             results.update(obj)
-        # intrinsic and extrinsic
+        # intrinsic and extrinsic 地面坐标系到img，这个不需要预测吧？是内外参
         results['gt_project_matrix'] = projection_g2im(results['gt_camera_pitch'], results['gt_camera_height'], self.K)
         results['img_metas'] = {'ori_shape':results['ori_shape']}
         return self.pipeline(results)

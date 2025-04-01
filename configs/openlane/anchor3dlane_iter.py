@@ -33,7 +33,7 @@ dataset_config = dict(
 )
 
 data = dict(
-    samples_per_gpu=16,
+    samples_per_gpu=64, #原版16
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,

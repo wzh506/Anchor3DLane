@@ -1,0 +1,4 @@
+# ninja log v5
+1	8245	1741318642073873575	/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/build/temp.linux-x86_64-3.9/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/cpu/ms_deform_attn_cpu.o	df6c70bba7169e8d
+2	20283	1741318654103938809	/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/build/temp.linux-x86_64-3.9/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/cuda/ms_deform_attn_cuda.o	c6056fe5ac92393b
+2	20469	1741318654296939855	/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/build/temp.linux-x86_64-3.9/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/vision.o	a73925802198d575

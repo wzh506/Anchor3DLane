@@ -4,12 +4,75 @@
         
 
         {
-            "name": "Anchor3DLane:Single",
+            "name": "Anchor3DLane:Single_train_ApolloSim",
             "type": "debugpy",
             "request": "launch",
             "program": "tools/train.py",
             "args": [
                 "configs/apollosim/anchor3dlane_iter.py"
+                "--auto-resume"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Anchor3DLane:Single_train_OpenLane",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/openlane/anchor3dlane_mf_iter.py"
+                "--auto-resume"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Anchor3DLane:train_openlane_mf_iter.config",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/openlane/anchor3dlane_mf_iter.py"
+
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Anchor3DLane:Test_Single_openlane_mf_iter.config",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/test.py",
+            "args": [
+                "configs/openlane/anchor3dlane_mf_iter.py",
+                "pretrained/openlane_anchor3dlane_temporal.pth",
+                "--show-dir", "output_openlane",
+                "--show"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+
+        {
+            "name": "Anchor3DLane:Infer_openlane",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/test.py",
+            "args": [
+                "configs/openlane/anchor3dlane_mf_iter.py", //或者用iter.py
+                "pretrained/openlane_anchor3dlane_temporal_iter.pth",
+                "--show-dir","/home/zhaohui1.wang/github/Anchor3DLane/output_openlane",
+                "--show",
+
             ],
             "env": {
                 "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"

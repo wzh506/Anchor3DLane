@@ -74,7 +74,7 @@ class LaneFormat(object):
     def __repr__(self):
         return self.__class__.__name__
 
-
+# 在result中添加一个mask功能
 @PIPELINES.register_module()
 class MaskGenerate(object):
     def __init__(self, input_size):

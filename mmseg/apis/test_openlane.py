@@ -33,6 +33,7 @@ def test_openlane(model,
                   eval=True,
                   show=False,
                   out_dir=None,
+                  raw=False,
                   **kwargs):
     """Test with single GPU by progressive mode.
 
@@ -50,15 +51,25 @@ def test_openlane(model,
     loader_indices = data_loader.batch_sampler
     prob_th=model.module.test_cfg.test_conf
 
+    # raw
+    if raw:#是否绘制原始图像，这个放在最前面
+        save_dir = osp.join(out_dir, 'vis/raw')
+        mmcv.mkdir_or_exist(save_dir)
+        print("original gt results at", save_dir)
+        visualizer = LaneVis(dataset)
+        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
+                            save_dir = save_dir, prob_th=prob_th)
+        
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
     print("testing model...")
     for batch_indices, data in tqdm.tqdm(zip(loader_indices, data_loader)):
         with torch.no_grad():
-            outputs= model(return_loss=False, **data)
+            outputs= model(return_loss=False, **data)#这里经过模型
             for output in outputs['proposals_list']:
                 result = postprocess(output, anchor_len=dataset.anchor_len)
                 results.append(result)
     dataset.format_results(results, pred_file)
+
 
     # evaluating
     if eval:
@@ -81,14 +92,15 @@ def test_openlane(model,
             json.dump(test_result, f)
 
     # visualizing
-    if show:
-        save_dir = osp.join(out_dir, 'vis')
+    if show: #最后才来画图
+        save_dir = osp.join(out_dir, 'vis/pred')
         mmcv.mkdir_or_exist(save_dir)
         print("visualizing results at", save_dir)
         visualizer = LaneVis(dataset)
         visualizer.visualize(pred_file, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
                             save_dir = save_dir, prob_th=prob_th)
         
+    
 def test_openlane_multigpu(model,
                            data_loader,
                            eval=True,
@@ -161,6 +173,6 @@ def test_openlane_multigpu(model,
         save_dir = osp.join(out_dir, 'vis')
         mmcv.mkdir_or_exist(save_dir)
         print("visualizing results at", save_dir)
-        visualizer = LaneVis(dataset)
+        visualizer = LaneVis(dataset) 
         visualizer.visualize(pred_file, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
                             save_dir = save_dir, prob_th=prob_th)

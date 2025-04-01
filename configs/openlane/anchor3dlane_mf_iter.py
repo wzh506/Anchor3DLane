@@ -4,7 +4,8 @@ anchor_len = len(anchor_y_steps)
 
 # dataset settings
 dataset_type = 'OpenlaneMFDataset'
-data_root = './data/OpenLane/'
+# data_root = './data/OpenLane/'
+data_root='/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 input_size = (360, 480)
@@ -34,7 +35,7 @@ dataset_config = dict(
 )
 
 data = dict(
-    samples_per_gpu=8,  # 8 gpus
+    samples_per_gpu=8,  # 8 gpus #训练时用16个完全足够
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
@@ -55,7 +56,7 @@ data = dict(
         dataset_config=dataset_config, 
         prev_dir='prev_data_release',
         prev_num=1,
-        prev_step=5,
+        prev_step=5, #原来是5
         is_prev=True,
         test_mode=True,
         pipeline=test_pipeline))

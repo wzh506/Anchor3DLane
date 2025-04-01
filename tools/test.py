@@ -42,6 +42,7 @@ def parse_args():
         'submit it to the test server')
     parser.add_argument('--show', action='store_true', help='show results')
     parser.add_argument('--eval', action='store_true', help='show results', default=True)
+    parser.add_argument('--raw', action='store_true', help='show raw gt results', default=True)
     parser.add_argument(
         '--show-dir', help='directory where painted images will be saved')
     parser.add_argument(
@@ -171,7 +172,7 @@ def main():
     })
     test_loader_cfg = {
         **loader_cfg,
-        'samples_per_gpu': 16,    # for debug
+        'samples_per_gpu': 1,    # for debug,NTM疯了
         'shuffle': False,  # Not shuffle by default
         **cfg.data.get('test_dataloader', {})
     }
@@ -205,7 +206,8 @@ def main():
              data_loader,
              args.eval,
              args.show,
-             args.show_dir)
+             args.show_dir,
+             args.raw) #这个函数哪里来的?估计单显卡完全运行不了吧
     else:
         if cfg.data.test.type.startswith('Openlane') or cfg.data.test.type.startswith('Waymo'):
             from mmseg.apis.test_openlane import test_openlane_multigpu as test_multigpu
@@ -226,7 +228,8 @@ def main():
                       data_loader,
                       args.eval,
                       args.show,
-                      args.show_dir)
+                      args.show_dir,
+                      args.raw)
 
 
 if __name__ == '__main__':

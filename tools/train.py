@@ -23,7 +23,7 @@ from mmseg import digit_version
 from mmseg.apis import init_random_seed, set_random_seed
 from mmseg.datasets import build_dataloader, build_dataset
 from mmseg.models import build_lanedetector,build_model2
-from mmseg.utils import build_ddp, build_dp, get_device, setup_multi_processes, get_root_logger, collect_env
+from mmseg.utils import build_ddp, build_dp, get_device, setup_multi_processes, get_root_logger, collect_env,find_latest_checkpoint
 
 
 def parse_args():

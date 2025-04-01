@@ -1,13 +1,41 @@
 1.运行方法
+训练方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/train.py configs/apollosim/anchor3dlane_iter.py
-bash tools/dist_train.sh configs/apollosim/anchor3dlane_iter.py 2 --auto-resume
+bash tools/dist_train.sh configs/apollosim/anchor3dlane_mf_iter.py 2 --auto-resume
+bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto-resume
+python tools/train.py configs/openlane/anchor3dlane_iter.py #训练没有问题,测试有一堆bug
+python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题，显示图片无法找到
+
 其他的参数放在2后面（作为3：传给.py文件）
+apollosim测试方法：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+python tools/test.py configs/apollosim/anchor3dlane_iter.py /home/zhaohui1.wang/github/Anchor3DLane/output_apollosim/apollosim/anchor3dlane_2stage.pth/latest.pth --show-dir /home/zhaohui1.wang/github/Anchor3DLane/output --show
+openlane测试方法：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+python tools/test.py configs/openlane/anchor3dlane_mf_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show #报错,超显卡了
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 2 --show-dir output_openlane --show #报错,mmcv不兼容
+python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show #单卡可以显示
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 8 --show-dir output_openlane --show #报错
+# 
+
+
+nohup bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto-resume > anchor3dlane_mf_iter.log 2>&1 &
+
+
 2.报错记录
 AttributeError: ‘int‘ object has no attribute ‘type‘
 train_dist.py: error: unrecognized arguments: --local-rank=0
+
+
 
 3.学习目标
 弄明白数据集读取方法，方便后续添加激光雷达和深度数据
 弄明白anchor传递方法，方便后续添加anchor运动模型
 弄明白最终曲线拟合方法，方便后续添加
+
+4.to do
+需要下载openlane数据集，anchor3DLane没有在Apollo上进行MF
+
+
+/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/prev_data_release/training/segment-7850521592343484282_4576_090_4596_090_with_camera_labels/152090848289187000.pkl

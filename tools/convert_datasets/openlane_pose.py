@@ -89,9 +89,10 @@ def warp_prev_frames(path_lists, raw_pose_path, target_pose_path, pid):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process Openlane dataset')
-    parser.add_argument('data_root', help='root path of openlane dataset')
+    # parser.add_argument('data_root', help='root path of openlane dataset')
     args = parser.parse_args()
-    path_lists = glob.glob(os.path.join(data_root, 'lane3d_1000/*/segment-*'))
+    # path_lists = glob.glob(os.path.join(args.data_root, 'lane3d_1000/*/segment-*'))
+    path_lists = glob.glob(os.path.join('/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane', 'lane3d_1000/*/segment-*'))
     p = Pool(8)
     interval = len(path_lists) // 8
     for pid in range(8):

@@ -333,7 +333,7 @@ class Anchor3DLane(BaseModule):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
         batch_size = img.shape[0]
         trans_feat = self.feature_extractor(img, mask)
-
+        # trans_feat torch.Size([16, 64, 45, 60])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat)
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
@@ -341,16 +341,16 @@ class Anchor3DLane(BaseModule):
 
         reg_proposals_all = []
         anchors_all = []
-        reg_proposals_s1 = self.get_proposals(project_matrixes, anchor_feat, 0)
+        reg_proposals_s1 = self.get_proposals(project_matrixes, anchor_feat, 0) #检测出本次的prorosals
         reg_proposals_all.append(reg_proposals_s1)
         anchors_all.append(torch.stack([self.anchors] * batch_size, dim=0))
 
-        for iter in range(self.iter_reg):
+        for iter in range(self.iter_reg): #self.iter_reg = 1
             proposals_prev = reg_proposals_all[iter]
-            reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))
+            reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这还不是时序融合
             anchors_all.append(proposals_prev[:, :, :5+self.anchor_len*3])
 
-        output = {'reg_proposals':reg_proposals_all[-1], 'anchors':anchors_all[-1]}
+        output = {'reg_proposals':reg_proposals_all[-1], 'anchors':anchors_all[-1]} #检测结果用最后一次的
         if self.iter_reg > 0:
             output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
             return output, output_aux
@@ -371,10 +371,10 @@ class Anchor3DLane(BaseModule):
         project_matrix = project_matrix.cpu().numpy()
         for i in range(len(project_matrix)):
             P_g2im = project_matrix[i]
-            Hc = homography_crop_resize((self.db_cfg.org_h, self.db_cfg.org_w), 0, feat_size)
+            Hc = homography_crop_resize((self.db_cfg.org_h, self.db_cfg.org_w), 0, feat_size) #什么单一性矩阵
             h_g2feat = np.matmul(Hc, P_g2im)
             h_g2feats.append(torch.from_numpy(h_g2feat).type(torch.FloatTensor).to(device))
-        return h_g2feats
+        return h_g2feats #feat这是什么的单应性矩阵
 
 
     def nms(self, batch_proposals, batch_anchors, nms_thres=0, conf_threshold=None, refine_vis=False, vis_thresh=0.5):
@@ -417,7 +417,7 @@ class Anchor3DLane(BaseModule):
         return output
 
     def forward_test(self, img, mask=None, img_metas=None, gt_project_matrix=None, **kwargs):
-        gt_project_matrix = gt_project_matrix.squeeze(1)
+        gt_project_matrix = gt_project_matrix.squeeze(1) #根本无法修改batch
         output, _ = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)
 
         proposals_list = self.nms(output['reg_proposals'], output['anchors'], self.test_cfg.nms_thres, 
@@ -486,7 +486,7 @@ class Anchor3DLane(BaseModule):
         Returns:
             dict[str, Tensor]: a dictionary of loss components
         """
-        gt_project_matrix = gt_project_matrix.squeeze(1)
+        gt_project_matrix = gt_project_matrix.squeeze(1) # 这个矩阵是g2im
         output, output_aux = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)
         losses, other_vars = self.loss(output, gt_3dlanes, output_aux)
         return losses, other_vars
@@ -517,7 +517,7 @@ class Anchor3DLane(BaseModule):
                 DDP, it means the batch size on each GPU), which is used for
                 averaging the logs.
         """
-        losses, other_vars = self(**data_batch)
+        losses, other_vars = self(**data_batch) #how to eval
         loss, log_vars = self._parse_losses(losses, other_vars)
 
         outputs = dict(

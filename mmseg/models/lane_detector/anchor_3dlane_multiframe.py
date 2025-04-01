@@ -26,6 +26,8 @@ from .tools import homography_crop_resize
 from ..lane_detector.utils import nms_3d
 from .anchor_3dlane import Anchor3DLane
 
+import os
+os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 @LANENET2S.register_module()
 class Anchor3DLaneMF(Anchor3DLane):
 
@@ -38,7 +40,7 @@ class Anchor3DLaneMF(Anchor3DLane):
         self.prev_num = prev_num
         self.is_detach = is_detach
         self.temp_fuse = nn.ModuleList()
-        self.temp_fuse.append(nn.TransformerDecoderLayer(self.anchor_feat_channels, 2, 256, batch_first=True))
+        self.temp_fuse.append(nn.TransformerDecoderLayer(self.anchor_feat_channels, 2, 256, batch_first=True))#你这里为什么有3个？
         for iter in range(self.iter_reg):
             self.temp_fuse.append(nn.TransformerDecoderLayer(self.anchor_feat_channels, 2, 256, batch_first=True))
 
@@ -91,7 +93,7 @@ class Anchor3DLaneMF(Anchor3DLane):
         else:
             batch_anchor_features_prev = torch.cat(batch_anchor_features_prev, dim=1)  # [BN, pl, C]
 
-        batch_anchor_features_fuse = self.temp_fuse[iter_idx](batch_anchor_features_cur, batch_anchor_features_prev)  # [BN, l, C]
+        batch_anchor_features_fuse = self.temp_fuse[iter_idx](batch_anchor_features_cur, batch_anchor_features_prev)  #这里会报错 # [BN, l, C]
         batch_anchor_features_fuse = batch_anchor_features_fuse.flatten(1, 2)  # [BN, lC]
 
         # Predict
