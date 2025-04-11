@@ -5,7 +5,8 @@ anchor_len = len(anchor_y_steps)
 # dataset settings
 dataset_type = 'OpenlaneMFDataset'
 # data_root = './data/OpenLane/'
-data_root='/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane'
+# data_root='/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane'
+data_root='/home/wzh/study/github/3D_lane_detection/Anchor3DLane/data/OpenLane'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 input_size = (360, 480)
@@ -154,7 +155,7 @@ optimizer_config = dict()
 # learning policy
 lr_config = dict(policy='step', step=[50000,], by_epoch=False)
 runner = dict(type='IterBasedRunner', max_iters=60000)
-checkpoint_config = dict(by_epoch=False, interval=5000)
+checkpoint_config = dict(by_epoch=False, interval=5000) #太多了，改成2000
 
 log_config = dict(
     interval=10,

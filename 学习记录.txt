@@ -3,7 +3,7 @@
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/train.py configs/apollosim/anchor3dlane_iter.py
 bash tools/dist_train.sh configs/apollosim/anchor3dlane_mf_iter.py 2 --auto-resume
-bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto-resume
+bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 2 --auto-resume
 python tools/train.py configs/openlane/anchor3dlane_iter.py #训练没有问题,测试有一堆bug
 python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题，显示图片无法找到
 
