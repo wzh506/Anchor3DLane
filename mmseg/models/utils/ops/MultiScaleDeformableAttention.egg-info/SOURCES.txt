@@ -1,7 +1,7 @@
 setup.py
-/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/vision.cpp
-/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/cpu/ms_deform_attn_cpu.cpp
-/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/utils/ops/src/cuda/ms_deform_attn_cuda.cu
+/home/wzh/study/github/3D_lane_detection/Anchor3DLane/mmseg/models/utils/ops/src/vision.cpp
+/home/wzh/study/github/3D_lane_detection/Anchor3DLane/mmseg/models/utils/ops/src/cpu/ms_deform_attn_cpu.cpp
+/home/wzh/study/github/3D_lane_detection/Anchor3DLane/mmseg/models/utils/ops/src/cuda/ms_deform_attn_cuda.cu
 MultiScaleDeformableAttention.egg-info/PKG-INFO
 MultiScaleDeformableAttention.egg-info/SOURCES.txt
 MultiScaleDeformableAttention.egg-info/dependency_links.txt

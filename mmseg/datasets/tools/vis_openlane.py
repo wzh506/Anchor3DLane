@@ -409,7 +409,7 @@ class LaneVis(object):
         fig.savefig(ops.join(save_dir, img_name.replace("/", "_")))
         plt.close(fig)
 
-
+    #这个vis能不能改为train的
     def visualize(self, pred_file, gt_file, test_file=None, prob_th=0.5, img_dir=None, save_dir=None, vis_step=20):
         mmcv.mkdir_or_exist(save_dir)
         if pred_file is not None:#同时绘制gt和pred
@@ -429,16 +429,21 @@ class LaneVis(object):
                 raw_file = pred['file_path']
                 gt = gts[raw_file]
                 self.vis(gt, pred, save_dir, img_dir, raw_file, prob_th)
-        else:#仅绘制gt
+        else:#仅绘制gt,后面改成多线程得了
             json_gt = [json.loads(line) for line in open(gt_file).readlines()]
             if test_file is not None:
                 test_list = [s.strip().split('.')[0] for s in open(test_file, 'r').readlines()]
                 json_gt = [s for s in json_gt if s['file_path'][:-4] in test_list]
             gts = {l['file_path']: l for l in json_gt}
             depth =dict()
-            depth['device']= torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了
-            depth['transforms'] = torch.hub.load("intel-isl/MiDaS", "transforms").small_transform
+            try:
+                depth['device']= torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了,特别离谱
+                depth['transforms'] = torch.hub.load("intel-isl/MiDaS", "transforms").small_transform
+                # 这东西读取不到很正常,网络老是有问题
+            except:
+                print("depth model load failed, try next time!")
+                depth = None
 
 
             for i, gt in tqdm(enumerate(json_gt)):#用一下多线程

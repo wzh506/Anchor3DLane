@@ -57,7 +57,10 @@ def test_openlane(model,
         mmcv.mkdir_or_exist(save_dir)
         print("original gt results at", save_dir)
         visualizer = LaneVis(dataset)
-        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
+        # dataset.eval_file可以自己修改，默认是val.txt
+        dataset.train_file = '/home/wzh/study/github/3D_lane_detection/Anchor3DLane/data/OpenLane/data_splits/training.json'
+        # 或者用dataset.eval_file
+        visualizer.visualize(None, gt_file = dataset.train_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
                             save_dir = save_dir, prob_th=prob_th)
         
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
