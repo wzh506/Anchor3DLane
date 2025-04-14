@@ -32,6 +32,20 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "LaneDT:Single_train_OpenLane",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/openlane/lanedt.py"
+                "--auto-resume"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Anchor3DLane:train_openlane_mf_iter.config",
             "type": "debugpy",
             "request": "launch",
@@ -78,6 +92,7 @@
                 "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
             },
             "console": "integratedTerminal"
-        }
+        },
+        
     ]
 }
