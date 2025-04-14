@@ -325,14 +325,14 @@ class Anchor3DLane(BaseModule):
         :param cam_height:
         :param cam_pitch:
         :return:
-        """
+        """"""  """
         h_g2feats = []
         device = project_matrix.device
         project_matrix = project_matrix.cpu().numpy()
         for i in range(len(project_matrix)):
             P_g2im = project_matrix[i]
-            Hc = homography_crop_resize((self.db_cfg.org_h, self.db_cfg.org_w), 0, feat_size) #什么单一性矩阵
-            h_g2feat = np.matmul(Hc, P_g2im)
+            Hc = homography_crop_resize((self.db_cfg.org_h, self.db_cfg.org_w), 0, feat_size) #单应性矩阵，原图像平面和现在特征平面的
+            h_g2feat = np.matmul(Hc, P_g2im) #这个不应该在后面相乘吗？？
             h_g2feats.append(torch.from_numpy(h_g2feat).type(torch.FloatTensor).to(device))
         return h_g2feats #feat这是什么的单应性矩阵
 

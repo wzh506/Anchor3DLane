@@ -305,15 +305,17 @@ class LaneDT(BaseModule):
         reg_proposals_all.append(reg_proposals_s1)
         anchors_all.append(torch.stack([self.anchors] * batch_size, dim=0))
 
-        for iter in range(self.iter_reg): #self.iter_reg = 1
-            proposals_prev = reg_proposals_all[iter]
-            reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这还不是时序融合
-            anchors_all.append(proposals_prev[:, :, :5+self.anchor_len*3])
+
+        # 这个不要，太慢了
+        # for iter in range(self.iter_reg): #self.iter_reg = 1
+        #     proposals_prev = reg_proposals_all[iter]
+        #     reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这还不是时序融合
+        #     anchors_all.append(proposals_prev[:, :, :5+self.anchor_len*3])
 
         output = {'reg_proposals':reg_proposals_all[-1], 'anchors':anchors_all[-1]} #检测结果用最后一次的
-        if self.iter_reg > 0:
-            output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
-            return output, output_aux
+        # if self.iter_reg > 0:
+        #     output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
+        #     return output, output_aux
         return output, None
         
 

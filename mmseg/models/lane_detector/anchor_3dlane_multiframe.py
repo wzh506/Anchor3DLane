@@ -64,7 +64,7 @@ class Anchor3DLaneMF(Anchor3DLane):
         trans_feat = self.transformer_layer(feat, src_key_padding_mask=mask_interp, pos=pos)  
         trans_feat = trans_feat.permute(1, 2, 0).reshape(bs, c, h, w)  # [bs, c, h, w]
         return trans_feat
-
+    # 思考这里的创新点了
     @force_fp32()
     def get_proposals(self, project_matrixes, prev_project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
         batch_size = project_matrixes.shape[0]
@@ -139,7 +139,7 @@ class Anchor3DLaneMF(Anchor3DLane):
             prev_matrix = self.obtain_projection_matrix(prev_poses[:, i, :, :], feat_size=self.feat_size)
             prev_matrix = torch.stack(prev_matrix, dim=0)   # [B, 3, 4]
             prev_project_matrixes.append(prev_matrix)
-
+        # 这里体现multi-frame
         reg_proposals_all = []
         anchors_all = []
         reg_proposals_s1 = self.get_proposals(project_matrixes, prev_project_matrixes, anchor_feat, 0)
