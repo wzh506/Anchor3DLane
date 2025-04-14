@@ -450,7 +450,7 @@ class Anchor3DLane(BaseModule):
         output, output_aux = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)
         losses, other_vars = self.loss(output, gt_3dlanes, output_aux)
         return losses, other_vars
-
+ # print(12)
     def train_step(self, data_batch, optimizer=None, **kwargs):
         """The iteration step during training.
 
