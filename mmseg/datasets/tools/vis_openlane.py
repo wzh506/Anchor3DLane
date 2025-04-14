@@ -418,7 +418,7 @@ class LaneVis(object):
         fig.savefig(ops.join(save_dir, img_name.replace("/", "_")))
         plt.close(fig)
 
-
+    #这个vis能不能改为train的
     def visualize(self, pred_file, gt_file, test_file=None, prob_th=0.5, img_dir=None, save_dir=None, vis_step=20):
         mmcv.mkdir_or_exist(save_dir)
         if pred_file is not None:#同时绘制gt和pred
@@ -438,10 +438,7 @@ class LaneVis(object):
                 raw_file = pred['file_path']
                 gt = gts[raw_file]
                 self.vis(gt, pred, save_dir, img_dir, raw_file, prob_th)
-        else:#仅绘制gt #慢的要死，改成多进程
-            import time
-            start = time.time()
-            worker=0 # 80时间是142,40时间是135  ，不用多进程时间是140
+        else:#仅绘制gt,后面改成多线程得了
             json_gt = [json.loads(line) for line in open(gt_file).readlines()]
             # json_gt = self.load_json_lines_parallel(gt_file, workers=worker)# 作用不大，速度依然很慢
             end = time.time()
@@ -453,12 +450,15 @@ class LaneVis(object):
             gts = {l['file_path']: l for l in json_gt}
             depth =dict()
             try:
-                depth['device']= torch.device("cuda" if torch.cuda.is_available() else "cpu")
-                depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了，会pritnt(None)
+                depth['device']= torWch.device("cuda" if torch.cuda.is_available() else "cpu")
+                depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了,特别离谱
                 depth['transforms'] = torch.hub.load("intel-isl/MiDaS", "transforms").small_transform
+                # 这东西读取不到很正常,网络老是有问题
             except:
-                print('下次一定！')
-            # 如果只想要读取其中一个的话怎么办呢 现在在哪里了
+                print("depth model load failed, try next time!")
+                depth = None
+
+
             for i, gt in tqdm(enumerate(json_gt)):#用一下多线程
                 if gt['file_path'] != 'training/segment-11392401368700458296_1086_429_1106_429_with_camera_labels/150913982702468600.jpg':
                     continue #只要这个快速遍历一下 #109419

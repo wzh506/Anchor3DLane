@@ -2,3 +2,7 @@ data
 output
 output_apollosim
 output_openlane
+mmseg/
+/mmseg
+gen-efficientnet-pytorch
+intel-sl/

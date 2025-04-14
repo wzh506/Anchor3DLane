@@ -42,7 +42,8 @@ def parse_args():
         'submit it to the test server')
     parser.add_argument('--show', action='store_true', help='show results')
     parser.add_argument('--eval', action='store_true', help='show results', default=True)
-    parser.add_argument('--raw', action='store_true', help='show raw gt results', default=True)
+    parser.add_argument('--raw', action='store_true', help='show raw gt results')
+    # parser.add_argument('--raw', type=bool, help='show raw gt results', default=False)
     parser.add_argument(
         '--show-dir', help='directory where painted images will be saved')
     parser.add_argument(
@@ -132,8 +133,9 @@ def main():
     setup_multi_processes(cfg)
 
     # set cudnn_benchmark
-    if cfg.get('cudnn_benchmark', False):
-        torch.backends.cudnn.benchmark = True
+    # 
+    # if cfg.get('cudnn_benchmark', False):
+    #     torch.backends.cudnn.benchmark = True
 
     cfg.data.test.test_mode = True
 
@@ -183,7 +185,7 @@ def main():
     model = build_lanedetector(cfg.model)
     checkpoint = load_checkpoint(model, args.checkpoint, map_location='cpu')
     print(model)
-    
+    print('args.raw is ', args.raw)
 
     # clean gpu memory when starting a new evaluation.
     torch.cuda.empty_cache()

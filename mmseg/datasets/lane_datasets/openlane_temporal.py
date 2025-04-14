@@ -138,7 +138,6 @@ class OpenlaneMFDataset(OpenlaneDataset):
         except:
             print('No prev data for {},have to generate another file'.format(results['prev_file']))
             return self.__getitem__(idx+1, transform)
-        
         if self.test_mode:
             if self.is_prev:
                 prev_images, prev_poses = self.sample_prev_frame_test(prev_datas, results['gt_project_matrix'], results['filename'])

@@ -248,8 +248,9 @@ def main():
         cfg.merge_from_dict(args.cfg_options)
 
     # set cudnn_benchmark
-    if cfg.get('cudnn_benchmark', False):
-        torch.backends.cudnn.benchmark = True
+    # 我的小电脑开了就会爆炸
+    # if cfg.get('cudnn_benchmark', False):
+    #     torch.backends.cudnn.benchmark = True
 
     # work_dir is determined in this priority: CLI > segment in file > filename
     if args.work_dir is not None:
@@ -327,7 +328,6 @@ def main():
     meta['seed'] = seed
     meta['exp_name'] = osp.basename(args.config)
 
-    # model2 = build_model2(cfg.model2) #学习如何构建使用mmcv构建模型
     model = build_lanedetector(cfg.model) #这里以及构建模型了
     model.init_weights()
 
@@ -342,7 +342,7 @@ def main():
     logger.info(model)
 
     datasets = []
-    dataset = build_dataset(cfg.data.train) #构建训练数据集
+    dataset = build_dataset(cfg.data.train) #构建训练数据集,这里记得添加waymo数据集处理方法
     datasets.append(dataset)
     # datasets.append(build_dataset(cfg.data.train))
 

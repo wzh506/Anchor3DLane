@@ -1,9 +1,14 @@
 1.运行方法
+
 训练方法：
+apollosim训练方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/train.py configs/apollosim/anchor3dlane_iter.py
 bash tools/dist_train.sh configs/apollosim/anchor3dlane_mf_iter.py 2 --auto-resume
-bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto-resume
+
+openlane训练方法：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 2 --auto-resume
 python tools/train.py configs/openlane/anchor3dlane_iter.py #训练没有问题,测试有一堆bug
 python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题，显示图片无法找到
 
@@ -11,11 +16,11 @@ python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题�
 apollosim测试方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/test.py configs/apollosim/anchor3dlane_iter.py /home/zhaohui1.wang/github/Anchor3DLane/output_apollosim/apollosim/anchor3dlane_2stage.pth/latest.pth --show-dir /home/zhaohui1.wang/github/Anchor3DLane/output --show
-openlane测试方法：
+openlane测试方法： mf_iter可以使用没有问题
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
-python tools/test.py configs/openlane/anchor3dlane_mf_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show #报错,超显卡了
-bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 2 --show-dir output_openlane --show #报错,mmcv不兼容
-python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show #单卡可以显示
+python tools/test.py configs/openlane/anchor3dlane_mf_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth --show-dir output_openlane --show #报错,超显卡了
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth 2 --show-dir output_openlane --show #报错,mmcv不兼容
+python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show --raw #单卡可以显示
 bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 8 --show-dir output_openlane --show #报错
 # 
 
