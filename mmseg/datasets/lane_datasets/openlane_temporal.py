@@ -132,8 +132,12 @@ class OpenlaneMFDataset(OpenlaneDataset):
         results['img_metas'] = {'ori_shape':results['ori_shape']}
         results['gt_project_matrix'] = projection_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         results['gt_homography_matrix'] = homography_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
-        with open(results['prev_file'], 'rb') as f:
-            prev_datas = pickle.load(f)
+        try:
+            with open(results['prev_file'], 'rb') as f:
+                prev_datas = pickle.load(f)
+        except:
+            print('No prev data for {},have to generate another file'.format(results['prev_file']))
+            return self.__getitem__(idx+1, transform)
         
         if self.test_mode:
             if self.is_prev:

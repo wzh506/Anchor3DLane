@@ -39,3 +39,7 @@ train_dist.py: error: unrecognized arguments: --local-rank=0
 
 
 /home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/prev_data_release/training/segment-7850521592343484282_4576_090_4596_090_with_camera_labels/152090848289187000.pkl
+segment-10212406498497081993_5300_000_5320_000_with_camera_labels #这个在训练集里面
+#用这个training/segment-11392401368700458296_1086_429_1106_429_with_camera_labels/150913982702468600.jpg
+
+# 直接运行test:python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show

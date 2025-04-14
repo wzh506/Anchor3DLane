@@ -33,6 +33,15 @@ color = [[0, 0, 255],  # red
 vis_min_y = 5
 vis_max_y = 80
 
+
+def parse_line(line):
+    """解析单行JSON"""
+    try:
+        return json.loads(line)
+    except json.JSONDecodeError:
+        print(f"解析失败的行: {line.strip()}")
+        return None
+        
 class LaneVis(object):
     def __init__(self, db):
         self.resize_h = db.resize_h
@@ -429,23 +438,65 @@ class LaneVis(object):
                 raw_file = pred['file_path']
                 gt = gts[raw_file]
                 self.vis(gt, pred, save_dir, img_dir, raw_file, prob_th)
-        else:#仅绘制gt
+        else:#仅绘制gt #慢的要死，改成多进程
+            import time
+            start = time.time()
+            worker=0 # 80时间是142,40时间是135  ，不用多进程时间是140
             json_gt = [json.loads(line) for line in open(gt_file).readlines()]
+            # json_gt = self.load_json_lines_parallel(gt_file, workers=worker)# 作用不大，速度依然很慢
+            end = time.time()
+            print('load json gt time:', end-start,'with workers:', worker)
+            print('json_gt:', len(json_gt))
             if test_file is not None:
                 test_list = [s.strip().split('.')[0] for s in open(test_file, 'r').readlines()]
                 json_gt = [s for s in json_gt if s['file_path'][:-4] in test_list]
             gts = {l['file_path']: l for l in json_gt}
             depth =dict()
-            depth['device']= torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了
-            depth['transforms'] = torch.hub.load("intel-isl/MiDaS", "transforms").small_transform
-
-
+            try:
+                depth['device']= torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                depth['model'] = torch.hub.load("intel-isl/MiDaS", "MiDaS_small").to(depth['device']).eval() #网不好就用不了，会pritnt(None)
+                depth['transforms'] = torch.hub.load("intel-isl/MiDaS", "transforms").small_transform
+            except:
+                print('下次一定！')
+            # 如果只想要读取其中一个的话怎么办呢 现在在哪里了
             for i, gt in tqdm(enumerate(json_gt)):#用一下多线程
-                if i % vis_step > 0:
-                    continue
-                raw_file = gt['file_path']
-                self.vis_raw(gt, save_dir, img_dir, raw_file, prob_th,depth) #后面甚至可以添加激光l
+                if gt['file_path'] != 'training/segment-11392401368700458296_1086_429_1106_429_with_camera_labels/150913982702468600.jpg':
+                    continue #只要这个快速遍历一下 #109419
+                else:
+                # if i % vis_step > 0: #通过上面这个遍历
+                #     continue
+                    print(f'find target in json_gt[{i}]!')
+                    raw_file = gt['file_path']
+                    self.vis_raw(gt, save_dir, img_dir, raw_file, prob_th,depth) #有问题
+    def load_json_lines_parallel(self,gt_file, workers=None):
+        import json
+        from multiprocessing import Pool, cpu_count
+        import mmap
+        """
+        多进程解析JSON Lines文件（每行一个独立对象）
+        
+        参数：
+            gt_file (str): JSON Lines文件路径
+            workers (int): 进程数（默认使用CPU核心数）
+        """
+        # 使用内存映射加速大文件读取
+        with open(gt_file, "r+") as f:
+            # 创建内存映射文件
+            mm = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
+            # 按行分割（比 readlines() 更高效）
+            lines = mm.read().splitlines()
+            mm.close()
+        
+        # 过滤空行
+        lines = [line for line in lines if line.strip()]
+        
+        # 启动多进程池
+        workers = workers or cpu_count()
+        with Pool(processes=workers) as pool:
+            results = pool.map(parse_line, lines, chunksize=1000)
+        
+        # 过滤解析失败项
+        return [res for res in results if res is not None]
 
     def vis_raw(self, gt, save_dir, img_dir, img_name, prob_th=0.5,depth=None):#其实就是没有pred的vis
         img_path = os.path.join(img_dir, 'images', img_name)
@@ -577,7 +628,7 @@ class LaneVis(object):
             x_g = f_xy(y_g)
             z_g = f_zy(y_g)
             ax3.plot(x_g, y_g, z_g, lw=2, c='red', alpha=1, label='gt')
-
+            # 以y_g作为坐标
             x_2d, y_2d = projective_transformation(P_gt, x_g, y_g, z_g)
             valid_mask_2d = np.logical_and(np.logical_and(x_2d >= 0, x_2d < self.resize_w), np.logical_and(y_2d >= 0, y_2d < self.resize_h))
             x_2d = x_2d[valid_mask_2d]
@@ -600,7 +651,9 @@ class LaneVis(object):
         ax3.locator_params(nbins=10, axis='z')
         ax3.tick_params(pad=18, labelsize=15)
         print("save to", ops.join(save_dir, img_name.replace("/", "_")))
-        fig.savefig(ops.join(save_dir, img_name.replace("/", "_")))
+        path_part, dot, ext = img_name.rpartition('.')
+        new_name = f"{path_part}.pdf"
+        fig.savefig(ops.join(save_dir, new_name.replace("/", "_"))) #这个绘图失败了
         plt.close(fig)
 
         #再画一组图
@@ -611,7 +664,7 @@ class LaneVis(object):
         ax5.imshow(img2_ipm[:, :, [2, 1, 0]])
 
         path_part, dot, ext = img_name.rpartition('.')
-        new_name = f"{path_part}_append1.{ext}"
+        new_name = f"{path_part}_append1.pdf"
         print("save to", ops.join(save_dir, new_name.replace("/", "_")))
         fig2.savefig(ops.join(save_dir, new_name.replace("/", "_")))
         plt.close(fig)
@@ -648,7 +701,7 @@ class LaneVis(object):
 
         ax6.imshow(output)
         path_part, dot, ext = img_name.rpartition('.')
-        new_name = f"{path_part}_depth.{ext}"
+        new_name = f"{path_part}_depth.png" #把后缀改为pdf，否则用{ext}# 保持为
         maximum = np.max(output)
         minimum = np.min(output)
         # depth_map = output/maximum #用最大值做归一化,但是不需要
@@ -657,6 +710,13 @@ class LaneVis(object):
         # fig3.savefig(ops.join(save_dir, new_name.replace("/", "_")))
         save_dir2= os.path.join(save_dir, "depth")
         cv2.imwrite(ops.join(save_dir2, new_name.replace("/", "_")), depth_colored)
+        print('raw depth generated!')
+
+
+
+
+        #深度图用fig3吧
+        #最后按照名字单独存储每张图
 
 #         depth_colored = cv2.applyColorMap(
 #     cv2.normalize(depth_map, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U),
