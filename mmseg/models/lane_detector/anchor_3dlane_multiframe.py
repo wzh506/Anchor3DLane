@@ -120,17 +120,17 @@ class Anchor3DLaneMF(Anchor3DLane):
         reg_proposals[:, :, 5+self.anchor_len*2:5+self.anchor_len*3] = reg_vis
         reg_proposals[:, :, 5+self.anchor_len*3:5+self.anchor_len*3+self.num_category] = cls_logits   # [B, N, C]
         return reg_proposals
-
+    # 
     def encoder_decoder(self, img, mask, gt_project_matrix, prev_poses=None, **kwargs):
         # img: [B, 3, inp_h, inp_w, Np+1]; mask: [B, 1, 36, 480]
         # prev_poses: [B, Np, 3, 4]
-        batch_size = img.shape[0] 
-        img = torch.cat(img.split(1, dim=4), dim=0).squeeze(4)  # [2B, 3, h, w]
+        batch_size = img.shape[0] #用了前面一帧的pose
+        img = torch.cat(img.split(1, dim=4), dim=0).squeeze(4)  # [2B, 3, h, w]，一般情况下Np=1
         trans_feat = self.feature_extractor(img, mask)  # [B(Np+1), C, h, w]
-        
+        # FV的feat torch.Size([16, 64, 45, 60])
         # anchor
-        anchor_feat = self.anchor_projection(trans_feat)
-        anchor_feat = anchor_feat.split(batch_size, dim=0)  # [B(Np+1), C, h, w]
+        anchor_feat = self.anchor_projection(trans_feat) #1x1 conv2d,大小刚好不变 
+        anchor_feat = anchor_feat.split(batch_size, dim=0)  # [B(Np+1), C, h, w] #修改为两帧，还是前后两帧时序顺序
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, feat_size=self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
 
