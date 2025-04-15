@@ -22,7 +22,7 @@ from typing import Optional, List
 from torch import Tensor
 from .PE import build_position_encoding
 
-from models.utils.ops.modules import MSDeformAttn
+from mmseg.models.utils.ops.modules import MSDeformAttn #相对于根目录
 
 from torch.nn.init import xavier_uniform_, constant_, uniform_, normal_
 

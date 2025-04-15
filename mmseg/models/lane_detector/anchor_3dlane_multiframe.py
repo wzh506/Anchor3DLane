@@ -25,6 +25,8 @@ from ..builder import LANENET2S
 from .tools import homography_crop_resize
 from ..lane_detector.utils import nms_3d
 from .anchor_3dlane import Anchor3DLane
+from mmseg.models.utils.ops.modules import MSDeformAttn #只能这样
+
 
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
