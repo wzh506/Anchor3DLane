@@ -30,6 +30,8 @@ from ..builder import LANENET2S
 from .tools import homography_crop_resize
 from .utils import AnchorGenerator, nms_3d
 
+
+
 class DecodeLayer(nn.Module):
     def __init__(self, in_channel, mid_channel, out_channel):
         super(DecodeLayer, self).__init__()
