@@ -52,6 +52,8 @@ class LaneDT(BaseModule):
 
     def __init__(self, 
                  backbone,
+                 PerspectiveTransformer,
+                 BEVHead = None,
                  neck = None,
                  pretrained = None,
                  y_steps = [  5.,  10.,  15.,  20.,  30.,  40.,  50.,  60.,  80.,  100.],
@@ -73,7 +75,8 @@ class LaneDT(BaseModule):
                  loss_aux = None,
                  init_cfg = None,
                  train_cfg = None,
-                 test_cfg = None):
+                 test_cfg = None
+                 ):
         super(LaneDT, self).__init__(init_cfg)
         assert loss_aux is None or len(loss_aux) == iter_reg
         self.train_cfg = train_cfg
@@ -113,9 +116,17 @@ class LaneDT(BaseModule):
             backbone.pretrained = pretrained
         self.backbone = build_backbone(backbone)
 
+        # 这些是我自己修改的，主要是为了使用deformabel_attention
+        if PerspectiveTransformer is not None:
+            self.pers_tr = build_neck(PerspectiveTransformer) 
+        if BEVHead is not None:
+            self.BEVHead = build_neck(BEVHead)
+
+
         # transformer layer
         self.position_embedding = PositionEmbeddingSine(num_pos_feats=hidden_dim // 2, normalize=True)
         self.input_proj = nn.Conv2d(backbone_dim, hidden_dim, kernel_size=1)  # the same as channel of self.layer4
+
         if self.enc_layers == 1:
             self.transformer_layer = TransformerEncoderLayer(hidden_dim, nhead=num_heads, dim_feedforward=dim_feedforward,
                                     dropout=drop_out, normalize_before=pre_norm)
@@ -250,6 +261,17 @@ class LaneDT(BaseModule):
         trans_feat = trans_feat.permute(1, 2, 0).reshape(bs, c, h, w)  # [bs, c, h, w]
 
         return trans_feat
+    
+    def feature_extractor_lanedt(self, input, mask, _M_inv=None):
+        frontview_features = self.backbone(input) #这是一个feature map
+
+        if _M_inv is not None:
+            projs= self.pers_tr(input, frontview_features,_M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
+        else:
+            projs= self.pers_tr(input, frontview_features) #这个函数会把feature map变成一个投影矩阵
+        trans_feat = self.BEVHead(projs)
+
+        return trans_feat
 
     @force_fp32()
     def get_proposals(self, project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
@@ -294,7 +316,11 @@ class LaneDT(BaseModule):
     def encoder_decoder(self, img, mask, gt_project_matrix, **kwargs):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
         batch_size = img.shape[0]
-        trans_feat = self.feature_extractor(img, mask)
+        trans_feat = self.feature_extractor_lanedt(img, mask,kwargs.get('M_inv', None)) #这个函数会返回一个特征图
+        # trans_feat torch.Size([16, 64, 45, 60]) #现在输出的特征图是torch.Size([8, 64, 104, 64])
+        # anchor
+        anchor_feat = self.anchor_projection(trans_feat)
+        project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
         # trans_feat torch.Size([16, 64, 45, 60])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat)
@@ -308,7 +334,7 @@ class LaneDT(BaseModule):
         anchors_all.append(torch.stack([self.anchors] * batch_size, dim=0))
 
 
-        # 这个不要，太慢了
+        # 下面这个是核心其实
         # for iter in range(self.iter_reg): #self.iter_reg = 1
         #     proposals_prev = reg_proposals_all[iter]
         #     reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这还不是时序融合

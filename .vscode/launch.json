@@ -37,8 +37,8 @@
             "request": "launch",
             "program": "tools/train.py",
             "args": [
-                "configs/openlane/lanedt.py"
-                "--auto-resume"
+                "configs/openlane/lanedt.py",
+                "--auto-resume",
             ],
             "env": {
                 "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"

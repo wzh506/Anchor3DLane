@@ -6,18 +6,20 @@ anchor_len = len(anchor_y_steps)
 dataset_type = 'OpenlaneDataset'
 
 data_root = './data/OpenLane'
+# data_root='/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane' #用上面的有点问题
+# data_root='/home/wzh/study/github/3D_lane_detection/Anchor3DLane/data/OpenLane'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 input_size = (360, 480)
 
-# lidar应该也要经过类似的处理（麻了）
+# 怪不得没有用deformable attention,这里有数据增强
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', img_scale=(input_size[1], input_size[0]), keep_ratio=False),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='MaskGenerate', input_size=input_size),
     dict(type='LaneFormat'),
-    dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask']),
+    dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
 ]
 
 test_pipeline = [
@@ -26,7 +28,7 @@ test_pipeline = [
     dict(type='Normalize', **img_norm_cfg),
     dict(type='MaskGenerate', input_size=input_size),
     dict(type='LaneFormat'),
-    dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask']),
+    dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
 ]
 
 dataset_config = dict(
@@ -35,7 +37,7 @@ dataset_config = dict(
 )
 
 data = dict(
-    samples_per_gpu=16,
+    samples_per_gpu=8,
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
@@ -54,6 +56,8 @@ data = dict(
         pipeline=test_pipeline))
 
 # model setting
+# 任务：
+# 1.用deformable attention替换普通的attention
 model = dict(
     type = 'LaneDT',
     backbone=dict(
@@ -65,6 +69,25 @@ model = dict(
     strides=(1, 2, 1, 1),
     with_cp=False,
     style='pytorch'),
+    PerspectiveTransformer=dict(
+        type='PerspectiveTransformer',
+        no_cuda=False,
+        channels=64,# 适当降低
+        bev_h=208,  # 208
+        bev_w=128,  # 128
+        uv_h=360/4,  # 90
+        uv_w=480/4,  # 120 因为使用的特征图变小了
+        M_inv=None,  #现在不传入
+        num_att=3, 
+        num_proj=1,  #原本是4个，现在改为1个（resnet输出瓷都变化不太对劲）
+        nhead=8,
+        npoints=8
+    ),
+    BEVHead=dict(
+        type='BEVHead',
+        batch_norm=True,
+        channels=64,
+    ),
     pretrained = 'pretrained/resnet18_v1c-b5776b93.pth',
     y_steps = anchor_y_steps,
     feat_y_steps = feat_y_steps,

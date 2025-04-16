@@ -69,6 +69,8 @@ class LaneFormat(object):
             results['prev_poses'] = DC(to_tensor(np.stack(results['prev_poses'], axis=0).astype(np.float32)), stack=True)  # [Np, 3, 4]
         if 'mask' in results:
             results['mask'] = DC(to_tensor(results['mask'][None, ...].astype(np.float32)), stack=True)
+        if 'M_inv' in results:
+            results['M_inv'] = DC(to_tensor(results['M_inv'][None, ...].astype(np.float32)), stack=True) #这个就不动即可
         return results
 
     def __repr__(self):

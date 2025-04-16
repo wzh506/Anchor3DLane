@@ -26,6 +26,7 @@ from ..tools.utils import *
 from ..tools import eval_openlane
 from ..builder import DATASETS
 from ..pipelines import Compose
+from mmseg.utils.utils import *
 
 RED = (0, 0, 255)
 GREEN = (0, 255, 0)
@@ -183,6 +184,11 @@ class OpenlaneDataset(Dataset):
         results['img_metas'] = {'ori_shape':results['ori_shape']}
         results['gt_project_matrix'] = projection_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         results['gt_homography_matrix'] = homography_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
+        aug_mat = np.eye(3) #没有使用数据增强，直接传入单位矩阵；直接把自己这个类送进去
+        M_inv = unit_update_projection_extrinsic(self, results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
+        M_inv = unit_update_projection_for_data_aug(self, aug_mat, M_inv)
+        results['M_inv'] = M_inv
+        # 或者把这个放在pipeline里面去
         results = self.pipeline(results)
         return results
 

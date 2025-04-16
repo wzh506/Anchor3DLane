@@ -129,7 +129,7 @@ class OpenlaneMFDataset(OpenlaneDataset):
             results.update(obj)
         if self.no_cls:
             results['gt_3dlanes'][:, 1] = results['gt_3dlanes'][:, 1] > 0
-        results['img_metas'] = {'ori_shape':results['ori_shape']}
+        results['img_metas'] = {'ori_shape':results['ori_shape']} #额外计算一个M_inv
         results['gt_project_matrix'] = projection_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         results['gt_homography_matrix'] = homography_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         try:
