@@ -277,7 +277,7 @@ class LaneDT(BaseModule):
     def get_proposals(self, project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
         batch_size = project_matrixes.shape[0]
         if proposals_prev is None:
-            batch_anchor_features, _ = self.cut_anchor_features(anchor_feat, project_matrixes, self.xs, self.ys, self.zs)   # [B, C, N, l]
+            batch_anchor_features, _ = self.cut_anchor_features(anchor_feat, project_matrixes, self.xs, self.ys, self.zs)   # [B, C, N, l],这里直接cut
         else:
             sampled_anchor = torch.zeros(batch_size, len(self.anchors), 5 + self.anchor_feat_len * 3, device = anchor_feat.device)
             sampled_anchor[:, :, 5:5+self.anchor_feat_len] = proposals_prev[:, :, 5:5+self.anchor_len][:, :, self.feat_sample_index]
@@ -315,20 +315,16 @@ class LaneDT(BaseModule):
 
     def encoder_decoder(self, img, mask, gt_project_matrix, **kwargs):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
-        batch_size = img.shape[0]
+        batch_size = img.shape[0] 
         trans_feat = self.feature_extractor_lanedt(img, mask,kwargs.get('M_inv', None)) #这个函数会返回一个特征图
         # trans_feat torch.Size([16, 64, 45, 60]) #现在输出的特征图是torch.Size([8, 64, 104, 64])
-        # anchor
-        anchor_feat = self.anchor_projection(trans_feat)
-        project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
-        # trans_feat torch.Size([16, 64, 45, 60])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat)
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
 
         reg_proposals_all = []
-        anchors_all = []
+        anchors_all = [] #可以接受上一轮的anchor_feat
         reg_proposals_s1 = self.get_proposals(project_matrixes, anchor_feat, 0) #检测出本次的prorosals
         reg_proposals_all.append(reg_proposals_s1)
         anchors_all.append(torch.stack([self.anchors] * batch_size, dim=0))
