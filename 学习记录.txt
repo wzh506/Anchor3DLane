@@ -31,6 +31,9 @@ nohup bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto
 2.报错记录
 AttributeError: ‘int‘ object has no attribute ‘type‘
 train_dist.py: error: unrecognized arguments: --local-rank=0
+解决方法：添加os.environ[local-rank]
+AttributeError: 'MMDistributedDataParallel' object has no attribute '_use_replicated_tensor_module'
+解决方法：mmcv库代码替换，参考https://github.com/microsoft/Cream/issues/179
 
 
 
@@ -48,3 +51,17 @@ segment-10212406498497081993_5300_000_5320_000_with_camera_labels #这个在训�
 #用这个training/segment-11392401368700458296_1086_429_1106_429_with_camera_labels/150913982702468600.jpg
 
 # 直接运行test:python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show
+
+
+5.我的训练LaneDT模型
+
+原生LaneDT：
+训练：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
+
+测试：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
+python tools/test.py configs/openlane/lanedt.py output/openlane/lanedt/latest.pth --show-dir output_lanedt --show
+bash tools/dist_test.sh configs/openlane/lanedt.py output/openlane/lanedt/latest.pth 2 --show-dir output_lanedt --show

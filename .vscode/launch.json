@@ -18,7 +18,7 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Anchor3DLane:Single_train_OpenLane",
+            "name": "Anchor3DLaneMF:Single_train_OpenLane",
             "type": "debugpy",
             "request": "launch",
             "program": "tools/train.py",
@@ -46,12 +46,12 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Anchor3DLane:train_openlane_mf_iter.config",
+            "name": "Anchor3DLane:train_openlane.config",
             "type": "debugpy",
             "request": "launch",
             "program": "tools/train.py",
             "args": [
-                "configs/openlane/anchor3dlane_mf_iter.py"
+                "configs/openlane/anchor3dlane.py"
 
             ],
             "env": {
