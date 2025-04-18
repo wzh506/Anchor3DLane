@@ -150,7 +150,7 @@ optimizer_config = dict()
 
 # learning policy
 lr_config = dict(policy='step', step=[50000,], by_epoch=False)
-runner = dict(type='IterBasedRunner', max_iters=60000)
+runner = dict(type='IterBasedRunner', max_iters=100000) #60000
 checkpoint_config = dict(by_epoch=False, interval=5000)
 
 log_config = dict(

@@ -411,6 +411,7 @@ class LaneDT(BaseModule):
         output, _ = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)
         return output
 
+    # 注意：forward_test不需要针对训练进行修改
     def forward_test(self, img, mask=None, img_metas=None, gt_project_matrix=None, **kwargs):
         gt_project_matrix = gt_project_matrix.squeeze(1) #根本无法修改batch
         output, _ = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)

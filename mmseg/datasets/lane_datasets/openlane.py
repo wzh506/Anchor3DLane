@@ -77,6 +77,8 @@ class OpenlaneDataset(Dataset):
         self.data_list = os.path.join(data_root, 'data_lists', data_list)
         self.cache_dir = os.path.join(data_root, 'cache_dense')
         self.eval_file = os.path.join(data_root, 'data_splits', 'validation.json')  
+        # self.eval_file = os.path.join(data_root, 'data_splits', 'training.json')
+
         self.visibility = visibility
         self.no_cls = no_cls
         
@@ -146,6 +148,9 @@ class OpenlaneDataset(Dataset):
             self.test_list = None
 
         self.load_annotations()
+
+    def set_test_on_train(self):
+        self.eval_file = os.path.join(self.data_root, 'data_splits', 'training.json')
 
     def load_annotations(self):
         print('Now loading annotations...')
@@ -245,8 +250,8 @@ class OpenlaneDataset(Dataset):
         json_pred = [json.loads(line) for line in pred_lines]
         json_gt = [json.loads(line) for line in open(self.eval_file).readlines()]
         if len(json_gt) != len(json_pred):
-            print("gt len:", len(json_gt))
-            print("pred len:", len(json_pred))
+            print("gt len:", len(json_gt))    #157807 #training中部分拿去做testing了
+            print("pred len:", len(json_pred))#136496
             # raise Exception('We do not get the predictions of all the test tasks')
         if self.test_list is not None:
             test_list = [s.strip().split('.')[0] for s in open(self.test_list, 'r').readlines()]

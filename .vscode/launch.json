@@ -107,6 +107,21 @@
             },
             "console": "integratedTerminal"
         },
+        {
+            "name": "Anchor3DLaneDeform:Single_train_openlane_iter_r50",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/openlane/anchor3dlane_iter_r50.py", 
+                "--auto-resume"
+
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
         
     ]
 }
