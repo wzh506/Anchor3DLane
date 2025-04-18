@@ -149,6 +149,10 @@ class LaneDTMF(LaneDT):
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, feat_size=self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
 
+
+        # 这里体现multi-frame
+
+
         prev_project_matrixes = []
         for i in range(self.prev_num):
             prev_matrix = self.obtain_projection_matrix(prev_poses[:, i, :, :], feat_size=self.feat_size)

@@ -276,9 +276,9 @@ class LaneDT(BaseModule):
     @force_fp32()
     def get_proposals(self, project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
         batch_size = project_matrixes.shape[0]
-        if proposals_prev is None:
+        if proposals_prev is None: 
             batch_anchor_features, _ = self.cut_anchor_features(anchor_feat, project_matrixes, self.xs, self.ys, self.zs)   # [B, C, N, l],这里直接cut
-        else:
+        else: #这里就是使用上一轮的anchor_feat的好地方
             sampled_anchor = torch.zeros(batch_size, len(self.anchors), 5 + self.anchor_feat_len * 3, device = anchor_feat.device)
             sampled_anchor[:, :, 5:5+self.anchor_feat_len] = proposals_prev[:, :, 5:5+self.anchor_len][:, :, self.feat_sample_index]
             sampled_anchor[:, :, 5+self.anchor_feat_len:5+self.anchor_feat_len*2] = proposals_prev[:, :, 5+self.anchor_len:5+self.anchor_len*2][:, :, self.feat_sample_index]
@@ -298,6 +298,13 @@ class LaneDT(BaseModule):
         reg_vis = self.reg_vis_layer[iter_idx](batch_anchor_features)  # [B * N, l]
         reg_vis = torch.sigmoid(reg_vis)
         reg_vis = reg_vis.reshape(batch_size, -1, reg_vis.shape[1])   # [B, N, l]
+        
+    
+        
+        
+        
+        
+        
         
         # Add offsets to anchors
         # [B, N, l]
@@ -322,24 +329,26 @@ class LaneDT(BaseModule):
         anchor_feat = self.anchor_projection(trans_feat)
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
-
+        
         reg_proposals_all = []
         anchors_all = [] #可以接受上一轮的anchor_feat
         reg_proposals_s1 = self.get_proposals(project_matrixes, anchor_feat, 0) #检测出本次的prorosals
         reg_proposals_all.append(reg_proposals_s1)
         anchors_all.append(torch.stack([self.anchors] * batch_size, dim=0))
-
+        #
 
         # 下面这个是核心其实
-        # for iter in range(self.iter_reg): #self.iter_reg = 1
-        #     proposals_prev = reg_proposals_all[iter]
-        #     reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这还不是时序融合
-        #     anchors_all.append(proposals_prev[:, :, :5+self.anchor_len*3])
+        for iter in range(self.iter_reg): #self.iter_reg = 1
+            proposals_prev = reg_proposals_all[iter]
+            reg_proposals_all.append(self.get_proposals(project_matrixes, anchor_feat, iter+1, proposals_prev))#这不是时序融合，是iter_reg
+            anchors_all.append(proposals_prev[:, :, :5+self.anchor_len*3])
+    
+       
 
         output = {'reg_proposals':reg_proposals_all[-1], 'anchors':anchors_all[-1]} #检测结果用最后一次的
-        # if self.iter_reg > 0:
-        #     output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
-        #     return output, output_aux
+        if self.iter_reg > 0:
+            output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
+            return output, output_aux
         return output, None
         
 
