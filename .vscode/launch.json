@@ -59,7 +59,7 @@
             },
             "console": "integratedTerminal"
         },
-        {
+        {//
             "name": "Anchor3DLane:Test_Single_openlane_mf_iter.config",
             "type": "debugpy",
             "request": "launch",
@@ -86,6 +86,21 @@
                 "pretrained/openlane_anchor3dlane_temporal_iter.pth",
                 "--show-dir","/home/zhaohui1.wang/github/Anchor3DLane/output_openlane",
                 "--show",
+
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Anchor3DLaneDeform:Single_train_openlane_iter_r50",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/train.py",
+            "args": [
+                "configs/openlane/anchor3dlane_iter_r50.py", 
+                "--auto-resume"
 
             ],
             "env": {

@@ -12,6 +12,11 @@ bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 2 --auto-resum
 python tools/train.py configs/openlane/anchor3dlane_iter.py #训练没有问题,测试有一堆bug
 python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题，显示图片无法找到
 
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+bash tools/dist_train.sh configs/openlane/anchor3dlane_iter_r50.py 8 --auto-resume
+
+
+
 其他的参数放在2后面（作为3：传给.py文件）
 apollosim测试方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
@@ -19,10 +24,13 @@ python tools/test.py configs/apollosim/anchor3dlane_iter.py /home/zhaohui1.wang/
 openlane测试方法： mf_iter可以使用没有问题
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/test.py configs/openlane/anchor3dlane_mf_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth --show-dir output_openlane --show #报错,超显卡了
-bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth 2 --show-dir output_openlane --show #报错,mmcv不兼容
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth 8 --show-dir output_openlane --show #报错,mmcv不兼容
 python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth --show-dir output_openlane --show --raw #单卡可以显示
 bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 8 --show-dir output_openlane --show #报错
-# 
+
+
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter_r50.py pretrained/openlanev2_anchor3dlane_iter_r50x2.pth 8 --show-dir output_openlane_deform --show
 
 
 nohup bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 8 --auto-resume > anchor3dlane_mf_iter.log 2>&1 &
@@ -64,4 +72,12 @@ bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
 python tools/test.py configs/openlane/lanedt.py output/openlane/lanedt/latest.pth --show-dir output_lanedt --show
-bash tools/dist_test.sh configs/openlane/lanedt.py output/openlane/lanedt/latest.pth 2 --show-dir output_lanedt --show
+bash tools/dist_test.sh configs/openlane/lanedt.py output/openlane/lanedt/latest.pth 8 --show-dir output_lanedtv2 --show
+
+
+6.说明
+open_lanedt 我的lanedtdeform模型效果
+open_openlane anchor3dlane模型效果
+open_anchordeform anchor3dlane中anchor3dlanedeform模型效果
+
+我在tools\test.py中添加了--test-on-train和--raw两个参数，非常好用
