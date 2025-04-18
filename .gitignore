@@ -5,3 +5,4 @@ output_openlane
 output_lanedt
 gen-efficientnet-pytorch
 intel-sl/
+pretrained/
