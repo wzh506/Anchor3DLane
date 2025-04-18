@@ -15,6 +15,7 @@ import numpy as np
 from ..tools.utils import *
 from .openlane import OpenlaneDataset
 from ..builder import DATASETS
+from mmseg.utils.utils import *
 
 RED = (0, 0, 255)
 GREEN = (0, 255, 0)
@@ -132,6 +133,12 @@ class OpenlaneMFDataset(OpenlaneDataset):
         results['img_metas'] = {'ori_shape':results['ori_shape']} #额外计算一个M_inv
         results['gt_project_matrix'] = projection_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         results['gt_homography_matrix'] = homography_g2im_extrinsic(results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
+
+        aug_mat = np.eye(3) #没有使用数据增强，直接传入单位矩阵；直接把自己这个类送进去
+        M_inv = unit_update_projection_extrinsic(self, results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
+        M_inv = unit_update_projection_for_data_aug(self, aug_mat, M_inv)
+        results['M_inv'] = M_inv
+        
         try:
             with open(results['prev_file'], 'rb') as f:
                 prev_datas = pickle.load(f)
@@ -148,7 +155,7 @@ class OpenlaneMFDataset(OpenlaneDataset):
                 prev_images, prev_poses = self.sample_prev_frame_train(prev_datas, results['gt_project_matrix'], results['filename'])
             else:
                 prev_images, prev_poses = self.sample_post_frame_train(prev_datas, results['gt_project_matrix'], results['filename'])
-        results['prev_images'] = prev_images
+        results['prev_images'] = prev_images #需要把上一帧的M_inv同样传入进去
         results['prev_poses'] = prev_poses
         results = self.pipeline(results)
         return results

@@ -27,16 +27,19 @@ from ..lane_detector.utils import nms_3d
 from .lanedt import LaneDT
 
 import os
-os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+# os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 @LANENET2S.register_module()
 class LaneDTMF(LaneDT):
-
     def __init__(self, 
                  backbone,
+                 PerspectiveTransformer,
+                 BEVHead,
                  prev_num = 1,
                  is_detach = False,
                  **kwargs):
-        super(LaneDT, self).__init__(backbone, **kwargs)
+        super(LaneDTMF, self).__init__(backbone,PerspectiveTransformer,BEVHead, **kwargs)#集成LaneDT的初始化函数
+        self.iter_reg = 1
+        self.anchor_feat_channels = 256
         self.prev_num = prev_num
         self.is_detach = is_detach
         self.temp_fuse = nn.ModuleList()
@@ -65,6 +68,18 @@ class LaneDTMF(LaneDT):
         trans_feat = trans_feat.permute(1, 2, 0).reshape(bs, c, h, w)  # [bs, c, h, w]
         return trans_feat
 
+
+    def feature_extractor_lanedt(self, input, mask, _M_inv=None):
+        frontview_features = self.backbone(input) #这是一个feature map
+
+        if _M_inv is not None:
+            projs= self.pers_tr(input, frontview_features,_M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
+        else:
+            projs= self.pers_tr(input, frontview_features) #这个函数会把feature map变成一个投影矩阵
+        trans_feat = self.BEVHead(projs)
+
+        return trans_feat
+    
     @force_fp32()
     def get_proposals(self, project_matrixes, prev_project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
         batch_size = project_matrixes.shape[0]
@@ -126,13 +141,17 @@ class LaneDTMF(LaneDT):
         # prev_poses: [B, Np, 3, 4]
         batch_size = img.shape[0] #用了前面一帧的pose
         img = torch.cat(img.split(1, dim=4), dim=0).squeeze(4)  # [2B, 3, h, w]，一般情况下Np=1
-        trans_feat = self.feature_extractor(img, mask)  # [B(Np+1), C, h, w]
+        trans_feat = self.feature_extractor_lanedt(img, mask,kwargs.get('M_inv', None))  # [B(Np+1), C, h, w]
         # FV的feat torch.Size([16, 64, 45, 60])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat) #1x1 conv2d,大小刚好不变 
         anchor_feat = anchor_feat.split(batch_size, dim=0)  # [B(Np+1), C, h, w] #修改为两帧，还是前后两帧时序顺序
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, feat_size=self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
+
+
+        # 这里体现multi-frame
+
 
         prev_project_matrixes = []
         for i in range(self.prev_num):

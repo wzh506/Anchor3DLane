@@ -227,7 +227,7 @@ class Anchor3DLaneDeform(BaseModule):
         # transformer forward
         bs, c, h, w = feat.shape
         assert h == self.feat_size[0] and w == self.feat_size[1]
-        trans_feat = self.transformer_layer([feat,])  
+        trans_feat = self.transformer_layer([feat,])   #这里改为transformer了
         trans_feat = trans_feat[0]
 
         return trans_feat
@@ -276,7 +276,7 @@ class Anchor3DLaneDeform(BaseModule):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
         batch_size = img.shape[0]
         trans_feat = self.feature_extractor(img, mask)
-
+        # 现在是90，120
         # anchor
         anchor_feat = self.anchor_projection(trans_feat)
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)

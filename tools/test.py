@@ -43,6 +43,7 @@ def parse_args():
     parser.add_argument('--show', action='store_true', help='show results')
     parser.add_argument('--eval', action='store_true', help='show results', default=True)
     parser.add_argument('--raw', action='store_true', help='show raw gt results')
+    parser.add_argument('--test-on-train', action='store_true', help='set test on train')
     # parser.add_argument('--raw', type=bool, help='show raw gt results', default=False)
     parser.add_argument(
         '--show-dir', help='directory where painted images will be saved')
@@ -156,8 +157,11 @@ def main():
         init_dist(args.launcher, **cfg.dist_params)
 
     rank, _ = get_dist_info()
+    if args.test_on_train:
+        dataset = build_dataset(cfg.data.train)
 
-    dataset = build_dataset(cfg.data.test)
+    else:
+        dataset = build_dataset(cfg.data.test)
     # The default loader config
     loader_cfg = dict(
         # cfg.gpus will be ignored if distributed
@@ -172,14 +176,26 @@ def main():
             'test_dataloader'
         ]
     })
-    test_loader_cfg = {
-        **loader_cfg,
-        'samples_per_gpu': 1,    # for debug,NTM疯了
-        'shuffle': False,  # Not shuffle by default
-        **cfg.data.get('test_dataloader', {})
-    }
+    if not args.test_on_train:
+        test_loader_cfg = {
+            **loader_cfg,
+            'samples_per_gpu': 1,    # for debug,NTM疯了
+            'shuffle': False,  # Not shuffle by default
+            **cfg.data.get('test_dataloader', {})
+        }
+    else:
+        test_loader_cfg = {
+            **loader_cfg,
+            'samples_per_gpu': 1,    # for debug,NTM疯了
+            'shuffle': False,  # Not shuffle by default
+            **cfg.data.get('train_dataloader', {})
+        }
     # build the dataloader
     data_loader = build_dataloader(dataset, **test_loader_cfg)
+    if args.test_on_train:
+        data_loader.dataset.set_test_on_train()
+    else:
+        pass
 
     # build the model and load checkpoint
     model = build_lanedetector(cfg.model)
