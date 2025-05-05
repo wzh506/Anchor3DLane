@@ -141,7 +141,9 @@ class LaneDTMF(LaneDT):
         # prev_poses: [B, Np, 3, 4]
         batch_size = img.shape[0] #用了前面一帧的pose
         img = torch.cat(img.split(1, dim=4), dim=0).squeeze(4)  # [2B, 3, h, w]，一般情况下Np=1
-        trans_feat = self.feature_extractor_lanedt(img, mask,kwargs.get('M_inv', None))  # [B(Np+1), C, h, w]
+        M_inv = kwargs['M_inv']
+        M_inv = M_inv.squeeze(1).view(-1,M_inv.shape[-2],M_inv.shape[-1])  # [2B, 3, 3]
+        trans_feat = self.feature_extractor_lanedt(img, mask,M_inv)  # [B(Np+1), C, h, w]
         # FV的feat torch.Size([16, 64, 45, 60])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat) #1x1 conv2d,大小刚好不变 

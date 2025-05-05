@@ -83,6 +83,20 @@ model = dict(
         nhead=8,
         npoints=8
     ),
+    DEN=dict(
+        type='DepthEstimationNetwork',
+        no_cuda=False,
+        channels=64,# 适当降低
+        bev_h=208,  # 208
+        bev_w=128,  # 128
+        uv_h=360/4,  # 90
+        uv_w=480/4,  # 120 因为使用的特征图变小了
+        M_inv=None,  #现在不传入
+        num_att=3, 
+        num_proj=1,  #原本是4个，现在改为1个（resnet输出瓷都变化不太对劲）
+        nhead=8,
+        npoints=8
+    ),
     BEVHead=dict(
         type='BEVHead',
         batch_norm=True,

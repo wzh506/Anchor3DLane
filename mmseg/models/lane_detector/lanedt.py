@@ -53,6 +53,7 @@ class LaneDT(BaseModule):
     def __init__(self, 
                  backbone,
                  PerspectiveTransformer,
+                 DEN,
                  BEVHead = None,
                  neck = None,
                  pretrained = None,
@@ -121,6 +122,9 @@ class LaneDT(BaseModule):
             self.pers_tr = build_neck(PerspectiveTransformer) 
         if BEVHead is not None:
             self.BEVHead = build_neck(BEVHead)
+        
+        if DEN is not None:
+            self.DEN= build_neck(DEN)
 
 
         # transformer layer
@@ -262,16 +266,18 @@ class LaneDT(BaseModule):
 
         return trans_feat
     
-    def feature_extractor_lanedt(self, input, mask, _M_inv=None):
+    def feature_extractor_lanedt(self, input, mask, kwargs):
         frontview_features = self.backbone(input) #这是一个feature map
-
-        if _M_inv is not None:
-            projs= self.pers_tr(input, frontview_features,_M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
+        M_inv = kwargs.get('M_inv', None) 
+        if M_inv is not None:
+            projs= self.pers_tr(input, frontview_features,M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
         else:
             projs= self.pers_tr(input, frontview_features) #这个函数会把feature map变成一个投影矩阵
         trans_feat = self.BEVHead(projs)
 
-        return trans_feat
+        depth= self.DEN(input, frontview_features,M_inv.squeeze(1))
+        
+        return trans_feat,depth
 
     @force_fp32()
     def get_proposals(self, project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
@@ -323,7 +329,7 @@ class LaneDT(BaseModule):
     def encoder_decoder(self, img, mask, gt_project_matrix, **kwargs):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
         batch_size = img.shape[0] 
-        trans_feat = self.feature_extractor_lanedt(img, mask,kwargs.get('M_inv', None)) #这个函数会返回一个特征图
+        trans_feat,depth = self.feature_extractor_lanedt(img, mask,kwargs) #这个函数会返回一个特征图以及深度图
         # trans_feat torch.Size([16, 64, 45, 60]) #现在输出的特征图是torch.Size([8, 64, 104, 64])
         # anchor
         anchor_feat = self.anchor_projection(trans_feat)

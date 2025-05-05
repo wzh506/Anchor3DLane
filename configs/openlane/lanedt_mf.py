@@ -3,7 +3,7 @@ anchor_y_steps = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80,
 anchor_len = len(anchor_y_steps)
 
 # dataset settings
-dataset_type = 'OpenlaneMFDataset'
+dataset_type = 'OpenlaneMODataset'
 data_root = './data/OpenLane/'
 # data_root='/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane'
 # data_root='/home/wzh/study/github/3D_lane_detection/Anchor3DLane/data/OpenLane'
@@ -37,7 +37,7 @@ dataset_config = dict(
 
 data = dict(
     samples_per_gpu=8,  # 8 gpus #训练时用16个完全足够
-    workers_per_gpu=4,
+    workers_per_gpu=0,
     train=dict(
         type=dataset_type,
         data_root=data_root,

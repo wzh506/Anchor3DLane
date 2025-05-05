@@ -69,6 +69,10 @@ class OpenlaneMFDataset(OpenlaneDataset):
                 self.img_infos.append(anno)
         print("after load annotation")
         print("found {} samples in total".format(len(self.img_infos)))
+        
+        #构建一个img到annotations的hash表
+        # key为img,value为annotation
+            
 
     def sample_prev_frame_train(self, prev_datas, cur_project_matrix, cur_filename):
         if len(prev_datas['prev_data']) < self.prev_range:
@@ -159,3 +163,5 @@ class OpenlaneMFDataset(OpenlaneDataset):
         results['prev_poses'] = prev_poses
         results = self.pipeline(results)
         return results
+    
+# 修改：数据集需要传入新图片数据的路径和投影矩阵，并返回上一帧的图片路径和投影矩阵

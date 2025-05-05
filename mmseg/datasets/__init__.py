@@ -22,6 +22,7 @@ from .voc import PascalVOCDataset
 from .lane_datasets.apollosim import APOLLOSIMDataset
 from .lane_datasets.openlane import OpenlaneDataset
 from .lane_datasets.openlane_temporal import OpenlaneMFDataset
+from .lane_datasets.openlane_momory import OpenlaneMODataset
 from .lane_datasets.once import ONCEDataset
 
 __all__ = [
@@ -32,4 +33,4 @@ __all__ = [
     'STAREDataset', 'DarkZurichDataset', 'NightDrivingDataset',
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
     'iSAIDDataset', 'ISPRSDataset', 'PotsdamDataset', 'APOLLOSIMDataset', 'OpenlaneDataset',
-    'OpenlaneMFDataset', 'ONCEDataset']
+    'OpenlaneMFDataset','OpenlaneMODataset', 'ONCEDataset']
