@@ -74,7 +74,8 @@ class OpenlaneDataset(Dataset):
         self.metric = 'default'
         self.is_resample = is_resample
         self.dataset_config = dataset_config
-        self.data_list = os.path.join(data_root, 'data_lists', data_list)
+        # self.data_list = os.path.join(data_root, 'data_lists', data_list)
+        self.data_list = os.path.join(data_root, 'data_lists', 'validation.txt')
         self.cache_dir = os.path.join(data_root, 'cache_dense')
         self.eval_file = os.path.join(data_root, 'data_splits', 'validation.json')  
         # self.eval_file = os.path.join(data_root, 'data_splits', 'training.json')

@@ -2,7 +2,7 @@
 from .compose import Compose
 from .formatting import (Collect, ImageToTensor, ToDataContainer, ToTensor,
                          Transpose, to_tensor)
-from .loading import LoadAnnotations, LoadImageFromFile, LoadAnnotationsList, LoadImageListFromFile
+from .loading import LoadAnnotations, LoadImageFromFile, LoadAnnotationsList, LoadImageListFromFile, LoadDepthFromFile
 from .test_time_aug import MultiScaleFlipAug
 from .transforms import (CLAHE, AdjustGamma, Normalize, Pad,
                          PhotoMetricDistortion, RandomCrop, RandomCutOut,
@@ -17,4 +17,4 @@ __all__ = [
     'Normalize', 'SegRescale', 'PhotoMetricDistortion', 'RandomRotate',
     'AdjustGamma', 'CLAHE', 'Rerange', 'RGB2Gray', 'RandomCutOut',
     'RandomMosaic', 'LaneFormat', 'MaskGenerate', 'LoadAnnotationsList',
-    'LoadImageListFromFile']
+    'LoadImageListFromFile','LoadLidarFromFile']

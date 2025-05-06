@@ -6,8 +6,8 @@ from .mla_neck import MLANeck
 from .multilevel_neck import MultiLevelNeck
 from .PerspectiveTransformer import PerspectiveTransformer
 from .BEVHead import BEVHead
-from .DEN import DepthEstimationNetwork
+from .ADN import ADNet
 
 __all__ = [
-    'FPN', 'MultiLevelNeck', 'MLANeck', 'ICNeck', 'JPU','PerspectiveTransformer','BEVHead','DepthEstimationNetwork'
+    'FPN', 'MultiLevelNeck', 'MLANeck', 'ICNeck', 'JPU','PerspectiveTransformer','BEVHead','ADNet'
 ]

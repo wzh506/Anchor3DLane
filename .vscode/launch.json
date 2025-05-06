@@ -38,7 +38,7 @@
             "program": "tools/train.py",
             "args": [
                 "configs/openlane/lanedt.py",
-                "--auto-resume",
+                // "--auto-resume", #
             ],
             "env": {
                 "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"

@@ -52,8 +52,8 @@ class LaneDT(BaseModule):
 
     def __init__(self, 
                  backbone,
-                 PerspectiveTransformer,
-                 DEN,
+                 PerspectiveTransformer =None,
+                 ADN = None,
                  BEVHead = None,
                  neck = None,
                  pretrained = None,
@@ -123,8 +123,8 @@ class LaneDT(BaseModule):
         if BEVHead is not None:
             self.BEVHead = build_neck(BEVHead)
         
-        if DEN is not None:
-            self.DEN= build_neck(DEN)
+        if ADN is not None:
+            self.ADN= build_neck(ADN)
 
 
         # transformer layer
@@ -266,18 +266,21 @@ class LaneDT(BaseModule):
 
         return trans_feat
     
-    def feature_extractor_lanedt(self, input, mask, kwargs):
-        frontview_features = self.backbone(input) #这是一个feature map
+    def feature_extractor_lanedt(self, inputs, mask, kwargs):
+        frontview_features = self.backbone(inputs) #这是一个feature map
         M_inv = kwargs.get('M_inv', None) 
         if M_inv is not None:
-            projs= self.pers_tr(input, frontview_features,M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
+            projs= self.pers_tr(inputs, frontview_features,M_inv.squeeze(1)) #这个函数会把feature map变成一个投影矩阵
         else:
-            projs= self.pers_tr(input, frontview_features) #这个函数会把feature map变成一个投影矩阵
+            projs= self.pers_tr(inputs, frontview_features) #这个函数会把feature map变成一个投影矩阵
         trans_feat = self.BEVHead(projs)
-
-        depth= self.DEN(input, frontview_features,M_inv.squeeze(1))
-        
-        return trans_feat,depth
+        if self.ADN is not None:
+            depth= self.ADN(frontview_features) #用前面三个吧，四个顶不住
+            return {'trans_feat':trans_feat,
+                    'depth':depth}
+        else:
+            return {'trans_feat':trans_feat,
+                    'depth':None}
 
     @force_fp32()
     def get_proposals(self, project_matrixes, anchor_feat, iter_idx=0, proposals_prev=None):
@@ -329,10 +332,11 @@ class LaneDT(BaseModule):
     def encoder_decoder(self, img, mask, gt_project_matrix, **kwargs):
         # img: [B, 3, inp_h, inp_w]; mask: [B, 1, 36, 480]
         batch_size = img.shape[0] 
-        trans_feat,depth = self.feature_extractor_lanedt(img, mask,kwargs) #这个函数会返回一个特征图以及深度图
+        feat_dict = self.feature_extractor_lanedt(img, mask,kwargs) #这个函数会返回一个特征图以及深度图
+
         # trans_feat torch.Size([16, 64, 45, 60]) #现在输出的特征图是torch.Size([8, 64, 104, 64])
         # anchor
-        anchor_feat = self.anchor_projection(trans_feat)
+        anchor_feat = self.anchor_projection(feat_dict['trans_feat'])  # [B, C, h, w]
         project_matrixes = self.obtain_projection_matrix(gt_project_matrix, self.feat_size)
         project_matrixes = torch.stack(project_matrixes, dim=0)   # [B, 3, 4]
         
@@ -352,6 +356,10 @@ class LaneDT(BaseModule):
        
 
         output = {'reg_proposals':reg_proposals_all[-1], 'anchors':anchors_all[-1]} #检测结果用最后一次的
+
+        if feat_dict.get('depth', None) is not None: #得看有没有深度
+            output['depth'] = feat_dict['depth']
+
         if self.iter_reg > 0:
             output_aux = {'reg_proposals':reg_proposals_all[:-1], 'anchors':anchors_all[:-1]}
             return output, output_aux

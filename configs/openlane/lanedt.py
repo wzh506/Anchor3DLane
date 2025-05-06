@@ -17,18 +17,20 @@ train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', img_scale=(input_size[1], input_size[0]), keep_ratio=False),
     dict(type='Normalize', **img_norm_cfg),
+    # dict(type='LoadDepthFromFile'),
     dict(type='MaskGenerate', input_size=input_size),
     dict(type='LaneFormat'),
-    dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
+    dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv','depth']),
+
 ]
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', img_scale=(input_size[1], input_size[0]), keep_ratio=False),
     dict(type='Normalize', **img_norm_cfg),
-    dict(type='MaskGenerate', input_size=input_size),
+    dict(type='MaskGenerate', input_size=input_size),#没有Depth了
     dict(type='LaneFormat'),
-    dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
+    dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask','M_inv','depth']),
 ]
 
 dataset_config = dict(
@@ -83,19 +85,10 @@ model = dict(
         nhead=8,
         npoints=8
     ),
-    DEN=dict(
-        type='DepthEstimationNetwork',
-        no_cuda=False,
-        channels=64,# 适当降低
-        bev_h=208,  # 208
-        bev_w=128,  # 128
-        uv_h=360/4,  # 90
-        uv_w=480/4,  # 120 因为使用的特征图变小了
-        M_inv=None,  #现在不传入
-        num_att=3, 
-        num_proj=1,  #原本是4个，现在改为1个（resnet输出瓷都变化不太对劲）
-        nhead=8,
-        npoints=8
+    ADN=dict( #这是一个深度图，它能够输出90，120，单通道/多通道的feature图
+        type='ADNet',
+        channels=256, # 256
+        output_channels=1, # 1
     ),
     BEVHead=dict(
         type='BEVHead',

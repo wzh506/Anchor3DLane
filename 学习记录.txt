@@ -66,7 +66,7 @@ segment-10212406498497081993_5300_000_5320_000_with_camera_labels #这个在训�
 原生LaneDT：
 训练：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
-bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
+bash tools/dist_train.sh configs/openlane/lanedt.py 2 --auto-resume
 
 测试：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
@@ -81,3 +81,4 @@ open_openlane anchor3dlane模型效果
 open_anchordeform anchor3dlane中anchor3dlanedeform模型效果
 
 我在tools\test.py中添加了--test-on-train和--raw两个参数，非常好用
+使用load lidar pipeline 主要是为了能够保留深度图数据到服务器上运行
