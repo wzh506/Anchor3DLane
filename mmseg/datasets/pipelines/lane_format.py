@@ -71,6 +71,8 @@ class LaneFormat(object):
             results['mask'] = DC(to_tensor(results['mask'][None, ...].astype(np.float32)), stack=True)
         if 'M_inv' in results:
             results['M_inv'] = DC(to_tensor(results['M_inv'][None, ...].astype(np.float32)), stack=True) #这个就不动即可
+        if 'depth' in results:
+            results['depth'] = DC(to_tensor(results['depth'][None, ...].astype(np.float32)), stack=True)
         return results
 
     def __repr__(self):

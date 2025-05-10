@@ -65,10 +65,12 @@ class OpenlaneDataset(Dataset):
                  y_steps = [  5,  10,  15,  20,  30,  40,  50,  60,  80,  100],
                  is_resample=True, 
                  visibility=False,
-                 no_cls=False):
+                 no_cls=False,
+                 depth_dir='depth',):
         self.pipeline = Compose(pipeline)
         self.data_root = data_root
         self.img_dir = os.path.join(data_root, img_dir)
+        self.depth_dir = os.path.join(data_root, depth_dir)
         self.img_suffix = img_suffix
         self.test_mode = test_mode
         self.metric = 'default'
@@ -160,7 +162,9 @@ class OpenlaneDataset(Dataset):
             all_ids = [s.strip() for s in anno_obj.readlines()]
             for k, id in enumerate(all_ids):
                 anno = {'filename': os.path.join(self.img_dir, id + self.img_suffix),
-                        'anno_file': os.path.join(self.cache_dir, id + '.pkl')}
+                        'anno_file': os.path.join(self.cache_dir, id + '.pkl'),
+                        'depth_file': os.path.join(self.depth_dir, id + '.npy'),
+                        }
                 self.img_infos.append(anno)
         print("after load annotation")
         print("find {} samples in {}.".format(len(self.img_infos), self.data_list))
@@ -178,6 +182,7 @@ class OpenlaneDataset(Dataset):
         results = self.img_infos[idx].copy()
         results['img_info'] = {}
         results['img_info']['filename'] = results['filename']
+        results['img_info']['depth'] = results['depth_file']
         results['ori_filename'] = results['filename']
         results['ori_shape'] = (self.h_org, self.w_org)
         results['flip'] = False
@@ -193,6 +198,9 @@ class OpenlaneDataset(Dataset):
         aug_mat = np.eye(3) #没有使用数据增强，直接传入单位矩阵；直接把自己这个类送进去
         M_inv = unit_update_projection_extrinsic(self, results['gt_camera_extrinsic'], results['gt_camera_intrinsic'])
         M_inv = unit_update_projection_for_data_aug(self, aug_mat, M_inv)
+
+
+        
         results['M_inv'] = M_inv
         # 或者把这个放在pipeline里面去
         results = self.pipeline(results)

@@ -13,14 +13,16 @@ img_norm_cfg = dict(
 input_size = (360, 480)
 
 # 怪不得没有用deformable attention,这里有数据增强
+# 为什么depth没有进入datacontainer?
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', img_scale=(input_size[1], input_size[0]), keep_ratio=False),
     dict(type='Normalize', **img_norm_cfg),
-    # dict(type='LoadDepthFromFile'),
+    dict(type='LoadDepthFromFile',depth_shape=(90, 120)),#这个不需要Normaliize
     dict(type='MaskGenerate', input_size=input_size),
     dict(type='LaneFormat'),
     dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv','depth']),
+    # dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
 
 ]
 
@@ -30,7 +32,8 @@ test_pipeline = [
     dict(type='Normalize', **img_norm_cfg),
     dict(type='MaskGenerate', input_size=input_size),#没有Depth了
     dict(type='LaneFormat'),
-    dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask','M_inv','depth']),
+    # dict(type='Collect', keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask','M_inv','depth']),
+    dict(type='Collect', keys=['img', 'img_metas','gt_3dlanes', 'gt_project_matrix', 'mask','M_inv']),
 ]
 
 dataset_config = dict(

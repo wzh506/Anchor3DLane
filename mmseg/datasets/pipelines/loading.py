@@ -1,6 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import os.path as osp
-
+import os
 import mmcv
 import numpy as np
 import gc
@@ -130,63 +130,73 @@ class LoadDepthFromFile(object):
                  color_type='color',
                  file_client_args=dict(backend='disk'),
                  imdecode_backend='cv2',
-                 extra_keys = None):
+                 extra_keys = None,
+                 depth_shape = (90, 120)):
         self.to_float32 = to_float32
         self.color_type = color_type
         self.file_client_args = file_client_args.copy()
         self.file_client = None
         self.imdecode_backend = imdecode_backend
         self.extra_keys = extra_keys
+        self.depth_shape = depth_shape
 
     # @profile(precision=4)
     def __call__(self, results):
-        """Call functions to load image and get image meta information.
+        """Call functions to load depth and get depth meta information.
 
         Args:
             results (dict): Result dict from :obj:`mmseg.CustomDataset`.
 
         Returns:
-            dict: The dict contains loaded image and meta information.
+            dict: The dict contains loaded depth and meta information.
         """
 
         if self.file_client is None:
             self.file_client = mmcv.FileClient(**self.file_client_args)
 
-        if results.get('img_prefix') is not None:
-            filename = osp.join(results['img_prefix'],
-                                results['img_info']['filename'])
+        if results.get('depth_file') is not None:
+            filename = results['depth_file']
         else:
-            filename = results['img_info']['filename']
-        img_bytes = self.file_client.get(filename)
-        img = mmcv.imfrombytes(
-            img_bytes, flag=self.color_type, backend=self.imdecode_backend)
-        if self.to_float32:
-            img = img.astype(np.float32)
+            filename = results['img_info']['depth']
+        # 检查文件是否存在
+        if not os.path.exists(filename):
+            # 创建目录（如果不存在）
+            # 生成全零数组并保存
+            zero_array = np.zeros(self.depth_shape, dtype=np.float32)
+            results['depth'] = zero_array
+            #说明这个文件不存在depth数据
+        else:
+            results['depth'] = np.load(filename)
+        # img_bytes = self.file_client.get(filename)
+        # img = mmcv.imfrombytes(
+        #     img_bytes, flag=self.color_type, backend=self.imdecode_backend)
+        # if self.to_float32:
+        #     img = img.astype(np.float32)
 
-        results['filename'] = filename
-        results['ori_filename'] = results['img_info']['filename']
-        results['img'] = img
-        results['img_shape'] = img.shape
-        results['ori_shape'] = img.shape
-        # Set initial values for default meta_keys
-        results['pad_shape'] = img.shape
-        results['scale_factor'] = 1.0
-        num_channels = 1 if len(img.shape) < 3 else img.shape[2]
-        results['img_norm_cfg'] = dict(
-            mean=np.zeros(num_channels, dtype=np.float32),
-            std=np.ones(num_channels, dtype=np.float32),
-            to_rgb=False)
-        if self.extra_keys is not None:
-            imgs = []
-            for filename in results[self.extra_keys]:
-                img_bytes = self.file_client.get(filename)
-                img = mmcv.imfrombytes(
-                    img_bytes, flag=self.color_type, backend=self.imdecode_backend)
-                if self.to_float32:
-                    img = img.astype(np.float32)
-                imgs.append(img)
-            results['img'] = np.stack([results['img']]+imgs, axis=-1)
-        return results
+        # results['filename'] = filename
+        # results['ori_filename'] = results['img_info']['filename']
+        # results['img'] = img
+        # results['img_shape'] = img.shape
+        # results['ori_shape'] = img.shape
+        # # Set initial values for default meta_keys
+        # results['pad_shape'] = img.shape
+        # results['scale_factor'] = 1.0
+        # num_channels = 1 if len(img.shape) < 3 else img.shape[2]
+        # results['img_norm_cfg'] = dict(
+        #     mean=np.zeros(num_channels, dtype=np.float32),
+        #     std=np.ones(num_channels, dtype=np.float32),
+        #     to_rgb=False)
+        # if self.extra_keys is not None:
+        #     imgs = []
+        #     for filename in results[self.extra_keys]:
+        #         img_bytes = self.file_client.get(filename)
+        #         img = mmcv.imfrombytes(
+        #             img_bytes, flag=self.color_type, backend=self.imdecode_backend)
+        #         if self.to_float32:
+        #             img = img.astype(np.float32)
+        #         imgs.append(img)
+        #     results['img'] = np.stack([results['img']]+imgs, axis=-1)
+        return results #numpyarray的结构是[H,W,C,T]，所以这里的img是一个numpyarray，shape是[H,W,C,T]，而不是[H,W,T,C]，因为最后一维是通道数
 
     def __repr__(self): #这个函数用于打印类的基本信息
         repr_str = self.__class__.__name__
