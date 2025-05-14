@@ -10,3 +10,4 @@ pretrained2/*
 output_openlane_deform
 output_openlane
 output_lanedtv2/*
+*.jpg
