@@ -76,7 +76,8 @@ class LaneDT(BaseModule):
                  loss_aux = None,
                  init_cfg = None,
                  train_cfg = None,
-                 test_cfg = None
+                 test_cfg = None,
+                 loss_depth = None,
                  ):
         super(LaneDT, self).__init__(init_cfg)
         assert loss_aux is None or len(loss_aux) == iter_reg
@@ -160,6 +161,7 @@ class LaneDT(BaseModule):
 
         # build loss function
         self.lane_loss = build_loss(loss_lane)
+        self.depth_loss = build_loss(loss_depth) if loss_depth is not None else None
 
         # build iterative regression layers
         self.build_iterreg_layers()
@@ -275,7 +277,7 @@ class LaneDT(BaseModule):
             projs= self.pers_tr(inputs, frontview_features) #这个函数会把feature map变成一个投影矩阵
         trans_feat = self.BEVHead(projs)
         if self.ADN is not None:
-            depth= self.ADN(frontview_features) #用前面三个吧，四个顶不住
+            depth= self.ADN(frontview_features) #用前面三个吧，四个顶不住，最后接一个softmax
             return {'trans_feat':trans_feat,
                     'depth':depth}
         else:
@@ -452,9 +454,9 @@ class LaneDT(BaseModule):
         else:
             return self.forward_test(img, mask, img_metas, **kwargs)
     
-
+    #观看如何计算loss
     @force_fp32()
-    def loss(self, output, gt_3dlanes, output_aux=None):
+    def loss(self, output, gt_3dlanes, output_aux=None,**kwargs):
         losses = dict()
 
         # postprocess
@@ -463,8 +465,13 @@ class LaneDT(BaseModule):
             proposals_list.append((proposal, anchor))
         anchor_losses = self.lane_loss(proposals_list, gt_3dlanes)
         losses.update(anchor_losses['losses'])
+        # 在这里计算深度的loss
+        if kwargs.get('depth', None) is not None:
+            depth_loss = self.depth_loss(output['depth'],kwargs['depth'])
+            losses.update(depth_loss['losses'])
+            
         
-        # auxiliary loss
+        # auxiliary loss(由于iter_reg = 0，所以这里不会执行)
         for iter in range(self.iter_reg):
             proposals_list_aux = []
             for proposal, anchor in zip(output_aux['reg_proposals'][iter], output_aux['anchors'][iter]):
@@ -498,7 +505,7 @@ class LaneDT(BaseModule):
         """
         gt_project_matrix = gt_project_matrix.squeeze(1) # 这个矩阵是g2im
         output, output_aux = self.encoder_decoder(img, mask, gt_project_matrix, **kwargs)
-        losses, other_vars = self.loss(output, gt_3dlanes, output_aux)
+        losses, other_vars = self.loss(output, gt_3dlanes, output_aux,**kwargs)#这里计算loss
         return losses, other_vars
 
     def train_step(self, data_batch, optimizer=None, **kwargs):

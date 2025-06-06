@@ -12,3 +12,4 @@ output_openlane
 output_lanedtv2/
 results/
 *.log
+*.jpg

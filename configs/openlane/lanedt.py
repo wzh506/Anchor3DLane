@@ -42,7 +42,7 @@ dataset_config = dict(
 )
 
 data = dict(
-    samples_per_gpu=16,
+    samples_per_gpu=2, #16个batch
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
@@ -140,6 +140,11 @@ model = dict(
         ),
         anchor_len = anchor_len,
         anchor_steps=anchor_y_steps,
+    ),
+    loss_depth = dict(
+        type = 'DepthLoss',
+        loss_weights = dict(l1_loss = 0.7,
+                            ssim_loss = 0.3),
     ),
     train_cfg = dict(
         nms_thres = 0,

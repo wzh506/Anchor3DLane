@@ -54,6 +54,7 @@ class ADNet(nn.Module):
         self.rb5 = AAConv_Block(channels//4)
         self.tail_conv = nn.Conv2d(channels//4, output_channels, 3, 1, 1)
         self.hw_range = hw_range
+        self.sigmoid = nn.Sigmoid()
  
     def forward(self, inputs, epoch=0):
         # x1 = torch.cat([pan, lms], dim=1)
@@ -83,6 +84,7 @@ class ADNet(nn.Module):
         del x1
         x5 = self.rb5(x5, epoch, self.hw_range)
         x5 = self.tail_conv(x5)
+        x5 = self.sigmoid(x5)
         return x5
 
 # Downsample and Upsample blocks for Unet-strucutre
