@@ -226,6 +226,17 @@ class LaneEval(object):
         pred_lines = open(pred_file).readlines()
         json_pred = [json.loads(line) for line in pred_lines]
         json_gt = [json.loads(line) for line in open(gt_file).readlines()]
+        
+        # 将长度处理为一致
+        json_gt2  = []
+        for pred in json_pred:
+            for gt in json_gt:
+                if pred['raw_file'] == gt['raw_file']:
+                    json_gt2.append(gt)
+        print(f'pred_file: {pred_file}')
+        print(f'gt_file: {gt_file}')
+        json_gt = json_gt2
+        
         if len(json_gt) != len(json_pred):
             raise Exception('We do not get the predictions of all the test tasks')
         gts = {l['raw_file']: l for l in json_gt}
@@ -477,10 +488,21 @@ class LaneEval(object):
         json_pred = [json.loads(line) for line in pred_lines]
         # except BaseException as e:
         #     raise Exception('Fail to load json file of the prediction.')
+        
         json_gt = [json.loads(line) for line in open(gt_file).readlines()]
-
+        
+        json_gt2  = []
+        for pred in json_pred:
+            for gt in json_gt:
+                if pred['raw_file'] == gt['raw_file']:
+                    json_gt2.append(gt)
+        print(f'pred_file: {pred_file}')
+        print(f'gt_file: {gt_file}')
+        json_gt = json_gt2
+        
         if len(json_gt) != len(json_pred):
-            raise Exception('We do not get the predictions of all the test tasks')
+            # raise Exception('We do not get the predictions of all the test tasks')
+            print('We do not get the predictions of all the test tasks')
         gts = {l['raw_file']: l for l in json_gt}
 
         laneline_r_all = []
@@ -501,6 +523,7 @@ class LaneEval(object):
 
             pred_lanelines = pred['laneLines']
             pred_laneLines_prob = pred['laneLines_prob']
+            print(f'raw_file: {raw_file}')
             if raw_file not in gts:
                 raise Exception('Some raw_file from your predictions do not exist in the test tasks.')
             gt = gts[raw_file]

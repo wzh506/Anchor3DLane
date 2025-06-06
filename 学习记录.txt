@@ -9,7 +9,9 @@ bash tools/dist_train.sh configs/apollosim/anchor3dlane_mf_iter.py 2 --auto-resu
 openlane训练方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 bash tools/dist_train.sh configs/openlane/anchor3dlane_mf_iter.py 2 --auto-resume
-python tools/train.py configs/openlane/anchor3dlane_iter.py #训练没有问题,测试有一堆bug
+bash tools/dist_train.sh configs/openlane/anchor3dlane_iter.py 8 --auto-resume
+nohup bash tools/dist_train.sh configs/openlane/anchor3dlane_iter.py 8 --auto-resume  >> anchor3dlane_openlane.log 2>&1 &
+python tools/train.py configs/openlane/anchor3dlane_iter.py     #训练没有问题,测试有一堆bug
 python tools/train.py configs/openlane/anchor3dlane_mf_iter.py #训练有问题，显示图片无法找到
 
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
@@ -21,6 +23,9 @@ bash tools/dist_train.sh configs/openlane/anchor3dlane_iter_r50.py 8 --auto-resu
 apollosim测试方法：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/test.py configs/apollosim/anchor3dlane_iter.py /home/zhaohui1.wang/github/Anchor3DLane/output_apollosim/apollosim/anchor3dlane_2stage.pth/latest.pth --show-dir /home/zhaohui1.wang/github/Anchor3DLane/output --show
+bash tools/dist_test.sh configs/apollosim/anchor3dlane.py pretrained/apollo_anchor3dlane.pth 2 --show-dir results/apollo_raw --show --raw
+bash tools/dist_test.sh configs/apollosim/anchor3dlane.py pretrained/apollo_anchor3dlane.pth 2 --show-dir results/anchor3dlane/apollo_standard --show
+
 openlane测试方法： mf_iter可以使用没有问题
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 python tools/test.py configs/openlane/anchor3dlane_mf_iter.py output/openlane/anchor3dlane_temporal_2stage/latest.pth --show-dir output_openlane --show #报错,超显卡了
@@ -66,7 +71,11 @@ segment-10212406498497081993_5300_000_5320_000_with_camera_labels #这个在训�
 原生LaneDT：
 训练：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
-bash tools/dist_train.sh configs/openlane/lanedt.py 2 --auto-resume
+bash tools/dist_train.sh configs/openlane/lanedt.py 8 --auto-resume
+bash tools/dist_train.sh configs/apollosim/lanedt.py 8 --auto-resume
+nohup bash tools/dist_train.sh configs/apollosim/lanedt_test2.py 8 --auto-resume >> lanedt_apollo_illus_chg_test2.log 2>&1 &
+nohup bash tools/dist_train.sh configs/apollosim/lanedt_test2.py 8 --auto-resume >> lanedt_apollo_standard2.log 2>&1 &
+nohup bash tools/dist_train.sh configs/apollosim/lanedt.py 8 --auto-resume >> lanedt_apollo_rare_subset2.log 2>&1 &
 
 测试：
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
@@ -82,3 +91,42 @@ open_anchordeform anchor3dlane中anchor3dlanedeform模型效果
 
 我在tools\test.py中添加了--test-on-train和--raw两个参数，非常好用
 使用load lidar pipeline 主要是为了能够保留深度图数据到服务器上运行
+
+所有模型infer的结果都保留在results文件夹下面
+
+apollosim三个测试：
+bash tools/dist_test.sh configs/apollosim/lanedt_test2.py output/apollosim/lanedt2/standard/latest.pth 2 --show-dir results/lanedt/apollo/standard_test2 --show
+bash tools/dist_test.sh configs/apollosim/lanedt_test2.py output/apollosim/lanedt2/illus_chg/latest.pth 2 --show-dir results/lanedt/apollo/illus_chg_test2 --show
+bash tools/dist_test.sh configs/apollosim/lanedt.py output/apollosim/lanedt/rare_subset/latest.pth 2 --show-dir results/lanedt/apollo/rare_subset --show
+
+apollosim三个训练：
+nohup bash tools/dist_train.sh configs/apollosim/lanedt.py 8 --auto-resume >> lanedt_apollo_standard5.log 2>&1 & #单独重新训练
+nohup bash tools/dist_train.sh configs/apollosim/lanedt.py 8 --auto-resume >> lanedt_apollo_illus_chg3.log 2>&1 & #单独重新训练
+nohup bash tools/dist_train.sh configs/apollosim/lanedt.py 2 --auto-resume >> lanedt_apollo_rare_subset4.log 2>&1 &
+#或者用test2来做test
+nohup bash tools/dist_train.sh configs/apollosim/lanedt_test2.py 2 --auto-resume >> lanedt_apollo_standard_test9.log 2>&1 &
+nohup bash tools/dist_train.sh configs/apollosim/lanedt_test2.py 2 --auto-resume >> lanedt_apollo_illus_chg_test5.log 2>&1 &
+nohup bash tools/dist_train.sh configs/apollosim/lanedt_test2.py 8 --auto-resume >> lanedt_apollo_rare_subset_test2.log 2>&1 &
+
+apollosim纯GT图
+bash tools/dist_test.sh configs/apollosim/anchor3dlane.py pretrained/apollo_anchor3dlane.pth 2 --show-dir results/apollo_raw --show --raw
+
+openlane结果训练：
+export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
+nohup bash tools/dist_train.sh configs/openlane/lanedt_iter.py 2 --auto-resume  >> lanedt_openlane_iter8.log 2>&1 & 
+
+openlane结果测试：gt绘制有问题
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_iter.pth 2 --show-dir results/openlane_raw --show --raw
+bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/latest.pth 8 --show-dir results/lanedt/openlane  --show
+all:
+bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/latest.pth 8 --show-dir results/lanedt/openlane  --show
+分场景：
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/all   >> lanedt_openlane_all.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/curve   >> lanedt_openlane_curve.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/extreme_weather   >> lanedt_openlane_extreme_weather.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/intersection   >> lanedt_openlane_intersection.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/night  >> lanedt_openlane_night.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/updown   >> lanedt_openlane_updown.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/merge_split_case   >> lanedt_openlane_merge_split_case.log 2>&1 & 
+
+#注意:gt的修改可以通过修改/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/data_lists/wzh.txt来进行获得

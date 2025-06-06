@@ -76,10 +76,11 @@ class OpenlaneDataset(Dataset):
         self.metric = 'default'
         self.is_resample = is_resample
         self.dataset_config = dataset_config
-        # self.data_list = os.path.join(data_root, 'data_lists', data_list)
-        self.data_list = os.path.join(data_root, 'data_lists', 'validation.txt')
+        self.data_list = os.path.join(data_root, 'data_lists', data_list)
+        # self.data_list = os.path.join(data_root, 'data_lists', 'validation.txt')
         self.cache_dir = os.path.join(data_root, 'cache_dense')
         self.eval_file = os.path.join(data_root, 'data_splits', 'validation.json')  
+        # self.eval_file = os.path.join(data_root, 'data_splits', 'testing.json')  # testing.json is used for evaluation in the paper
         # self.eval_file = os.path.join(data_root, 'data_splits', 'training.json')
 
         self.visibility = visibility
@@ -161,10 +162,18 @@ class OpenlaneDataset(Dataset):
         with open(self.data_list, 'r') as anno_obj:
             all_ids = [s.strip() for s in anno_obj.readlines()]
             for k, id in enumerate(all_ids):
+                # if not id.endswith('.jpg'):
                 anno = {'filename': os.path.join(self.img_dir, id + self.img_suffix),
                         'anno_file': os.path.join(self.cache_dir, id + '.pkl'),
                         'depth_file': os.path.join(self.depth_dir, id + '.npy'),
                         }
+                # else:
+                #     #可能末尾是.jpg，这里干
+                #     id_without_extension = id.rsplit('.', 1)[0]
+                #     anno = {'filename': os.path.join(self.img_dir, id_without_extension + self.img_suffix),
+                #             'anno_file': os.path.join(self.cache_dir, id_without_extension + '.pkl'),
+                #             'depth_file': os.path.join(self.depth_dir, id_without_extension + '.npy'),
+                #             }
                 self.img_infos.append(anno)
         print("after load annotation")
         print("find {} samples in {}.".format(len(self.img_infos), self.data_list))

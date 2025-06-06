@@ -241,13 +241,14 @@ def main():
             cfg.device,
             device_ids=[int(os.environ['LOCAL_RANK'])],
             broadcast_buffers=False)
-        
+        # print('great!')
         test_multigpu(model,
                       data_loader,
                       args.eval,
                       args.show,
                       args.show_dir,
-                      args.raw)
+                      raw=args.raw
+                    )
 
 
 if __name__ == '__main__':

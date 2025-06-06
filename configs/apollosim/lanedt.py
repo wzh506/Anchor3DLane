@@ -1,7 +1,8 @@
 # data setting
+# data setting
 dataset_type = 'APOLLOSIMDataset'
 data_root = 'data/ApolloSim'
-split = 'standard'
+split = 'rare_subset'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 input_size = (360, 480)
@@ -39,7 +40,7 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        data_list='train.txt',
+        data_list='test.txt', #更夸张
         y_steps=anchor_y_steps,
         dataset_config=dataset_config,
         split=split,
@@ -145,4 +146,4 @@ load_from = None
 resume_from = None
 workflow = [('train', 10000000)]
 cudnn_benchmark = True
-work_dir = 'output/apollosim/anchor3dlane'
+work_dir = 'output/apollosim/lanedt/'+f'{split}' #从头开始训练

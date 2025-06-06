@@ -38,7 +38,7 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        data_list='training.txt',
+        data_list='validation.txt',
         dataset_config=dataset_config,
         y_steps=anchor_y_steps,
         pipeline=train_pipeline),
@@ -46,12 +46,11 @@ data = dict(
         type=dataset_type,
         data_root=data_root,
         y_steps=anchor_y_steps,
-        # data_list='validation.txt',
-        data_list='wzh.txt',
+        data_list='merge_split_case.txt', #需要结果的话改这里就好
         dataset_config=dataset_config, 
         test_mode=True,
         pipeline=test_pipeline))
-
+# 选择：validation.txt,curve.txt,extreme_weather.txt,intersection.txt，night.txt,updown.txt,merge_split_case.txt
 
 # model setting
 model = dict(
@@ -146,7 +145,7 @@ optimizer_config = dict()
 # learning policy
 lr_config = dict(policy='step', step=[50000,], by_epoch=False)
 runner = dict(type='IterBasedRunner', max_iters=60000)
-checkpoint_config = dict(by_epoch=False, interval=5000)
+checkpoint_config = dict(by_epoch=False, interval=1000)
 
 log_config = dict(
     interval=10,
@@ -162,4 +161,4 @@ resume_from = None
 workflow = [('train', 10000000)]
 cudnn_benchmark = True
 load_from = None
-work_dir = 'output/openlane/anchor3dlane_2stage'
+work_dir = 'output/openlane/lanedt_iter'

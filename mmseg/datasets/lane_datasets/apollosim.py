@@ -69,6 +69,7 @@ class APOLLOSIMDataset(Dataset):
         self.is_resample = is_resample
         self.dataset_config = dataset_config
         self.data_list = os.path.join(data_root, 'data_lists', split, data_list)
+        # self.data_list = os.path.join(data_root, 'data_lists', split, 'test.txt')
         self.eval_file = os.path.join(data_root, 'data_splits', split, 'test.json') 
         self.cache_dir = os.path.join(data_root, 'cache_dense')
         

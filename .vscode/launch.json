@@ -17,6 +17,25 @@
             },
             "console": "integratedTerminal"
         },
+//bash tools/dist_test.sh configs/apollosim/lanedt_test2.py output/apollosim/lanedt2/standard/latest.pth 2 --show-dir results/lanedt/apollo/standard_test2 --show
+            {
+        "name": "LaneDT:Test_ApolloSim_standard",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "tools/test.py",
+        "args": [
+            "configs/apollosim/lanedt_test2.py",
+            "output/apollosim/lanedt2/standard/latest.pth",
+            // "--launcher", "pytorch",
+            // "--local_rank", "0",
+            "--show-dir", "results/lanedt/apollo/standard_test2",
+            "--show"
+        ],
+        "env": {
+            "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+        },
+        "console": "integratedTerminal"
+    },
         {
             "name": "Anchor3DLaneMF:Single_train_OpenLane",
             "type": "debugpy",
@@ -31,6 +50,26 @@
             },
             "console": "integratedTerminal"
         },
+            {
+        "name": "Anchor3DLaneMF:Test_OpenLane_raw",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "tools/test.py",
+        "args": [
+            "configs/openlane/anchor3dlane_iter.py",
+            "pretrained/openlane_anchor3dlane_iter.pth",
+            // "--launcher", "pytorch",
+            // "--local_rank", "0",
+            "--show-dir", "results/openlane_raw",
+            "--show",
+            "--raw"
+        ],
+        "env": {
+            "PYTHONPATH": "${env:PYTHONPATH}:./gen-efficientnet-pytorch"
+        },
+        "console": "integratedTerminal"
+    },
+
         {
             "name": "LaneDT:Single_train_OpenLane",
             "type": "debugpy",

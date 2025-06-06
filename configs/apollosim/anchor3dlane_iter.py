@@ -161,7 +161,7 @@ lr_config = dict(policy='step', step=[45000,], by_epoch=False)
 
 # runtime settings
 runner = dict(type='IterBasedRunner', max_iters=50000)
-checkpoint_config = dict(by_epoch=False, interval=2500)
+checkpoint_config = dict(by_epoch=False, interval=1000) #interval是保存的iteration数,修改为1000
 
 log_config = dict(
     interval=10,

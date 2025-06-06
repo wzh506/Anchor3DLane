@@ -31,6 +31,7 @@ def test_apollosim(model,
                   eval=True,
                   show=False,
                   out_dir=None,
+                  raw=False,
                   **kwargs):
     """Test with single GPU by progressive mode.
 
@@ -48,6 +49,21 @@ def test_apollosim(model,
     results = []
     dataset = data_loader.dataset
     loader_indices = data_loader.batch_sampler
+
+    if raw:#是否绘制原始图像，这个放在最前面
+        save_dir = osp.join(out_dir, 'raw')
+        mmcv.mkdir_or_exist(save_dir)
+        print("original gt results at", save_dir)
+        visualizer = LaneVis(dataset)
+        #可以替换为eval_file
+        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, 
+                             save_dir = save_dir, prob_th=model.module.test_cfg.test_conf)
+        print('finish raw gt results!Return!')
+        return
+
+
+
+
 
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
     print("testing model...")
@@ -93,6 +109,7 @@ def test_apollosim_multigpu(model,
                             eval=True,
                             show=False,
                             out_dir=None,
+                            raw=False,
                             **kwargs):
     """Test with single GPU by progressive mode.
 
@@ -114,6 +131,19 @@ def test_apollosim_multigpu(model,
     dataset = data_loader.dataset
     loader_indices = data_loader.batch_sampler
 
+
+    print(f"args.raw: {raw}")  
+    if raw:#是否绘制原始图像，这个放在最前面
+        save_dir = osp.join(out_dir, 'raw')
+        mmcv.mkdir_or_exist(save_dir)
+        print("original gt results at", save_dir)
+        visualizer = LaneVis(dataset)
+        #可以替换为eval_file
+        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, 
+                             save_dir = save_dir, prob_th=model.module.test_cfg.test_conf)
+        print('finish raw gt results!Return!')
+        return
+        
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
     print("testing model...")
     if rank == 0:

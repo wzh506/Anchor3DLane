@@ -59,7 +59,7 @@ def test_openlane(model,
         visualizer = LaneVis(dataset)
         dataset.train_file = "/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/data_splits/training.json"
         #可以替换为eval_file
-        visualizer.visualize(None, gt_file = dataset.train_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
+        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
                             save_dir = save_dir, prob_th=prob_th)
         
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
@@ -101,7 +101,8 @@ def test_openlane(model,
         visualizer = LaneVis(dataset)
         visualizer.visualize(pred_file, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
                             save_dir = save_dir, prob_th=prob_th)
-        
+
+    
     
 def test_openlane_multigpu(model,
                            data_loader,
@@ -109,6 +110,7 @@ def test_openlane_multigpu(model,
                            show=False,
                            out_dir=None,
                            eval_range=100,
+                           raw=False,
                            **kwargs):
     """Test with single GPU by progressive mode.
 
@@ -128,6 +130,17 @@ def test_openlane_multigpu(model,
     dataset = data_loader.dataset
     loader_indices = data_loader.batch_sampler
     prob_th=model.module.test_cfg.test_conf
+    if raw:#是否绘制原始图像，这个放在最前面
+        save_dir = osp.join(out_dir, 'vis/raw')
+        mmcv.mkdir_or_exist(save_dir)
+        print("original gt results at", save_dir)
+        visualizer = LaneVis(dataset)
+        # dataset.train_file = "/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/data_splits/training.json"
+        #可以替换为eval_file
+        visualizer.visualize(None, gt_file = dataset.eval_file, img_dir = dataset.data_root, test_file=dataset.test_list, 
+                            save_dir = save_dir, prob_th=prob_th)
+
+
 
     pred_file = osp.join(out_dir, 'lane3d_prediction.json')
     print("testing model...")
