@@ -816,8 +816,8 @@ class LaneVis(object):
                 #     continue
                 # print(f'find target in json_gt[{i}]!')
                 raw_file = gt['file_path']
-                # self.vis_raw(gt, save_dir, img_dir, raw_file, prob_th,depth) #有问题
-                self.vis_raw2(gt, save_dir, img_dir, raw_file, prob_th)
+                self.vis_raw(gt, save_dir, img_dir, raw_file, prob_th,depth) #有问题
+                # self.vis_raw2(gt, save_dir, img_dir, raw_file, prob_th)
                     
                     
                     

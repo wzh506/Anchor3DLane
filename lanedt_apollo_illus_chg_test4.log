@@ -1,0 +1,1214 @@
+nohup: ignoring input
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Traceback (most recent call last):
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+    main()
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = self._invoke_run(role)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+nohup: ignoring input
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+2025-05-23 23:54:48,119 - mmseg - INFO - Multi-processing start method is `None`
+2025-05-23 23:54:48,120 - mmseg - INFO - OpenCV num_threads is `160
+2025-05-23 23:54:48,192 - mmseg - INFO - Environment info:
+------------------------------------------------------------
+sys.platform: linux
+Python: 3.9.21 (main, Dec 11 2024, 16:24:11) [GCC 11.2.0]
+CUDA available: True
+GPU 0,1,2,3,4,5,6,7: NVIDIA H20
+CUDA_HOME: /usr/local/cuda
+NVCC: Cuda compilation tools, release 12.4, V12.4.131
+GCC: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+PyTorch: 2.4.0+cu124
+PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 12.4
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 90.1
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.4, CUDNN_VERSION=9.1.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+TorchVision: 0.19.0+cu124
+OpenCV: 4.11.0
+MMCV: 1.7.2
+MMCV Compiler: GCC 9.4
+MMCV CUDA Compiler: 12.4
+MMSegmentation: 0.26.0+5cdf06e
+------------------------------------------------------------
+
+2025-05-23 23:54:48,192 - mmseg - INFO - Distributed training: True
+2025-05-23 23:54:48,661 - mmseg - INFO - Config:
+dataset_type = 'APOLLOSIMDataset'
+data_root = 'data/ApolloSim'
+split = 'illus_chg'
+img_norm_cfg = dict(
+    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+input_size = (360, 480)
+feat_y_steps = [5, 10, 15, 20, 30, 40, 50, 60, 80, 100]
+anchor_y_steps = [5, 10, 15, 20, 30, 40, 50, 60, 80, 100]
+anchor_len = 10
+train_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+    dict(
+        type='Normalize',
+        mean=[123.675, 116.28, 103.53],
+        std=[58.395, 57.12, 57.375],
+        to_rgb=True),
+    dict(type='MaskGenerate', input_size=(360, 480)),
+    dict(type='LaneFormat'),
+    dict(
+        type='Collect',
+        keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask'])
+]
+test_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+    dict(
+        type='Normalize',
+        mean=[123.675, 116.28, 103.53],
+        std=[58.395, 57.12, 57.375],
+        to_rgb=True),
+    dict(type='MaskGenerate', input_size=(360, 480)),
+    dict(type='LaneFormat'),
+    dict(
+        type='Collect',
+        keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask'])
+]
+dataset_config = dict(max_lanes=7, input_size=(360, 480))
+data = dict(
+    samples_per_gpu=2,
+    workers_per_gpu=0,
+    train=dict(
+        type='APOLLOSIMDataset',
+        data_root='data/ApolloSim',
+        data_list='test2.txt',
+        y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+        dataset_config=dict(max_lanes=7, input_size=(360, 480)),
+        split='illus_chg',
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+            dict(
+                type='Normalize',
+                mean=[123.675, 116.28, 103.53],
+                std=[58.395, 57.12, 57.375],
+                to_rgb=True),
+            dict(type='MaskGenerate', input_size=(360, 480)),
+            dict(type='LaneFormat'),
+            dict(
+                type='Collect',
+                keys=[
+                    'img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix',
+                    'mask'
+                ])
+        ]),
+    test=dict(
+        type='APOLLOSIMDataset',
+        data_root='data/ApolloSim',
+        data_list='test.txt',
+        dataset_config=dict(max_lanes=7, input_size=(360, 480)),
+        y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+        split='illus_chg',
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+            dict(
+                type='Normalize',
+                mean=[123.675, 116.28, 103.53],
+                std=[58.395, 57.12, 57.375],
+                to_rgb=True),
+            dict(type='MaskGenerate', input_size=(360, 480)),
+            dict(type='LaneFormat'),
+            dict(
+                type='Collect',
+                keys=[
+                    'img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix',
+                    'mask'
+                ])
+        ],
+        test_mode=True))
+model = dict(
+    type='Anchor3DLane',
+    backbone=dict(
+        type='ResNetV1c',
+        depth=18,
+        num_stages=4,
+        out_indices=(0, 1, 2, 3),
+        dilations=(1, 1, 2, 4),
+        strides=(1, 2, 1, 1),
+        style='pytorch'),
+    pretrained='pretrained/resnet18_v1c-b5776b93.pth',
+    y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+    feat_y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+    anchor_cfg=dict(
+        pitches=[5, 2, 1, 0, -1, -2, -5],
+        yaws=[
+            30, 20, 15, 10, 7, 5, 3, 1, 0, -1, -3, -5, -7, -10, -15, -20, -30
+        ],
+        num_x=45,
+        distances=[3]),
+    db_cfg=dict(
+        org_h=1080,
+        org_w=1920,
+        resize_h=360,
+        resize_w=480,
+        ipm_h=208,
+        ipm_w=128,
+        pitch=3,
+        cam_height=1.55,
+        crop_y=0,
+        K=[[2015.0, 0.0, 960.0], [0.0, 2015.0, 540.0], [0.0, 0.0, 1.0]],
+        top_view_region=[[-10, 103], [10, 103], [-10, 3], [10, 3]],
+        max_2dpoints=10),
+    attn_dim=64,
+    iter_reg=0,
+    drop_out=0.0,
+    num_heads=2,
+    dim_feedforward=128,
+    pre_norm=False,
+    feat_size=(45, 60),
+    num_category=2,
+    loss_lane=dict(
+        type='LaneLoss',
+        loss_weights=dict(
+            cls_loss=1, reg_losses_x=1, reg_losses_z=1, reg_losses_vis=1),
+        assign_cfg=dict(
+            type='TopkAssigner',
+            pos_k=3,
+            neg_k=450,
+            anchor_len=10,
+            metric='Euclidean'),
+        anchor_len=10,
+        anchor_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100]),
+    train_cfg=dict(nms_thres=0, conf_threshold=0),
+    test_cfg=dict(
+        nms_thres=2,
+        conf_threshold=0.5,
+        test_conf=0.7,
+        refine_vis=True,
+        vis_thresh=0.5))
+data_shuffle = True
+optimizer = dict(type='Adam', lr=0.0001)
+optimizer_config = dict()
+lr_config = dict(policy='step', step=[45000], by_epoch=False)
+runner = dict(type='IterBasedRunner', max_iters=50000)
+checkpoint_config = dict(by_epoch=False, interval=2500)
+log_config = dict(
+    interval=10,
+    hooks=[
+        dict(type='TextLoggerHook', by_epoch=False),
+        dict(type='TensorboardLoggerHook')
+    ])
+dist_params = dict(backend='nccl')
+log_level = 'INFO'
+load_from = None
+resume_from = None
+workflow = [('train', 10000000)]
+cudnn_benchmark = True
+work_dir = 'output/apollosim/lanedt2/illus_chg'
+gpu_ids = range(0, 8)
+auto_resume = True
+
+2025-05-23 23:55:09,971 - mmseg - INFO - Set random seed to 1255475244, deterministic: False
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+anchor: 4431
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+anchor: 4431
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+2025-05-23 23:55:10,145 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,146 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,146 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,146 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,146 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,146 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,146 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,146 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,146 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,146 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,147 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,147 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,147 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,147 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 23:55:10,147 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,148 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,148 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,148 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 23:55:10,153 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,153 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,154 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+Now loading annotations...
+Now loading annotations...
+Now loading annotations...
+Now loading annotations...
+Now loading annotations...
+Now loading annotations...
+Now loading annotations...
+0it [00:00, ?it/s]0it [00:00, ?it/s]16it [00:00, 126144.48it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+16it [00:00, 115505.79it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 101989.16it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 124275.67it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 109834.47it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 114912.44it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 111662.00it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+2025-05-23 23:55:10,236 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 23:55:10,236 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 23:55:10,237 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 23:55:10,276 - mmcv - WARNING - The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: fc.weight, fc.bias
+
+2025-05-23 23:55:10,284 - mmcv - INFO - 
+backbone.stem.0.weight - torch.Size([32, 3, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.1.weight - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.1.bias - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.3.weight - torch.Size([32, 32, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.4.weight - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.4.bias - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.6.weight - torch.Size([64, 32, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.7.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.stem.7.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.conv1.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.bn1.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.bn1.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.bn2.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.0.bn2.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.conv1.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.bn1.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.bn1.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.bn2.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer1.1.bn2.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.conv1.weight - torch.Size([128, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.bn1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.bn1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.bn2.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.bn2.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.downsample.0.weight - torch.Size([128, 64, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.downsample.1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.0.downsample.1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.conv1.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.bn1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.bn1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.bn2.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer2.1.bn2.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.conv1.weight - torch.Size([256, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.bn1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.bn1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.bn2.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.bn2.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.downsample.0.weight - torch.Size([256, 128, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.downsample.1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.0.downsample.1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.conv1.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.bn1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.bn1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.bn2.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer3.1.bn2.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer4.0.conv1.weight - torch.Size([512, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,285 - mmcv - INFO - 
+backbone.layer4.0.bn1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.bn1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.bn2.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.bn2.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.downsample.1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.0.downsample.1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.conv1.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.bn1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.bn1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.bn2.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+backbone.layer4.1.bn2.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+input_proj.weight - torch.Size([64, 512, 1, 1]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+input_proj.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.self_attn.in_proj_weight - torch.Size([192, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.self_attn.in_proj_bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.self_attn.out_proj.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.self_attn.out_proj.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.linear1.weight - torch.Size([128, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.linear1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.linear2.weight - torch.Size([64, 128]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.linear2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.norm1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.norm1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.norm2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+transformer_layer.norm2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+anchor_projection.weight - torch.Size([64, 64, 1, 1]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+anchor_projection.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.0.weight - torch.Size([640, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.0.bias - torch.Size([640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.2.weight - torch.Size([640, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.2.bias - torch.Size([640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.4.weight - torch.Size([2, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+cls_layer.0.layer.4.bias - torch.Size([2]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_x_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_z_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,286 - mmcv - INFO - 
+reg_vis_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 23:55:10,287 - mmseg - INFO - Anchor3DLane(
+  (backbone): ResNetV1c(
+    (stem): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU(inplace=True)
+      (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (8): ReLU(inplace=True)
+    )
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer2): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer3): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer4): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  init_cfg={'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+  (position_embedding): PositionEmbeddingSine()
+  (input_proj): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1))
+  (transformer_layer): TransformerEncoderLayer(
+    (self_attn): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+    )
+    (linear1): Linear(in_features=64, out_features=128, bias=True)
+    (dropout): Dropout(p=0.0, inplace=False)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+    (norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (dropout1): Dropout(p=0.0, inplace=False)
+    (dropout2): Dropout(p=0.0, inplace=False)
+  )
+  (anchor_projection): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+  (cls_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=640, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=640, out_features=640, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=640, out_features=2, bias=True)
+      )
+    )
+  )
+  (reg_x_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (reg_z_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (reg_vis_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (lane_loss): LaneLoss()
+  (aux_loss): ModuleList()
+)
+Now loading annotations...
+0it [00:00, ?it/s]16it [00:00, 111107.39it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/illus_chg/test2.txt.
+2025-05-23 23:55:10,336 - mmseg - INFO - optimized parameters:
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.0.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.3.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.4.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.4.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.6.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.7.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.stem.7.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.conv1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.bn1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.bn1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.conv2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.bn2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.0.bn2.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.conv1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.bn1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.bn1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.conv2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.bn2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer1.1.bn2.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.conv1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.bn1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.bn1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.conv2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.bn2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.bn2.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.downsample.0.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.downsample.1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.0.downsample.1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.conv1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.bn1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.bn1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.conv2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.bn2.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer2.1.bn2.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer3.0.conv1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer3.0.bn1.weight
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer3.0.bn1.bias
+2025-05-23 23:55:10,337 - mmseg - INFO - backbone.layer3.0.conv2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.0.bn2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.0.bn2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.0.downsample.0.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.0.downsample.1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.0.downsample.1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.conv1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.bn1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.bn1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.conv2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.bn2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer3.1.bn2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.conv1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.bn1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.bn1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.conv2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.bn2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.bn2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.downsample.0.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.downsample.1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.0.downsample.1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.conv1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.bn1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.bn1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.conv2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.bn2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - backbone.layer4.1.bn2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - input_proj.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - input_proj.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.self_attn.in_proj_weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.self_attn.in_proj_bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.self_attn.out_proj.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.self_attn.out_proj.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.linear1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.linear1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.linear2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.linear2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.norm1.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.norm1.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.norm2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - transformer_layer.norm2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - anchor_projection.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - anchor_projection.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.0.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.0.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.2.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.2.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.4.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - cls_layer.0.layer.4.bias
+2025-05-23 23:55:10,338 - mmseg - INFO - reg_x_layer.0.layer.0.weight
+2025-05-23 23:55:10,338 - mmseg - INFO - reg_x_layer.0.layer.0.bias
+2025-05-23 23:55:10,339 - mmseg - INFO - reg_x_layer.0.layer.2.weight
+2025-05-23 23:55:10,339 - mmseg - INFO - reg_x_layer.0.layer.2.bias
+2025-05-23 23:55:10,339 - mmseg - INFO - reg_x_layer.0.layer.4.weight
+2025-05-23 23:55:10,339 - mmseg - INFO - reg_x_layer.0.layer.4.bias
+2025-05-23 23:55:10,340 - mmseg - INFO - reg_z_layer.0.layer.0.weight
+2025-05-23 23:55:10,340 - mmseg - INFO - reg_z_layer.0.layer.0.bias
+2025-05-23 23:55:10,341 - mmseg - INFO - reg_z_layer.0.layer.2.weight
+2025-05-23 23:55:10,341 - mmseg - INFO - reg_z_layer.0.layer.2.bias
+2025-05-23 23:55:10,341 - mmseg - INFO - reg_z_layer.0.layer.4.weight
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_z_layer.0.layer.4.bias
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.0.weight
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.0.bias
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.2.weight
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.2.bias
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.4.weight
+2025-05-23 23:55:10,342 - mmseg - INFO - reg_vis_layer.0.layer.4.bias
+2025-05-23 23:55:10,343 - mmseg - INFO - load checkpoint from local path: output/apollosim/lanedt2/illus_chg/latest.pth
+to run
+to run
+to run
+to run
+to run
+to run
+2025-05-23 23:55:10,809 - mmseg - INFO - resumed from epoch: 2500, iter 4999
+to run
+2025-05-23 23:55:10,809 - mmseg - INFO - Start running, host: zhaohui1.wang@bare-20250217151813020-10-251-16-51, work_dir: /home/zhaohui1.wang/github/Anchor3DLane/output/apollosim/lanedt2/illus_chg
+2025-05-23 23:55:10,809 - mmseg - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) OptimizerHook                      
+(NORMAL      ) CheckpointHook                     
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_val_epoch:
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+2025-05-23 23:55:10,810 - mmseg - INFO - workflow: [('train', 10000000)], max: 50000 iters
+2025-05-23 23:55:10,810 - mmseg - INFO - Checkpoints will be saved to /home/zhaohui1.wang/github/Anchor3DLane/output/apollosim/lanedt2/illus_chg by HardDiskBackend.
+to run
+2025-05-23 23:55:11.155748: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-23 23:55:11.169119: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1748015711.184446  105474 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1748015711.188947  105474 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-23 23:55:11.206313: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+[rank0]:[W523 23:55:15.983918052 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank7]:[W523 23:55:15.984009474 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank1]:[W523 23:55:15.984016260 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank4]:[W523 23:55:15.984022936 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank5]:[W523 23:55:15.984078456 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank6]:[W523 23:55:15.984142282 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank3]:[W523 23:55:15.984240405 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank2]:[W523 23:55:15.984375935 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2025-05-23 23:55:16,186 - mmseg - INFO - Saving checkpoint at 5000 iterations
+2025-05-23 23:55:16,671 - mmseg - INFO - Exp name: lanedt_test2.py
+2025-05-23 23:55:16,671 - mmseg - INFO - Iter [5000/50000]	lr: 1.000e-04, eta: 15 days, 9:48:39, time: 2.958, data_time: 0.070, memory: 1034, batch_positives: 15.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:55:44,175 - mmseg - INFO - Iter [5010/50000]	lr: 1.000e-04, eta: 2 days, 16:51:36, time: 2.750, data_time: 2.046, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:56:12,046 - mmseg - INFO - Iter [5020/50000]	lr: 1.000e-04, eta: 2 days, 2:22:06, time: 2.757, data_time: 2.045, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:56:42,772 - mmseg - INFO - Iter [5030/50000]	lr: 1.000e-04, eta: 1 day, 22:36:18, time: 3.100, data_time: 2.076, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:57:13,438 - mmseg - INFO - Iter [5040/50000]	lr: 1.000e-04, eta: 1 day, 20:34:46, time: 3.069, data_time: 2.048, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:57:42,863 - mmseg - INFO - Iter [5050/50000]	lr: 1.000e-04, eta: 1 day, 19:01:42, time: 2.940, data_time: 2.045, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:58:15,780 - mmseg - INFO - Iter [5060/50000]	lr: 1.000e-04, eta: 1 day, 18:42:02, time: 3.291, data_time: 2.046, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:58:46,143 - mmseg - INFO - Iter [5070/50000]	lr: 1.000e-04, eta: 1 day, 18:01:03, time: 3.037, data_time: 2.047, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:59:16,187 - mmseg - INFO - Iter [5080/50000]	lr: 1.000e-04, eta: 1 day, 17:27:14, time: 3.007, data_time: 2.046, memory: 1036, batch_positives: 13.0500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 23:59:48,859 - mmseg - INFO - Iter [5090/50000]	lr: 1.000e-04, eta: 1 day, 17:19:40, time: 3.237, data_time: 2.043, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:00:23,299 - mmseg - INFO - Iter [5100/50000]	lr: 1.000e-04, eta: 1 day, 17:30:59, time: 3.473, data_time: 2.074, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:00:53,173 - mmseg - INFO - Iter [5110/50000]	lr: 1.000e-04, eta: 1 day, 17:07:30, time: 2.988, data_time: 2.045, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:01:23,140 - mmseg - INFO - Iter [5120/50000]	lr: 1.000e-04, eta: 1 day, 16:48:19, time: 2.997, data_time: 2.044, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:01:56,580 - mmseg - INFO - Iter [5130/50000]	lr: 1.000e-04, eta: 1 day, 16:51:45, time: 3.343, data_time: 2.043, memory: 1036, batch_positives: 13.3500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:02:26,879 - mmseg - INFO - Iter [5140/50000]	lr: 1.000e-04, eta: 1 day, 16:36:29, time: 3.001, data_time: 2.044, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:02:59,857 - mmseg - INFO - Iter [5150/50000]	lr: 1.000e-04, eta: 1 day, 16:39:14, time: 3.325, data_time: 2.075, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:03:32,370 - mmseg - INFO - Iter [5160/50000]	lr: 1.000e-04, eta: 1 day, 16:38:13, time: 3.253, data_time: 2.046, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-24 00:04:07,138 - mmseg - INFO - Iter [5170/50000]	lr: 1.000e-04, eta: 1 day, 16:47:04, time: 3.478, data_time: 2.046, memory: 1036, batch_positives: 14.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:04:38,442 - mmseg - INFO - Iter [5180/50000]	lr: 1.000e-04, eta: 1 day, 16:40:27, time: 3.128, data_time: 2.044, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:05:13,690 - mmseg - INFO - Iter [5190/50000]	lr: 1.000e-04, eta: 1 day, 16:49:59, time: 3.525, data_time: 2.046, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:05:47,876 - mmseg - INFO - Iter [5200/50000]	lr: 1.000e-04, eta: 1 day, 16:54:31, time: 3.417, data_time: 2.046, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:06:21,696 - mmseg - INFO - Iter [5210/50000]	lr: 1.000e-04, eta: 1 day, 16:56:23, time: 3.355, data_time: 2.050, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:06:49,617 - mmseg - INFO - Iter [5220/50000]	lr: 1.000e-04, eta: 1 day, 16:39:56, time: 2.820, data_time: 2.075, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:07:14,133 - mmseg - INFO - Iter [5230/50000]	lr: 1.000e-04, eta: 1 day, 16:12:58, time: 2.451, data_time: 2.048, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:07:49,123 - mmseg - INFO - Iter [5240/50000]	lr: 1.000e-04, eta: 1 day, 16:20:39, time: 3.499, data_time: 2.046, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:08:19,960 - mmseg - INFO - Iter [5250/50000]	lr: 1.000e-04, eta: 1 day, 16:15:19, time: 3.084, data_time: 2.048, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:08:50,121 - mmseg - INFO - Iter [5260/50000]	lr: 1.000e-04, eta: 1 day, 16:08:26, time: 3.016, data_time: 2.047, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-24 00:09:24,172 - mmseg - INFO - Iter [5270/50000]	lr: 1.000e-04, eta: 1 day, 16:12:43, time: 3.405, data_time: 2.047, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-24 00:09:49,729 - mmseg - INFO - Iter [5280/50000]	lr: 1.000e-04, eta: 1 day, 15:54:07, time: 2.556, data_time: 2.048, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:10:25,155 - mmseg - INFO - Iter [5290/50000]	lr: 1.000e-04, eta: 1 day, 16:02:03, time: 3.543, data_time: 2.049, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-24 00:10:55,140 - mmseg - INFO - Iter [5300/50000]	lr: 1.000e-04, eta: 1 day, 15:55:15, time: 2.971, data_time: 2.044, memory: 1036, batch_positives: 12.9000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:11:26,571 - mmseg - INFO - Iter [5310/50000]	lr: 1.000e-04, eta: 1 day, 15:53:39, time: 3.171, data_time: 2.078, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:11:54,729 - mmseg - INFO - Iter [5320/50000]	lr: 1.000e-04, eta: 1 day, 15:43:53, time: 2.816, data_time: 2.049, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-24 00:12:26,199 - mmseg - INFO - Iter [5330/50000]	lr: 1.000e-04, eta: 1 day, 15:42:09, time: 3.148, data_time: 2.049, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:12:58,118 - mmseg - INFO - Iter [5340/50000]	lr: 1.000e-04, eta: 1 day, 15:41:29, time: 3.194, data_time: 2.047, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:13:27,525 - mmseg - INFO - Iter [5350/50000]	lr: 1.000e-04, eta: 1 day, 15:35:28, time: 2.941, data_time: 2.043, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:14:02,617 - mmseg - INFO - Iter [5360/50000]	lr: 1.000e-04, eta: 1 day, 15:41:28, time: 3.509, data_time: 2.043, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:14:38,581 - mmseg - INFO - Iter [5370/50000]	lr: 1.000e-04, eta: 1 day, 15:48:49, time: 3.594, data_time: 2.043, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:15:14,276 - mmseg - INFO - Iter [5380/50000]	lr: 1.000e-04, eta: 1 day, 15:55:16, time: 3.569, data_time: 2.046, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:15:45,327 - mmseg - INFO - Iter [5390/50000]	lr: 1.000e-04, eta: 1 day, 15:52:00, time: 3.078, data_time: 2.048, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:16:19,601 - mmseg - INFO - Iter [5400/50000]	lr: 1.000e-04, eta: 1 day, 15:55:55, time: 3.457, data_time: 2.075, memory: 1036, batch_positives: 14.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:16:53,475 - mmseg - INFO - Iter [5410/50000]	lr: 1.000e-04, eta: 1 day, 15:58:17, time: 3.384, data_time: 2.046, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:17:23,183 - mmseg - INFO - Iter [5420/50000]	lr: 1.000e-04, eta: 1 day, 15:53:15, time: 2.972, data_time: 2.048, memory: 1036, batch_positives: 13.2000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:17:52,899 - mmseg - INFO - Iter [5430/50000]	lr: 1.000e-04, eta: 1 day, 15:48:25, time: 2.972, data_time: 2.048, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:18:23,104 - mmseg - INFO - Iter [5440/50000]	lr: 1.000e-04, eta: 1 day, 15:44:34, time: 3.018, data_time: 2.047, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:18:57,271 - mmseg - INFO - Iter [5450/50000]	lr: 1.000e-04, eta: 1 day, 15:47:26, time: 3.418, data_time: 2.048, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:19:33,911 - mmseg - INFO - Iter [5460/50000]	lr: 1.000e-04, eta: 1 day, 15:54:08, time: 3.664, data_time: 2.044, memory: 1036, batch_positives: 13.2000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:20:04,561 - mmseg - INFO - Iter [5470/50000]	lr: 1.000e-04, eta: 1 day, 15:51:04, time: 3.065, data_time: 2.048, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:20:37,400 - mmseg - INFO - Iter [5480/50000]	lr: 1.000e-04, eta: 1 day, 15:51:30, time: 3.284, data_time: 2.046, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:21:08,549 - mmseg - INFO - Iter [5490/50000]	lr: 1.000e-04, eta: 1 day, 15:49:21, time: 3.116, data_time: 2.046, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:21:44,141 - mmseg - INFO - Iter [5500/50000]	lr: 1.000e-04, eta: 1 day, 15:53:50, time: 3.560, data_time: 2.046, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:22:11,859 - mmseg - INFO - Iter [5510/50000]	lr: 1.000e-04, eta: 1 day, 15:46:41, time: 2.772, data_time: 2.046, memory: 1036, batch_positives: 13.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:22:39,790 - mmseg - INFO - Iter [5520/50000]	lr: 1.000e-04, eta: 1 day, 15:39:39, time: 2.763, data_time: 2.044, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:23:06,175 - mmseg - INFO - Iter [5530/50000]	lr: 1.000e-04, eta: 1 day, 15:31:32, time: 2.666, data_time: 2.074, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:23:38,522 - mmseg - INFO - Iter [5540/50000]	lr: 1.000e-04, eta: 1 day, 15:31:06, time: 3.207, data_time: 2.047, memory: 1036, batch_positives: 14.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:24:05,374 - mmseg - INFO - Iter [5550/50000]	lr: 1.000e-04, eta: 1 day, 15:24:01, time: 2.713, data_time: 2.075, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:24:38,884 - mmseg - INFO - Iter [5560/50000]	lr: 1.000e-04, eta: 1 day, 15:25:35, time: 3.351, data_time: 2.047, memory: 1036, batch_positives: 13.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:25:03,902 - mmseg - INFO - Iter [5570/50000]	lr: 1.000e-04, eta: 1 day, 15:16:05, time: 2.502, data_time: 2.047, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:25:36,846 - mmseg - INFO - Iter [5580/50000]	lr: 1.000e-04, eta: 1 day, 15:17:01, time: 3.296, data_time: 2.046, memory: 1036, batch_positives: 13.3500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:26:05,295 - mmseg - INFO - Iter [5590/50000]	lr: 1.000e-04, eta: 1 day, 15:12:14, time: 2.844, data_time: 2.046, memory: 1036, batch_positives: 13.3500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:26:32,544 - mmseg - INFO - Iter [5600/50000]	lr: 1.000e-04, eta: 1 day, 15:06:08, time: 2.726, data_time: 2.047, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-24 00:27:05,161 - mmseg - INFO - Iter [5610/50000]	lr: 1.000e-04, eta: 1 day, 15:06:41, time: 3.259, data_time: 2.046, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:27:39,791 - mmseg - INFO - Iter [5620/50000]	lr: 1.000e-04, eta: 1 day, 15:09:36, time: 3.462, data_time: 2.050, memory: 1036, batch_positives: 13.6500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:28:07,716 - mmseg - INFO - Iter [5630/50000]	lr: 1.000e-04, eta: 1 day, 15:04:36, time: 2.794, data_time: 2.049, memory: 1036, batch_positives: 14.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001
+2025-05-24 00:28:40,545 - mmseg - INFO - Iter [5640/50000]	lr: 1.000e-04, eta: 1 day, 15:05:22, time: 3.283, data_time: 2.047, memory: 1036, batch_positives: 13.5000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0001

@@ -50,6 +50,13 @@
             },
             "console": "integratedTerminal"
         },
+        {
+      "name": "Python: Run hello.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "/home/zhaohui1.wang/github/Anchor3DLane/hello.py",
+      "console": "integratedTerminal"
+        },
             {
         "name": "Anchor3DLaneMF:Test_OpenLane_raw",
         "type": "debugpy",

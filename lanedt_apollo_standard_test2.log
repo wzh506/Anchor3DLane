@@ -1,0 +1,1528 @@
+nohup: ignoring input
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+2025-05-23 15:11:09,566 - mmseg - INFO - Multi-processing start method is `None`
+2025-05-23 15:11:09,567 - mmseg - INFO - OpenCV num_threads is `160
+2025-05-23 15:11:09,640 - mmseg - INFO - Environment info:
+------------------------------------------------------------
+sys.platform: linux
+Python: 3.9.21 (main, Dec 11 2024, 16:24:11) [GCC 11.2.0]
+CUDA available: True
+GPU 0,1,2,3,4,5,6,7: NVIDIA H20
+CUDA_HOME: /usr/local/cuda
+NVCC: Cuda compilation tools, release 12.4, V12.4.131
+GCC: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+PyTorch: 2.4.0+cu124
+PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 12.4
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 90.1
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.4, CUDNN_VERSION=9.1.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+TorchVision: 0.19.0+cu124
+OpenCV: 4.11.0
+MMCV: 1.7.2
+MMCV Compiler: GCC 9.4
+MMCV CUDA Compiler: 12.4
+MMSegmentation: 0.26.0+5cdf06e
+------------------------------------------------------------
+
+2025-05-23 15:11:09,641 - mmseg - INFO - Distributed training: True
+2025-05-23 15:11:10,110 - mmseg - INFO - Config:
+dataset_type = 'APOLLOSIMDataset'
+data_root = 'data/ApolloSim'
+split = 'standard'
+img_norm_cfg = dict(
+    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+input_size = (360, 480)
+feat_y_steps = [5, 10, 15, 20, 30, 40, 50, 60, 80, 100]
+anchor_y_steps = [5, 10, 15, 20, 30, 40, 50, 60, 80, 100]
+anchor_len = 10
+train_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+    dict(
+        type='Normalize',
+        mean=[123.675, 116.28, 103.53],
+        std=[58.395, 57.12, 57.375],
+        to_rgb=True),
+    dict(type='MaskGenerate', input_size=(360, 480)),
+    dict(type='LaneFormat'),
+    dict(
+        type='Collect',
+        keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask'])
+]
+test_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+    dict(
+        type='Normalize',
+        mean=[123.675, 116.28, 103.53],
+        std=[58.395, 57.12, 57.375],
+        to_rgb=True),
+    dict(type='MaskGenerate', input_size=(360, 480)),
+    dict(type='LaneFormat'),
+    dict(
+        type='Collect',
+        keys=['img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix', 'mask'])
+]
+dataset_config = dict(max_lanes=7, input_size=(360, 480))
+data = dict(
+    samples_per_gpu=2,
+    workers_per_gpu=0,
+    train=dict(
+        type='APOLLOSIMDataset',
+        data_root='data/ApolloSim',
+        data_list='test2.txt',
+        y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+        dataset_config=dict(max_lanes=7, input_size=(360, 480)),
+        split='standard',
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+            dict(
+                type='Normalize',
+                mean=[123.675, 116.28, 103.53],
+                std=[58.395, 57.12, 57.375],
+                to_rgb=True),
+            dict(type='MaskGenerate', input_size=(360, 480)),
+            dict(type='LaneFormat'),
+            dict(
+                type='Collect',
+                keys=[
+                    'img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix',
+                    'mask'
+                ])
+        ]),
+    test=dict(
+        type='APOLLOSIMDataset',
+        data_root='data/ApolloSim',
+        data_list='test.txt',
+        dataset_config=dict(max_lanes=7, input_size=(360, 480)),
+        y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+        split='standard',
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='Resize', img_scale=(480, 360), keep_ratio=False),
+            dict(
+                type='Normalize',
+                mean=[123.675, 116.28, 103.53],
+                std=[58.395, 57.12, 57.375],
+                to_rgb=True),
+            dict(type='MaskGenerate', input_size=(360, 480)),
+            dict(type='LaneFormat'),
+            dict(
+                type='Collect',
+                keys=[
+                    'img', 'img_metas', 'gt_3dlanes', 'gt_project_matrix',
+                    'mask'
+                ])
+        ],
+        test_mode=True))
+model = dict(
+    type='Anchor3DLane',
+    backbone=dict(
+        type='ResNetV1c',
+        depth=18,
+        num_stages=4,
+        out_indices=(0, 1, 2, 3),
+        dilations=(1, 1, 2, 4),
+        strides=(1, 2, 1, 1),
+        style='pytorch'),
+    pretrained='pretrained/resnet18_v1c-b5776b93.pth',
+    y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+    feat_y_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100],
+    anchor_cfg=dict(
+        pitches=[5, 2, 1, 0, -1, -2, -5],
+        yaws=[
+            30, 20, 15, 10, 7, 5, 3, 1, 0, -1, -3, -5, -7, -10, -15, -20, -30
+        ],
+        num_x=45,
+        distances=[3]),
+    db_cfg=dict(
+        org_h=1080,
+        org_w=1920,
+        resize_h=360,
+        resize_w=480,
+        ipm_h=208,
+        ipm_w=128,
+        pitch=3,
+        cam_height=1.55,
+        crop_y=0,
+        K=[[2015.0, 0.0, 960.0], [0.0, 2015.0, 540.0], [0.0, 0.0, 1.0]],
+        top_view_region=[[-10, 103], [10, 103], [-10, 3], [10, 3]],
+        max_2dpoints=10),
+    attn_dim=64,
+    iter_reg=0,
+    drop_out=0.0,
+    num_heads=2,
+    dim_feedforward=128,
+    pre_norm=False,
+    feat_size=(45, 60),
+    num_category=2,
+    loss_lane=dict(
+        type='LaneLoss',
+        loss_weights=dict(
+            cls_loss=1, reg_losses_x=1, reg_losses_z=1, reg_losses_vis=1),
+        assign_cfg=dict(
+            type='TopkAssigner',
+            pos_k=3,
+            neg_k=450,
+            anchor_len=10,
+            metric='Euclidean'),
+        anchor_len=10,
+        anchor_steps=[5, 10, 15, 20, 30, 40, 50, 60, 80, 100]),
+    train_cfg=dict(nms_thres=0, conf_threshold=0),
+    test_cfg=dict(
+        nms_thres=2,
+        conf_threshold=0.5,
+        test_conf=0.7,
+        refine_vis=True,
+        vis_thresh=0.5))
+data_shuffle = True
+optimizer = dict(type='Adam', lr=0.0001)
+optimizer_config = dict()
+lr_config = dict(policy='step', step=[45000], by_epoch=False)
+runner = dict(type='IterBasedRunner', max_iters=50000)
+checkpoint_config = dict(by_epoch=False, interval=2500)
+log_config = dict(
+    interval=10,
+    hooks=[
+        dict(type='TextLoggerHook', by_epoch=False),
+        dict(type='TensorboardLoggerHook')
+    ])
+dist_params = dict(backend='nccl')
+log_level = 'INFO'
+load_from = None
+resume_from = None
+workflow = [('train', 10000000)]
+cudnn_benchmark = True
+work_dir = 'output/apollosim/lanedt2/standard'
+gpu_ids = range(0, 8)
+auto_resume = True
+
+2025-05-23 15:11:21,143 - mmseg - INFO - Set random seed to 1709384448, deterministic: False
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+anchor: 4431
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/models/backbones/resnet.py:431: UserWarning: DeprecationWarning: pretrained is a deprecated, please use "init_cfg" instead
+  warnings.warn('DeprecationWarning: pretrained is a deprecated, '
+2025-05-23 15:11:21,314 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,314 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,315 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,315 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,315 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,316 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,316 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,316 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,316 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,316 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,316 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,317 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,317 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,317 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,318 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,318 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,318 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,318 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,320 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,320 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,321 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+2025-05-23 15:11:21,321 - mmcv - INFO - initialize ResNetV1c with init_cfg {'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+2025-05-23 15:11:21,321 - mmcv - INFO - load model from: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,322 - mmcv - INFO - load checkpoint from local path: pretrained/resnet18_v1c-b5776b93.pth
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/mmcv/runner/checkpoint.py:334: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+2025-05-23 15:11:21,354 - mmcv - WARNING - The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: fc.weight, fc.bias
+
+Now loading annotations...
+2025-05-23 15:11:21,363 - mmcv - INFO - 
+backbone.stem.0.weight - torch.Size([32, 3, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,363 - mmcv - INFO - 
+backbone.stem.1.weight - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,363 - mmcv - INFO - 
+backbone.stem.1.bias - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,363 - mmcv - INFO - 
+backbone.stem.3.weight - torch.Size([32, 32, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.stem.4.weight - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.stem.4.bias - torch.Size([32]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.stem.6.weight - torch.Size([64, 32, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.stem.7.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.stem.7.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.conv1.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.bn1.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+Now loading annotations...2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.bn1.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.bn2.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.0.bn2.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.conv1.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.bn1.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.bn1.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.bn2.weight - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer1.1.bn2.bias - torch.Size([64]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.conv1.weight - torch.Size([128, 64, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.bn1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.bn1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.bn2.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.bn2.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.downsample.0.weight - torch.Size([128, 64, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.downsample.1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.0.downsample.1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.conv1.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.bn1.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.bn1.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.bn2.weight - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer2.1.bn2.bias - torch.Size([128]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.conv1.weight - torch.Size([256, 128, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.bn1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.bn1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.bn2.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.bn2.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.downsample.0.weight - torch.Size([256, 128, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.downsample.1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.0.downsample.1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.conv1.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.bn1.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.bn1.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.bn2.weight - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer3.1.bn2.bias - torch.Size([256]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.conv1.weight - torch.Size([512, 256, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.bn1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.bn1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.bn2.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.bn2.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.downsample.1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.0.downsample.1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,364 - mmcv - INFO - 
+backbone.layer4.1.conv1.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+backbone.layer4.1.bn1.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+backbone.layer4.1.bn1.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+backbone.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+backbone.layer4.1.bn2.weight - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+backbone.layer4.1.bn2.bias - torch.Size([512]): 
+PretrainedInit: load from pretrained/resnet18_v1c-b5776b93.pth 
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+input_proj.weight - torch.Size([64, 512, 1, 1]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+input_proj.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.self_attn.in_proj_weight - torch.Size([192, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.self_attn.in_proj_bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.self_attn.out_proj.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.self_attn.out_proj.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.linear1.weight - torch.Size([128, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.linear1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.linear2.weight - torch.Size([64, 128]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.linear2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.norm1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.norm1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.norm2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+transformer_layer.norm2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+anchor_projection.weight - torch.Size([64, 64, 1, 1]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+anchor_projection.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+Now loading annotations...
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.0.weight - torch.Size([640, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.0.bias - torch.Size([640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.2.weight - torch.Size([640, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.2.bias - torch.Size([640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.4.weight - torch.Size([2, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+cls_layer.0.layer.4.bias - torch.Size([2]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_x_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_z_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+Now loading annotations...2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.0.weight - torch.Size([64, 640]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.0.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.2.weight - torch.Size([64, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.4.weight - torch.Size([10, 64]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+2025-05-23 15:11:21,365 - mmcv - INFO - 
+reg_vis_layer.0.layer.4.bias - torch.Size([10]): 
+The value is the same before and after calling `init_weights` of Anchor3DLane  
+ 
+Now loading annotations...
+Now loading annotations...
+2025-05-23 15:11:21,366 - mmseg - INFO - Anchor3DLane(
+  (backbone): ResNetV1c(
+    (stem): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU(inplace=True)
+      (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (8): ReLU(inplace=True)
+    )
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer2): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer3): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer4): ResLayer(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  init_cfg={'type': 'Pretrained', 'checkpoint': 'pretrained/resnet18_v1c-b5776b93.pth'}
+  (position_embedding): PositionEmbeddingSine()
+  (input_proj): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1))
+  (transformer_layer): TransformerEncoderLayer(
+    (self_attn): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+    )
+    (linear1): Linear(in_features=64, out_features=128, bias=True)
+    (dropout): Dropout(p=0.0, inplace=False)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+    (norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (dropout1): Dropout(p=0.0, inplace=False)
+    (dropout2): Dropout(p=0.0, inplace=False)
+  )
+  (anchor_projection): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+  (cls_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=640, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=640, out_features=640, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=640, out_features=2, bias=True)
+      )
+    )
+  )
+  (reg_x_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (reg_z_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (reg_vis_layer): ModuleList(
+    (0): DecodeLayer(
+      (layer): Sequential(
+        (0): Linear(in_features=640, out_features=64, bias=True)
+        (1): ReLU6()
+        (2): Linear(in_features=64, out_features=64, bias=True)
+        (3): ReLU6()
+        (4): Linear(in_features=64, out_features=10, bias=True)
+      )
+    )
+  )
+  (lane_loss): LaneLoss()
+  (aux_loss): ModuleList()
+)
+Now loading annotations...
+Now loading annotations...
+0it [00:00, ?it/s]16it [00:00, 136123.46it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 120699.40it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 132364.62it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 141579.88it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]0it [00:00, ?it/s]16it [00:00, 124506.24it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+16it [00:00, 130055.94it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 130055.94it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+0it [00:00, ?it/s]16it [00:00, 111848.11it/s]
+after load annotation
+find 16 samples in data/ApolloSim/data_lists/standard/test2.txt.
+2025-05-23 15:11:21,425 - mmseg - INFO - optimized parameters:
+2025-05-23 15:11:21,425 - mmseg - INFO - backbone.stem.0.weight
+2025-05-23 15:11:21,425 - mmseg - INFO - backbone.stem.1.weight
+2025-05-23 15:11:21,425 - mmseg - INFO - backbone.stem.1.bias
+2025-05-23 15:11:21,425 - mmseg - INFO - backbone.stem.3.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.stem.4.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.stem.4.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.stem.6.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.stem.7.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.stem.7.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.0.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer1.1.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.downsample.0.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.downsample.1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.0.downsample.1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer2.1.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.downsample.0.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.downsample.1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.0.downsample.1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.bn1.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.conv2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.bn2.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer3.1.bn2.bias
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer4.0.conv1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer4.0.bn1.weight
+2025-05-23 15:11:21,426 - mmseg - INFO - backbone.layer4.0.bn1.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.conv2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.bn2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.bn2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.downsample.0.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.downsample.1.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.0.downsample.1.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.conv1.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.bn1.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.bn1.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.conv2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.bn2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - backbone.layer4.1.bn2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - input_proj.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - input_proj.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.self_attn.in_proj_weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.self_attn.in_proj_bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.self_attn.out_proj.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.self_attn.out_proj.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.linear1.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.linear1.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.linear2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.linear2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.norm1.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.norm1.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.norm2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - transformer_layer.norm2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - anchor_projection.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - anchor_projection.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.0.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.0.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.4.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - cls_layer.0.layer.4.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.0.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.0.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.4.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_x_layer.0.layer.4.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.0.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.0.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.4.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_z_layer.0.layer.4.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_vis_layer.0.layer.0.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_vis_layer.0.layer.0.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_vis_layer.0.layer.2.weight
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_vis_layer.0.layer.2.bias
+2025-05-23 15:11:21,427 - mmseg - INFO - reg_vis_layer.0.layer.4.weight
+2025-05-23 15:11:21,428 - mmseg - INFO - reg_vis_layer.0.layer.4.bias
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+2025-05-23 15:11:21,430 - mmseg - INFO - Start running, host: zhaohui1.wang@bare-20250107211539715-10-251-16-130, work_dir: /home/zhaohui1.wang/github/Anchor3DLane/output/apollosim/lanedt2/standard
+2025-05-23 15:11:21,430 - mmseg - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) OptimizerHook                      
+(NORMAL      ) CheckpointHook                     
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_val_epoch:
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) TensorboardLoggerHook              
+ -------------------- 
+2025-05-23 15:11:21,430 - mmseg - INFO - workflow: [('train', 10000000)], max: 50000 iters
+2025-05-23 15:11:21,430 - mmseg - INFO - Checkpoints will be saved to /home/zhaohui1.wang/github/Anchor3DLane/output/apollosim/lanedt2/standard by HardDiskBackend.
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+to run
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+/home/zhaohui1.wang/github/Anchor3DLane/mmseg/utils/misc.py:28: UserWarning: The are no checkpoints in the path
+  warnings.warn('The are no checkpoints in the path')
+to run
+2025-05-23 15:11:21.707247: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-23 15:11:21.720874: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1747984281.735921    6773 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1747984281.740209    6773 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-23 15:11:21.757087: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+/home/zhaohui1.wang/miniconda3/envs/lane3d/lib/python3.9/site-packages/torch/nn/functional.py:4373: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+[rank0]:[W523 15:11:24.900011323 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank1]:[W523 15:11:24.900038747 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank6]:[W523 15:11:24.900088295 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank5]:[W523 15:11:24.900107332 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank3]:[W523 15:11:24.900133180 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank2]:[W523 15:11:24.900152577 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank7]:[W523 15:11:24.900153261 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank4]:[W523 15:11:24.900256870 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2025-05-23 15:11:43,994 - mmseg - INFO - Iter [10/50000]	lr: 1.000e-04, eta: 1 day, 4:05:39, time: 2.023, data_time: 1.847, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.9908, reg_losses_x: 0.7993, reg_losses_z: 0.0632, reg_losses_vis: 0.1226, loss: 1.9759
+2025-05-23 15:12:05,065 - mmseg - INFO - Iter [20/50000]	lr: 1.000e-04, eta: 1 day, 4:40:14, time: 2.107, data_time: 2.045, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.3533, reg_losses_x: 0.7883, reg_losses_z: 0.0609, reg_losses_vis: 0.1169, loss: 1.3194
+2025-05-23 15:12:26,259 - mmseg - INFO - Iter [30/50000]	lr: 1.000e-04, eta: 1 day, 4:54:59, time: 2.119, data_time: 2.046, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.2042, reg_losses_x: 0.7737, reg_losses_z: 0.0583, reg_losses_vis: 0.1107, loss: 1.1469
+2025-05-23 15:12:47,272 - mmseg - INFO - Iter [40/50000]	lr: 1.000e-04, eta: 1 day, 4:58:24, time: 2.101, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.1297, reg_losses_x: 0.7485, reg_losses_z: 0.0548, reg_losses_vis: 0.1026, loss: 1.0355
+2025-05-23 15:13:08,279 - mmseg - INFO - Iter [50/50000]	lr: 1.000e-04, eta: 1 day, 5:00:12, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0993, reg_losses_x: 0.7116, reg_losses_z: 0.0501, reg_losses_vis: 0.0922, loss: 0.9533
+2025-05-23 15:13:29,268 - mmseg - INFO - Iter [60/50000]	lr: 1.000e-04, eta: 1 day, 5:01:02, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0823, reg_losses_x: 0.6674, reg_losses_z: 0.0442, reg_losses_vis: 0.0822, loss: 0.8761
+2025-05-23 15:13:50,262 - mmseg - INFO - Iter [70/50000]	lr: 1.000e-04, eta: 1 day, 5:01:36, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0681, reg_losses_x: 0.6202, reg_losses_z: 0.0372, reg_losses_vis: 0.0742, loss: 0.7996
+2025-05-23 15:14:11,258 - mmseg - INFO - Iter [80/50000]	lr: 1.000e-04, eta: 1 day, 5:01:57, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0535, reg_losses_x: 0.5725, reg_losses_z: 0.0296, reg_losses_vis: 0.0679, loss: 0.7236
+2025-05-23 15:14:32,257 - mmseg - INFO - Iter [90/50000]	lr: 1.000e-04, eta: 1 day, 5:02:11, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0431, reg_losses_x: 0.5262, reg_losses_z: 0.0229, reg_losses_vis: 0.0636, loss: 0.6559
+2025-05-23 15:14:53,263 - mmseg - INFO - Iter [100/50000]	lr: 1.000e-04, eta: 1 day, 5:02:20, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0329, reg_losses_x: 0.4800, reg_losses_z: 0.0181, reg_losses_vis: 0.0606, loss: 0.5916
+2025-05-23 15:15:14,255 - mmseg - INFO - Iter [110/50000]	lr: 1.000e-04, eta: 1 day, 5:02:18, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0274, reg_losses_x: 0.4330, reg_losses_z: 0.0152, reg_losses_vis: 0.0585, loss: 0.5341
+2025-05-23 15:15:35,260 - mmseg - INFO - Iter [120/50000]	lr: 1.000e-04, eta: 1 day, 5:02:19, time: 2.101, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0207, reg_losses_x: 0.3868, reg_losses_z: 0.0125, reg_losses_vis: 0.0567, loss: 0.4767
+2025-05-23 15:15:56,249 - mmseg - INFO - Iter [130/50000]	lr: 1.000e-04, eta: 1 day, 5:02:10, time: 2.099, data_time: 2.042, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0172, reg_losses_x: 0.3402, reg_losses_z: 0.0105, reg_losses_vis: 0.0551, loss: 0.4229
+2025-05-23 15:16:17,237 - mmseg - INFO - Iter [140/50000]	lr: 1.000e-04, eta: 1 day, 5:01:59, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0159, reg_losses_x: 0.2988, reg_losses_z: 0.0088, reg_losses_vis: 0.0533, loss: 0.3768
+2025-05-23 15:16:38,231 - mmseg - INFO - Iter [150/50000]	lr: 1.000e-04, eta: 1 day, 5:01:48, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0143, reg_losses_x: 0.2630, reg_losses_z: 0.0074, reg_losses_vis: 0.0514, loss: 0.3361
+2025-05-23 15:16:59,234 - mmseg - INFO - Iter [160/50000]	lr: 1.000e-04, eta: 1 day, 5:01:39, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0136, reg_losses_x: 0.2324, reg_losses_z: 0.0064, reg_losses_vis: 0.0491, loss: 0.3016
+2025-05-23 15:17:20,324 - mmseg - INFO - Iter [170/50000]	lr: 1.000e-04, eta: 1 day, 5:01:54, time: 2.109, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0119, reg_losses_x: 0.2016, reg_losses_z: 0.0054, reg_losses_vis: 0.0467, loss: 0.2655
+2025-05-23 15:17:41,546 - mmseg - INFO - Iter [180/50000]	lr: 1.000e-04, eta: 1 day, 5:02:41, time: 2.122, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0092, reg_losses_x: 0.1735, reg_losses_z: 0.0047, reg_losses_vis: 0.0435, loss: 0.2308
+2025-05-23 15:18:02,613 - mmseg - INFO - Iter [190/50000]	lr: 1.000e-04, eta: 1 day, 5:02:41, time: 2.107, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0086, reg_losses_x: 0.1434, reg_losses_z: 0.0039, reg_losses_vis: 0.0402, loss: 0.1960
+2025-05-23 15:18:23,595 - mmseg - INFO - Iter [200/50000]	lr: 1.000e-04, eta: 1 day, 5:02:18, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0088, reg_losses_x: 0.1176, reg_losses_z: 0.0033, reg_losses_vis: 0.0366, loss: 0.1664
+2025-05-23 15:18:44,584 - mmseg - INFO - Iter [210/50000]	lr: 1.000e-04, eta: 1 day, 5:01:56, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0083, reg_losses_x: 0.0968, reg_losses_z: 0.0030, reg_losses_vis: 0.0332, loss: 0.1413
+2025-05-23 15:19:05,565 - mmseg - INFO - Iter [220/50000]	lr: 1.000e-04, eta: 1 day, 5:01:33, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0086, reg_losses_x: 0.0805, reg_losses_z: 0.0027, reg_losses_vis: 0.0300, loss: 0.1218
+2025-05-23 15:19:26,567 - mmseg - INFO - Iter [230/50000]	lr: 1.000e-04, eta: 1 day, 5:01:14, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0077, reg_losses_x: 0.0655, reg_losses_z: 0.0021, reg_losses_vis: 0.0271, loss: 0.1024
+2025-05-23 15:19:47,559 - mmseg - INFO - Iter [240/50000]	lr: 1.000e-04, eta: 1 day, 5:00:53, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0077, reg_losses_x: 0.0545, reg_losses_z: 0.0018, reg_losses_vis: 0.0243, loss: 0.0883
+2025-05-23 15:20:08,546 - mmseg - INFO - Iter [250/50000]	lr: 1.000e-04, eta: 1 day, 5:00:31, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0069, reg_losses_x: 0.0457, reg_losses_z: 0.0017, reg_losses_vis: 0.0220, loss: 0.0763
+2025-05-23 15:20:29,541 - mmseg - INFO - Iter [260/50000]	lr: 1.000e-04, eta: 1 day, 5:00:11, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0076, reg_losses_x: 0.0402, reg_losses_z: 0.0015, reg_losses_vis: 0.0199, loss: 0.0692
+2025-05-23 15:20:50,526 - mmseg - INFO - Iter [270/50000]	lr: 1.000e-04, eta: 1 day, 4:59:49, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0064, reg_losses_x: 0.0330, reg_losses_z: 0.0012, reg_losses_vis: 0.0180, loss: 0.0586
+2025-05-23 15:21:11,506 - mmseg - INFO - Iter [280/50000]	lr: 1.000e-04, eta: 1 day, 4:59:26, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0056, reg_losses_x: 0.0272, reg_losses_z: 0.0012, reg_losses_vis: 0.0163, loss: 0.0503
+2025-05-23 15:21:32,528 - mmseg - INFO - Iter [290/50000]	lr: 1.000e-04, eta: 1 day, 4:59:10, time: 2.102, data_time: 2.047, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0051, reg_losses_x: 0.0240, reg_losses_z: 0.0010, reg_losses_vis: 0.0148, loss: 0.0449
+2025-05-23 15:21:53,514 - mmseg - INFO - Iter [300/50000]	lr: 1.000e-04, eta: 1 day, 4:58:48, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0054, reg_losses_x: 0.0204, reg_losses_z: 0.0010, reg_losses_vis: 0.0134, loss: 0.0402
+2025-05-23 15:22:14,505 - mmseg - INFO - Iter [310/50000]	lr: 1.000e-04, eta: 1 day, 4:58:27, time: 2.099, data_time: 2.046, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0062, reg_losses_x: 0.0179, reg_losses_z: 0.0009, reg_losses_vis: 0.0123, loss: 0.0373
+2025-05-23 15:22:35,488 - mmseg - INFO - Iter [320/50000]	lr: 1.000e-04, eta: 1 day, 4:58:05, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0047, reg_losses_x: 0.0160, reg_losses_z: 0.0008, reg_losses_vis: 0.0112, loss: 0.0328
+2025-05-23 15:22:56,490 - mmseg - INFO - Iter [330/50000]	lr: 1.000e-04, eta: 1 day, 4:57:45, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0046, reg_losses_x: 0.0132, reg_losses_z: 0.0007, reg_losses_vis: 0.0103, loss: 0.0288
+2025-05-23 15:23:17,478 - mmseg - INFO - Iter [340/50000]	lr: 1.000e-04, eta: 1 day, 4:57:24, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0042, reg_losses_x: 0.0115, reg_losses_z: 0.0007, reg_losses_vis: 0.0094, loss: 0.0257
+2025-05-23 15:23:38,468 - mmseg - INFO - Iter [350/50000]	lr: 1.000e-04, eta: 1 day, 4:57:03, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 10.8000, batch_negatives: 450.0000, cls_loss: 0.0042, reg_losses_x: 0.0103, reg_losses_z: 0.0006, reg_losses_vis: 0.0086, loss: 0.0237
+2025-05-23 15:23:59,452 - mmseg - INFO - Iter [360/50000]	lr: 1.000e-04, eta: 1 day, 4:56:41, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0043, reg_losses_x: 0.0091, reg_losses_z: 0.0005, reg_losses_vis: 0.0078, loss: 0.0218
+2025-05-23 15:24:20,438 - mmseg - INFO - Iter [370/50000]	lr: 1.000e-04, eta: 1 day, 4:56:19, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0038, reg_losses_x: 0.0087, reg_losses_z: 0.0005, reg_losses_vis: 0.0072, loss: 0.0202
+2025-05-23 15:24:41,425 - mmseg - INFO - Iter [380/50000]	lr: 1.000e-04, eta: 1 day, 4:55:57, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0036, reg_losses_x: 0.0072, reg_losses_z: 0.0005, reg_losses_vis: 0.0065, loss: 0.0178
+2025-05-23 15:25:02,421 - mmseg - INFO - Iter [390/50000]	lr: 1.000e-04, eta: 1 day, 4:55:37, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0031, reg_losses_x: 0.0068, reg_losses_z: 0.0004, reg_losses_vis: 0.0060, loss: 0.0163
+2025-05-23 15:25:23,403 - mmseg - INFO - Iter [400/50000]	lr: 1.000e-04, eta: 1 day, 4:55:15, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0037, reg_losses_x: 0.0057, reg_losses_z: 0.0004, reg_losses_vis: 0.0055, loss: 0.0154
+2025-05-23 15:25:44,387 - mmseg - INFO - Iter [410/50000]	lr: 1.000e-04, eta: 1 day, 4:54:53, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0035, reg_losses_x: 0.0049, reg_losses_z: 0.0004, reg_losses_vis: 0.0051, loss: 0.0138
+2025-05-23 15:26:05,375 - mmseg - INFO - Iter [420/50000]	lr: 1.000e-04, eta: 1 day, 4:54:32, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0032, reg_losses_x: 0.0044, reg_losses_z: 0.0004, reg_losses_vis: 0.0047, loss: 0.0127
+2025-05-23 15:26:26,361 - mmseg - INFO - Iter [430/50000]	lr: 1.000e-04, eta: 1 day, 4:54:10, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0030, reg_losses_x: 0.0038, reg_losses_z: 0.0004, reg_losses_vis: 0.0044, loss: 0.0115
+2025-05-23 15:26:47,341 - mmseg - INFO - Iter [440/50000]	lr: 1.000e-04, eta: 1 day, 4:53:48, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0033, reg_losses_x: 0.0032, reg_losses_z: 0.0004, reg_losses_vis: 0.0041, loss: 0.0109
+2025-05-23 15:27:08,330 - mmseg - INFO - Iter [450/50000]	lr: 1.000e-04, eta: 1 day, 4:53:27, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0031, reg_losses_x: 0.0026, reg_losses_z: 0.0003, reg_losses_vis: 0.0038, loss: 0.0098
+2025-05-23 15:27:29,321 - mmseg - INFO - Iter [460/50000]	lr: 1.000e-04, eta: 1 day, 4:53:06, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0025, reg_losses_x: 0.0023, reg_losses_z: 0.0003, reg_losses_vis: 0.0035, loss: 0.0086
+2025-05-23 15:27:50,325 - mmseg - INFO - Iter [470/50000]	lr: 1.000e-04, eta: 1 day, 4:52:46, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0029, reg_losses_x: 0.0021, reg_losses_z: 0.0003, reg_losses_vis: 0.0033, loss: 0.0087
+2025-05-23 15:28:11,303 - mmseg - INFO - Iter [480/50000]	lr: 1.000e-04, eta: 1 day, 4:52:24, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0030, reg_losses_x: 0.0018, reg_losses_z: 0.0003, reg_losses_vis: 0.0031, loss: 0.0081
+2025-05-23 15:28:32,292 - mmseg - INFO - Iter [490/50000]	lr: 1.000e-04, eta: 1 day, 4:52:03, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0026, reg_losses_x: 0.0016, reg_losses_z: 0.0003, reg_losses_vis: 0.0029, loss: 0.0073
+2025-05-23 15:28:53,276 - mmseg - INFO - Iter [500/50000]	lr: 1.000e-04, eta: 1 day, 4:51:41, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0025, reg_losses_x: 0.0014, reg_losses_z: 0.0002, reg_losses_vis: 0.0027, loss: 0.0069
+2025-05-23 15:29:14,256 - mmseg - INFO - Iter [510/50000]	lr: 1.000e-04, eta: 1 day, 4:51:19, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0025, reg_losses_x: 0.0013, reg_losses_z: 0.0002, reg_losses_vis: 0.0026, loss: 0.0066
+2025-05-23 15:29:35,235 - mmseg - INFO - Iter [520/50000]	lr: 1.000e-04, eta: 1 day, 4:50:57, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0022, reg_losses_x: 0.0013, reg_losses_z: 0.0002, reg_losses_vis: 0.0024, loss: 0.0061
+2025-05-23 15:29:56,234 - mmseg - INFO - Iter [530/50000]	lr: 1.000e-04, eta: 1 day, 4:50:37, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0022, reg_losses_x: 0.0013, reg_losses_z: 0.0002, reg_losses_vis: 0.0023, loss: 0.0059
+2025-05-23 15:30:17,248 - mmseg - INFO - Iter [540/50000]	lr: 1.000e-04, eta: 1 day, 4:50:18, time: 2.101, data_time: 2.048, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0024, reg_losses_x: 0.0015, reg_losses_z: 0.0002, reg_losses_vis: 0.0022, loss: 0.0063
+2025-05-23 15:30:38,236 - mmseg - INFO - Iter [550/50000]	lr: 1.000e-04, eta: 1 day, 4:49:57, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0022, reg_losses_x: 0.0014, reg_losses_z: 0.0002, reg_losses_vis: 0.0020, loss: 0.0058
+2025-05-23 15:30:59,216 - mmseg - INFO - Iter [560/50000]	lr: 1.000e-04, eta: 1 day, 4:49:35, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0020, reg_losses_x: 0.0013, reg_losses_z: 0.0002, reg_losses_vis: 0.0019, loss: 0.0055
+2025-05-23 15:31:20,201 - mmseg - INFO - Iter [570/50000]	lr: 1.000e-04, eta: 1 day, 4:49:14, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0022, reg_losses_x: 0.0015, reg_losses_z: 0.0002, reg_losses_vis: 0.0018, loss: 0.0057
+2025-05-23 15:31:41,185 - mmseg - INFO - Iter [580/50000]	lr: 1.000e-04, eta: 1 day, 4:48:52, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0019, reg_losses_x: 0.0016, reg_losses_z: 0.0002, reg_losses_vis: 0.0017, loss: 0.0055
+2025-05-23 15:32:02,173 - mmseg - INFO - Iter [590/50000]	lr: 1.000e-04, eta: 1 day, 4:48:31, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0019, reg_losses_x: 0.0019, reg_losses_z: 0.0002, reg_losses_vis: 0.0016, loss: 0.0056
+2025-05-23 15:32:23,160 - mmseg - INFO - Iter [600/50000]	lr: 1.000e-04, eta: 1 day, 4:48:10, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0016, reg_losses_x: 0.0018, reg_losses_z: 0.0002, reg_losses_vis: 0.0015, loss: 0.0051
+2025-05-23 15:32:44,152 - mmseg - INFO - Iter [610/50000]	lr: 1.000e-04, eta: 1 day, 4:47:49, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0016, reg_losses_x: 0.0017, reg_losses_z: 0.0002, reg_losses_vis: 0.0014, loss: 0.0049
+2025-05-23 15:33:05,137 - mmseg - INFO - Iter [620/50000]	lr: 1.000e-04, eta: 1 day, 4:47:28, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0015, reg_losses_x: 0.0013, reg_losses_z: 0.0002, reg_losses_vis: 0.0014, loss: 0.0043
+2025-05-23 15:33:26,122 - mmseg - INFO - Iter [630/50000]	lr: 1.000e-04, eta: 1 day, 4:47:06, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0013, reg_losses_x: 0.0012, reg_losses_z: 0.0002, reg_losses_vis: 0.0013, loss: 0.0039
+2025-05-23 15:33:47,132 - mmseg - INFO - Iter [640/50000]	lr: 1.000e-04, eta: 1 day, 4:46:47, time: 2.101, data_time: 2.046, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0013, reg_losses_x: 0.0011, reg_losses_z: 0.0002, reg_losses_vis: 0.0012, loss: 0.0038
+2025-05-23 15:34:08,113 - mmseg - INFO - Iter [650/50000]	lr: 1.000e-04, eta: 1 day, 4:46:25, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0014, reg_losses_x: 0.0009, reg_losses_z: 0.0002, reg_losses_vis: 0.0012, loss: 0.0036
+2025-05-23 15:34:29,101 - mmseg - INFO - Iter [660/50000]	lr: 1.000e-04, eta: 1 day, 4:46:04, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0012, reg_losses_x: 0.0008, reg_losses_z: 0.0002, reg_losses_vis: 0.0011, loss: 0.0033
+2025-05-23 15:34:50,087 - mmseg - INFO - Iter [670/50000]	lr: 1.000e-04, eta: 1 day, 4:45:43, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0012, reg_losses_x: 0.0008, reg_losses_z: 0.0001, reg_losses_vis: 0.0010, loss: 0.0032
+2025-05-23 15:35:11,078 - mmseg - INFO - Iter [680/50000]	lr: 1.000e-04, eta: 1 day, 4:45:22, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0012, reg_losses_x: 0.0006, reg_losses_z: 0.0001, reg_losses_vis: 0.0010, loss: 0.0029
+2025-05-23 15:35:32,071 - mmseg - INFO - Iter [690/50000]	lr: 1.000e-04, eta: 1 day, 4:45:01, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0012, reg_losses_x: 0.0006, reg_losses_z: 0.0001, reg_losses_vis: 0.0009, loss: 0.0028
+2025-05-23 15:35:53,056 - mmseg - INFO - Iter [700/50000]	lr: 1.000e-04, eta: 1 day, 4:44:40, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0011, reg_losses_x: 0.0006, reg_losses_z: 0.0001, reg_losses_vis: 0.0009, loss: 0.0027
+2025-05-23 15:36:14,046 - mmseg - INFO - Iter [710/50000]	lr: 1.000e-04, eta: 1 day, 4:44:19, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 10.8000, batch_negatives: 450.0000, cls_loss: 0.0011, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0009, loss: 0.0025
+2025-05-23 15:36:35,034 - mmseg - INFO - Iter [720/50000]	lr: 1.000e-04, eta: 1 day, 4:43:58, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0010, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0008, loss: 0.0023
+2025-05-23 15:36:56,023 - mmseg - INFO - Iter [730/50000]	lr: 1.000e-04, eta: 1 day, 4:43:36, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0009, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0008, loss: 0.0022
+2025-05-23 15:37:17,010 - mmseg - INFO - Iter [740/50000]	lr: 1.000e-04, eta: 1 day, 4:43:15, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0009, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0008, loss: 0.0022
+2025-05-23 15:37:37,998 - mmseg - INFO - Iter [750/50000]	lr: 1.000e-04, eta: 1 day, 4:42:54, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0008, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0007, loss: 0.0020
+2025-05-23 15:37:58,984 - mmseg - INFO - Iter [760/50000]	lr: 1.000e-04, eta: 1 day, 4:42:33, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0008, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0007, loss: 0.0020
+2025-05-23 15:38:19,977 - mmseg - INFO - Iter [770/50000]	lr: 1.000e-04, eta: 1 day, 4:42:12, time: 2.099, data_time: 2.046, memory: 1038, batch_positives: 10.8000, batch_negatives: 450.0000, cls_loss: 0.0009, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0007, loss: 0.0020
+2025-05-23 15:38:40,975 - mmseg - INFO - Iter [780/50000]	lr: 1.000e-04, eta: 1 day, 4:41:52, time: 2.100, data_time: 2.046, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0007, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0006, loss: 0.0018
+2025-05-23 15:39:01,959 - mmseg - INFO - Iter [790/50000]	lr: 1.000e-04, eta: 1 day, 4:41:30, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0008, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0006, loss: 0.0018
+2025-05-23 15:39:22,971 - mmseg - INFO - Iter [800/50000]	lr: 1.000e-04, eta: 1 day, 4:41:11, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0008, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0006, loss: 0.0017
+2025-05-23 15:39:43,961 - mmseg - INFO - Iter [810/50000]	lr: 1.000e-04, eta: 1 day, 4:40:50, time: 2.099, data_time: 2.046, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0006, loss: 0.0015
+2025-05-23 15:40:04,943 - mmseg - INFO - Iter [820/50000]	lr: 1.000e-04, eta: 1 day, 4:40:28, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0006, loss: 0.0015
+2025-05-23 15:40:25,925 - mmseg - INFO - Iter [830/50000]	lr: 1.000e-04, eta: 1 day, 4:40:07, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0014
+2025-05-23 15:40:46,904 - mmseg - INFO - Iter [840/50000]	lr: 1.000e-04, eta: 1 day, 4:39:45, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0013
+2025-05-23 15:41:07,890 - mmseg - INFO - Iter [850/50000]	lr: 1.000e-04, eta: 1 day, 4:39:24, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0014
+2025-05-23 15:41:28,883 - mmseg - INFO - Iter [860/50000]	lr: 1.000e-04, eta: 1 day, 4:39:03, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 10.6500, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0013
+2025-05-23 15:41:49,879 - mmseg - INFO - Iter [870/50000]	lr: 1.000e-04, eta: 1 day, 4:38:42, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0013
+2025-05-23 15:42:10,861 - mmseg - INFO - Iter [880/50000]	lr: 1.000e-04, eta: 1 day, 4:38:21, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0005, loss: 0.0013
+2025-05-23 15:42:31,852 - mmseg - INFO - Iter [890/50000]	lr: 1.000e-04, eta: 1 day, 4:38:00, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0011
+2025-05-23 15:42:52,836 - mmseg - INFO - Iter [900/50000]	lr: 1.000e-04, eta: 1 day, 4:37:39, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0011
+2025-05-23 15:43:13,824 - mmseg - INFO - Iter [910/50000]	lr: 1.000e-04, eta: 1 day, 4:37:18, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0011
+2025-05-23 15:43:34,809 - mmseg - INFO - Iter [920/50000]	lr: 1.000e-04, eta: 1 day, 4:36:57, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0010
+2025-05-23 15:43:55,791 - mmseg - INFO - Iter [930/50000]	lr: 1.000e-04, eta: 1 day, 4:36:35, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0010
+2025-05-23 15:44:16,772 - mmseg - INFO - Iter [940/50000]	lr: 1.000e-04, eta: 1 day, 4:36:14, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0010
+2025-05-23 15:44:37,785 - mmseg - INFO - Iter [950/50000]	lr: 1.000e-04, eta: 1 day, 4:35:54, time: 2.101, data_time: 2.044, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0010
+2025-05-23 15:44:58,772 - mmseg - INFO - Iter [960/50000]	lr: 1.000e-04, eta: 1 day, 4:35:33, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0009
+2025-05-23 15:45:19,769 - mmseg - INFO - Iter [970/50000]	lr: 1.000e-04, eta: 1 day, 4:35:12, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0004, loss: 0.0009
+2025-05-23 15:45:40,752 - mmseg - INFO - Iter [980/50000]	lr: 1.000e-04, eta: 1 day, 4:34:51, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:46:01,735 - mmseg - INFO - Iter [990/50000]	lr: 1.000e-04, eta: 1 day, 4:34:30, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:46:22,719 - mmseg - INFO - Exp name: lanedt_test2.py
+2025-05-23 15:46:22,719 - mmseg - INFO - Iter [1000/50000]	lr: 1.000e-04, eta: 1 day, 4:34:08, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:46:43,707 - mmseg - INFO - Iter [1010/50000]	lr: 1.000e-04, eta: 1 day, 4:33:47, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:47:04,716 - mmseg - INFO - Iter [1020/50000]	lr: 1.000e-04, eta: 1 day, 4:33:27, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:47:25,705 - mmseg - INFO - Iter [1030/50000]	lr: 1.000e-04, eta: 1 day, 4:33:06, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:47:46,708 - mmseg - INFO - Iter [1040/50000]	lr: 1.000e-04, eta: 1 day, 4:32:46, time: 2.100, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0009
+2025-05-23 15:48:07,712 - mmseg - INFO - Iter [1050/50000]	lr: 1.000e-04, eta: 1 day, 4:32:25, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0008
+2025-05-23 15:48:28,701 - mmseg - INFO - Iter [1060/50000]	lr: 1.000e-04, eta: 1 day, 4:32:04, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0008
+2025-05-23 15:48:49,692 - mmseg - INFO - Iter [1070/50000]	lr: 1.000e-04, eta: 1 day, 4:31:43, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0008
+2025-05-23 15:49:10,679 - mmseg - INFO - Iter [1080/50000]	lr: 1.000e-04, eta: 1 day, 4:31:22, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0007
+2025-05-23 15:49:31,664 - mmseg - INFO - Iter [1090/50000]	lr: 1.000e-04, eta: 1 day, 4:31:01, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0007
+2025-05-23 15:49:52,646 - mmseg - INFO - Iter [1100/50000]	lr: 1.000e-04, eta: 1 day, 4:30:40, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0003, loss: 0.0007
+2025-05-23 15:50:13,626 - mmseg - INFO - Iter [1110/50000]	lr: 1.000e-04, eta: 1 day, 4:30:18, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:50:34,718 - mmseg - INFO - Iter [1120/50000]	lr: 1.000e-04, eta: 1 day, 4:30:02, time: 2.109, data_time: 2.051, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:50:55,756 - mmseg - INFO - Iter [1130/50000]	lr: 1.000e-04, eta: 1 day, 4:29:43, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:51:16,793 - mmseg - INFO - Iter [1140/50000]	lr: 1.000e-04, eta: 1 day, 4:29:24, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:51:37,827 - mmseg - INFO - Iter [1150/50000]	lr: 1.000e-04, eta: 1 day, 4:29:05, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:51:58,876 - mmseg - INFO - Iter [1160/50000]	lr: 1.000e-04, eta: 1 day, 4:28:46, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:52:19,917 - mmseg - INFO - Iter [1170/50000]	lr: 1.000e-04, eta: 1 day, 4:28:27, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:52:40,966 - mmseg - INFO - Iter [1180/50000]	lr: 1.000e-04, eta: 1 day, 4:28:08, time: 2.105, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:53:02,014 - mmseg - INFO - Iter [1190/50000]	lr: 1.000e-04, eta: 1 day, 4:27:50, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:53:23,061 - mmseg - INFO - Iter [1200/50000]	lr: 1.000e-04, eta: 1 day, 4:27:31, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0010
+2025-05-23 15:53:44,105 - mmseg - INFO - Iter [1210/50000]	lr: 1.000e-04, eta: 1 day, 4:27:12, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:54:05,150 - mmseg - INFO - Iter [1220/50000]	lr: 1.000e-04, eta: 1 day, 4:26:53, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:54:26,179 - mmseg - INFO - Iter [1230/50000]	lr: 1.000e-04, eta: 1 day, 4:26:33, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:54:47,221 - mmseg - INFO - Iter [1240/50000]	lr: 1.000e-04, eta: 1 day, 4:26:14, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:55:08,271 - mmseg - INFO - Iter [1250/50000]	lr: 1.000e-04, eta: 1 day, 4:25:55, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:55:29,308 - mmseg - INFO - Iter [1260/50000]	lr: 1.000e-04, eta: 1 day, 4:25:36, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:55:50,349 - mmseg - INFO - Iter [1270/50000]	lr: 1.000e-04, eta: 1 day, 4:25:16, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:56:11,393 - mmseg - INFO - Iter [1280/50000]	lr: 1.000e-04, eta: 1 day, 4:24:57, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:56:32,430 - mmseg - INFO - Iter [1290/50000]	lr: 1.000e-04, eta: 1 day, 4:24:38, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:56:53,465 - mmseg - INFO - Iter [1300/50000]	lr: 1.000e-04, eta: 1 day, 4:24:18, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:57:14,514 - mmseg - INFO - Iter [1310/50000]	lr: 1.000e-04, eta: 1 day, 4:23:59, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0005, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:57:35,548 - mmseg - INFO - Iter [1320/50000]	lr: 1.000e-04, eta: 1 day, 4:23:39, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 15:57:56,586 - mmseg - INFO - Iter [1330/50000]	lr: 1.000e-04, eta: 1 day, 4:23:20, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 15:58:17,619 - mmseg - INFO - Iter [1340/50000]	lr: 1.000e-04, eta: 1 day, 4:23:00, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:58:38,670 - mmseg - INFO - Iter [1350/50000]	lr: 1.000e-04, eta: 1 day, 4:22:41, time: 2.105, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:58:59,708 - mmseg - INFO - Iter [1360/50000]	lr: 1.000e-04, eta: 1 day, 4:22:21, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 15:59:20,751 - mmseg - INFO - Iter [1370/50000]	lr: 1.000e-04, eta: 1 day, 4:22:02, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0020, reg_losses_x: 0.0008, reg_losses_z: 0.0003, reg_losses_vis: 0.0002, loss: 0.0033
+2025-05-23 15:59:41,788 - mmseg - INFO - Iter [1380/50000]	lr: 1.000e-04, eta: 1 day, 4:21:42, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0041, reg_losses_x: 0.0048, reg_losses_z: 0.0005, reg_losses_vis: 0.0003, loss: 0.0097
+2025-05-23 16:00:02,823 - mmseg - INFO - Iter [1390/50000]	lr: 1.000e-04, eta: 1 day, 4:21:22, time: 2.103, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.1024, reg_losses_x: 0.0318, reg_losses_z: 0.0042, reg_losses_vis: 0.0023, loss: 0.1407
+2025-05-23 16:00:23,870 - mmseg - INFO - Iter [1400/50000]	lr: 1.000e-04, eta: 1 day, 4:21:03, time: 2.105, data_time: 2.045, memory: 1038, batch_positives: 10.8000, batch_negatives: 450.0000, cls_loss: 0.0386, reg_losses_x: 0.0539, reg_losses_z: 0.0075, reg_losses_vis: 0.0059, loss: 0.1059
+2025-05-23 16:00:44,901 - mmseg - INFO - Iter [1410/50000]	lr: 1.000e-04, eta: 1 day, 4:20:43, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0112, reg_losses_x: 0.0275, reg_losses_z: 0.0038, reg_losses_vis: 0.0029, loss: 0.0455
+2025-05-23 16:01:05,935 - mmseg - INFO - Iter [1420/50000]	lr: 1.000e-04, eta: 1 day, 4:20:23, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0069, reg_losses_x: 0.0122, reg_losses_z: 0.0019, reg_losses_vis: 0.0014, loss: 0.0224
+2025-05-23 16:01:26,966 - mmseg - INFO - Iter [1430/50000]	lr: 1.000e-04, eta: 1 day, 4:20:03, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0037, reg_losses_x: 0.0072, reg_losses_z: 0.0012, reg_losses_vis: 0.0009, loss: 0.0129
+2025-05-23 16:01:47,997 - mmseg - INFO - Iter [1440/50000]	lr: 1.000e-04, eta: 1 day, 4:19:43, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0029, reg_losses_x: 0.0050, reg_losses_z: 0.0008, reg_losses_vis: 0.0007, loss: 0.0095
+2025-05-23 16:02:09,040 - mmseg - INFO - Iter [1450/50000]	lr: 1.000e-04, eta: 1 day, 4:19:24, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0019, reg_losses_x: 0.0036, reg_losses_z: 0.0007, reg_losses_vis: 0.0005, loss: 0.0068
+2025-05-23 16:02:30,079 - mmseg - INFO - Iter [1460/50000]	lr: 1.000e-04, eta: 1 day, 4:19:04, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0016, reg_losses_x: 0.0030, reg_losses_z: 0.0005, reg_losses_vis: 0.0005, loss: 0.0056
+2025-05-23 16:02:51,117 - mmseg - INFO - Iter [1470/50000]	lr: 1.000e-04, eta: 1 day, 4:18:44, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0010, reg_losses_x: 0.0024, reg_losses_z: 0.0004, reg_losses_vis: 0.0004, loss: 0.0043
+2025-05-23 16:03:12,157 - mmseg - INFO - Iter [1480/50000]	lr: 1.000e-04, eta: 1 day, 4:18:24, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0009, reg_losses_x: 0.0018, reg_losses_z: 0.0004, reg_losses_vis: 0.0004, loss: 0.0035
+2025-05-23 16:03:33,195 - mmseg - INFO - Iter [1490/50000]	lr: 1.000e-04, eta: 1 day, 4:18:04, time: 2.104, data_time: 2.042, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0009, reg_losses_x: 0.0014, reg_losses_z: 0.0003, reg_losses_vis: 0.0004, loss: 0.0031
+2025-05-23 16:03:54,226 - mmseg - INFO - Iter [1500/50000]	lr: 1.000e-04, eta: 1 day, 4:17:44, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0007, reg_losses_x: 0.0012, reg_losses_z: 0.0003, reg_losses_vis: 0.0003, loss: 0.0025
+2025-05-23 16:04:15,291 - mmseg - INFO - Iter [1510/50000]	lr: 1.000e-04, eta: 1 day, 4:17:25, time: 2.107, data_time: 2.047, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0010, reg_losses_z: 0.0002, reg_losses_vis: 0.0003, loss: 0.0021
+2025-05-23 16:04:36,330 - mmseg - INFO - Iter [1520/50000]	lr: 1.000e-04, eta: 1 day, 4:17:05, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0006, reg_losses_x: 0.0008, reg_losses_z: 0.0002, reg_losses_vis: 0.0003, loss: 0.0019
+2025-05-23 16:04:57,365 - mmseg - INFO - Iter [1530/50000]	lr: 1.000e-04, eta: 1 day, 4:16:45, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0007, reg_losses_z: 0.0002, reg_losses_vis: 0.0003, loss: 0.0017
+2025-05-23 16:05:18,400 - mmseg - INFO - Iter [1540/50000]	lr: 1.000e-04, eta: 1 day, 4:16:25, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0006, reg_losses_z: 0.0002, reg_losses_vis: 0.0003, loss: 0.0015
+2025-05-23 16:05:39,431 - mmseg - INFO - Iter [1550/50000]	lr: 1.000e-04, eta: 1 day, 4:16:05, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0005, reg_losses_x: 0.0006, reg_losses_z: 0.0002, reg_losses_vis: 0.0003, loss: 0.0015
+2025-05-23 16:06:00,456 - mmseg - INFO - Iter [1560/50000]	lr: 1.000e-04, eta: 1 day, 4:15:45, time: 2.102, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0003, loss: 0.0014
+2025-05-23 16:06:21,494 - mmseg - INFO - Iter [1570/50000]	lr: 1.000e-04, eta: 1 day, 4:15:25, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0013
+2025-05-23 16:06:42,538 - mmseg - INFO - Iter [1580/50000]	lr: 1.000e-04, eta: 1 day, 4:15:05, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0005, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0012
+2025-05-23 16:07:03,568 - mmseg - INFO - Iter [1590/50000]	lr: 1.000e-04, eta: 1 day, 4:14:45, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0011
+2025-05-23 16:07:24,603 - mmseg - INFO - Iter [1600/50000]	lr: 1.000e-04, eta: 1 day, 4:14:25, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0011
+2025-05-23 16:07:45,648 - mmseg - INFO - Iter [1610/50000]	lr: 1.000e-04, eta: 1 day, 4:14:05, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0004, reg_losses_x: 0.0004, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0011
+2025-05-23 16:08:06,680 - mmseg - INFO - Iter [1620/50000]	lr: 1.000e-04, eta: 1 day, 4:13:45, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0010
+2025-05-23 16:08:27,722 - mmseg - INFO - Iter [1630/50000]	lr: 1.000e-04, eta: 1 day, 4:13:25, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 16:08:48,754 - mmseg - INFO - Iter [1640/50000]	lr: 1.000e-04, eta: 1 day, 4:13:05, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 16:09:09,789 - mmseg - INFO - Iter [1650/50000]	lr: 1.000e-04, eta: 1 day, 4:12:44, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0009
+2025-05-23 16:09:30,816 - mmseg - INFO - Iter [1660/50000]	lr: 1.000e-04, eta: 1 day, 4:12:24, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0003, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 16:09:51,851 - mmseg - INFO - Iter [1670/50000]	lr: 1.000e-04, eta: 1 day, 4:12:04, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 16:10:12,883 - mmseg - INFO - Iter [1680/50000]	lr: 1.000e-04, eta: 1 day, 4:11:44, time: 2.103, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 16:10:33,920 - mmseg - INFO - Iter [1690/50000]	lr: 1.000e-04, eta: 1 day, 4:11:23, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0008
+2025-05-23 16:10:54,956 - mmseg - INFO - Iter [1700/50000]	lr: 1.000e-04, eta: 1 day, 4:11:03, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 16:11:15,987 - mmseg - INFO - Iter [1710/50000]	lr: 1.000e-04, eta: 1 day, 4:10:43, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 16:11:37,013 - mmseg - INFO - Iter [1720/50000]	lr: 1.000e-04, eta: 1 day, 4:10:22, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 16:11:58,041 - mmseg - INFO - Iter [1730/50000]	lr: 1.000e-04, eta: 1 day, 4:10:02, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 16:12:19,074 - mmseg - INFO - Iter [1740/50000]	lr: 1.000e-04, eta: 1 day, 4:09:42, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0007
+2025-05-23 16:12:40,105 - mmseg - INFO - Iter [1750/50000]	lr: 1.000e-04, eta: 1 day, 4:09:21, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0006
+2025-05-23 16:13:01,137 - mmseg - INFO - Iter [1760/50000]	lr: 1.000e-04, eta: 1 day, 4:09:01, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0003, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0002, loss: 0.0006
+2025-05-23 16:13:22,166 - mmseg - INFO - Iter [1770/50000]	lr: 1.000e-04, eta: 1 day, 4:08:41, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:13:43,225 - mmseg - INFO - Iter [1780/50000]	lr: 1.000e-04, eta: 1 day, 4:08:21, time: 2.106, data_time: 2.047, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:14:04,266 - mmseg - INFO - Iter [1790/50000]	lr: 1.000e-04, eta: 1 day, 4:08:01, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:14:25,297 - mmseg - INFO - Iter [1800/50000]	lr: 1.000e-04, eta: 1 day, 4:07:40, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:14:46,342 - mmseg - INFO - Iter [1810/50000]	lr: 1.000e-04, eta: 1 day, 4:07:20, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:15:07,386 - mmseg - INFO - Iter [1820/50000]	lr: 1.000e-04, eta: 1 day, 4:07:00, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0001, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:15:28,425 - mmseg - INFO - Iter [1830/50000]	lr: 1.000e-04, eta: 1 day, 4:06:40, time: 2.104, data_time: 2.046, memory: 1038, batch_positives: 12.6000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:15:49,459 - mmseg - INFO - Iter [1840/50000]	lr: 1.000e-04, eta: 1 day, 4:06:20, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:16:10,496 - mmseg - INFO - Iter [1850/50000]	lr: 1.000e-04, eta: 1 day, 4:05:59, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:16:31,536 - mmseg - INFO - Iter [1860/50000]	lr: 1.000e-04, eta: 1 day, 4:05:39, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:16:52,573 - mmseg - INFO - Iter [1870/50000]	lr: 1.000e-04, eta: 1 day, 4:05:19, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:17:13,613 - mmseg - INFO - Iter [1880/50000]	lr: 1.000e-04, eta: 1 day, 4:04:59, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:17:34,656 - mmseg - INFO - Iter [1890/50000]	lr: 1.000e-04, eta: 1 day, 4:04:39, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:17:55,695 - mmseg - INFO - Iter [1900/50000]	lr: 1.000e-04, eta: 1 day, 4:04:18, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:18:16,722 - mmseg - INFO - Iter [1910/50000]	lr: 1.000e-04, eta: 1 day, 4:03:58, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:18:37,760 - mmseg - INFO - Iter [1920/50000]	lr: 1.000e-04, eta: 1 day, 4:03:37, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:18:58,796 - mmseg - INFO - Iter [1930/50000]	lr: 1.000e-04, eta: 1 day, 4:03:17, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:19:19,830 - mmseg - INFO - Iter [1940/50000]	lr: 1.000e-04, eta: 1 day, 4:02:57, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:19:40,873 - mmseg - INFO - Iter [1950/50000]	lr: 1.000e-04, eta: 1 day, 4:02:36, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:20:01,916 - mmseg - INFO - Iter [1960/50000]	lr: 1.000e-04, eta: 1 day, 4:02:16, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:20:22,950 - mmseg - INFO - Iter [1970/50000]	lr: 1.000e-04, eta: 1 day, 4:01:56, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:20:43,979 - mmseg - INFO - Iter [1980/50000]	lr: 1.000e-04, eta: 1 day, 4:01:35, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:21:05,012 - mmseg - INFO - Iter [1990/50000]	lr: 1.000e-04, eta: 1 day, 4:01:15, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:21:26,050 - mmseg - INFO - Exp name: lanedt_test2.py
+2025-05-23 16:21:26,050 - mmseg - INFO - Iter [2000/50000]	lr: 1.000e-04, eta: 1 day, 4:00:54, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:21:47,091 - mmseg - INFO - Iter [2010/50000]	lr: 1.000e-04, eta: 1 day, 4:00:34, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:22:08,128 - mmseg - INFO - Iter [2020/50000]	lr: 1.000e-04, eta: 1 day, 4:00:14, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:22:29,160 - mmseg - INFO - Iter [2030/50000]	lr: 1.000e-04, eta: 1 day, 3:59:53, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:22:50,195 - mmseg - INFO - Iter [2040/50000]	lr: 1.000e-04, eta: 1 day, 3:59:33, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:23:11,242 - mmseg - INFO - Iter [2050/50000]	lr: 1.000e-04, eta: 1 day, 3:59:12, time: 2.105, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:23:32,274 - mmseg - INFO - Iter [2060/50000]	lr: 1.000e-04, eta: 1 day, 3:58:52, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:23:53,311 - mmseg - INFO - Iter [2070/50000]	lr: 1.000e-04, eta: 1 day, 3:58:31, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:24:14,339 - mmseg - INFO - Iter [2080/50000]	lr: 1.000e-04, eta: 1 day, 3:58:11, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:24:35,375 - mmseg - INFO - Iter [2090/50000]	lr: 1.000e-04, eta: 1 day, 3:57:50, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:24:56,385 - mmseg - INFO - Iter [2100/50000]	lr: 1.000e-04, eta: 1 day, 3:57:29, time: 2.101, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:25:17,400 - mmseg - INFO - Iter [2110/50000]	lr: 1.000e-04, eta: 1 day, 3:57:08, time: 2.102, data_time: 2.047, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:25:38,379 - mmseg - INFO - Iter [2120/50000]	lr: 1.000e-04, eta: 1 day, 3:56:46, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:25:59,370 - mmseg - INFO - Iter [2130/50000]	lr: 1.000e-04, eta: 1 day, 3:56:25, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:26:20,356 - mmseg - INFO - Iter [2140/50000]	lr: 1.000e-04, eta: 1 day, 3:56:03, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:26:41,337 - mmseg - INFO - Iter [2150/50000]	lr: 1.000e-04, eta: 1 day, 3:55:42, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:27:02,322 - mmseg - INFO - Iter [2160/50000]	lr: 1.000e-04, eta: 1 day, 3:55:20, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:27:23,310 - mmseg - INFO - Iter [2170/50000]	lr: 1.000e-04, eta: 1 day, 3:54:59, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:27:44,297 - mmseg - INFO - Iter [2180/50000]	lr: 1.000e-04, eta: 1 day, 3:54:37, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:28:05,284 - mmseg - INFO - Iter [2190/50000]	lr: 1.000e-04, eta: 1 day, 3:54:15, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:28:26,270 - mmseg - INFO - Iter [2200/50000]	lr: 1.000e-04, eta: 1 day, 3:53:54, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:28:47,256 - mmseg - INFO - Iter [2210/50000]	lr: 1.000e-04, eta: 1 day, 3:53:32, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:29:08,236 - mmseg - INFO - Iter [2220/50000]	lr: 1.000e-04, eta: 1 day, 3:53:11, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:29:29,220 - mmseg - INFO - Iter [2230/50000]	lr: 1.000e-04, eta: 1 day, 3:52:49, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:29:50,208 - mmseg - INFO - Iter [2240/50000]	lr: 1.000e-04, eta: 1 day, 3:52:27, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:30:11,191 - mmseg - INFO - Iter [2250/50000]	lr: 1.000e-04, eta: 1 day, 3:52:06, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:30:32,167 - mmseg - INFO - Iter [2260/50000]	lr: 1.000e-04, eta: 1 day, 3:51:44, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:30:53,146 - mmseg - INFO - Iter [2270/50000]	lr: 1.000e-04, eta: 1 day, 3:51:22, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:31:14,128 - mmseg - INFO - Iter [2280/50000]	lr: 1.000e-04, eta: 1 day, 3:51:01, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:31:35,113 - mmseg - INFO - Iter [2290/50000]	lr: 1.000e-04, eta: 1 day, 3:50:39, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:31:56,114 - mmseg - INFO - Iter [2300/50000]	lr: 1.000e-04, eta: 1 day, 3:50:18, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:32:17,096 - mmseg - INFO - Iter [2310/50000]	lr: 1.000e-04, eta: 1 day, 3:49:57, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:32:38,081 - mmseg - INFO - Iter [2320/50000]	lr: 1.000e-04, eta: 1 day, 3:49:35, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:32:59,064 - mmseg - INFO - Iter [2330/50000]	lr: 1.000e-04, eta: 1 day, 3:49:13, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:33:20,056 - mmseg - INFO - Iter [2340/50000]	lr: 1.000e-04, eta: 1 day, 3:48:52, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:33:41,047 - mmseg - INFO - Iter [2350/50000]	lr: 1.000e-04, eta: 1 day, 3:48:31, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:34:02,035 - mmseg - INFO - Iter [2360/50000]	lr: 1.000e-04, eta: 1 day, 3:48:09, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:34:23,020 - mmseg - INFO - Iter [2370/50000]	lr: 1.000e-04, eta: 1 day, 3:47:48, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:34:44,006 - mmseg - INFO - Iter [2380/50000]	lr: 1.000e-04, eta: 1 day, 3:47:26, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:35:05,001 - mmseg - INFO - Iter [2390/50000]	lr: 1.000e-04, eta: 1 day, 3:47:05, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:35:25,983 - mmseg - INFO - Iter [2400/50000]	lr: 1.000e-04, eta: 1 day, 3:46:43, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:35:46,967 - mmseg - INFO - Iter [2410/50000]	lr: 1.000e-04, eta: 1 day, 3:46:22, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:36:08,065 - mmseg - INFO - Iter [2420/50000]	lr: 1.000e-04, eta: 1 day, 3:46:03, time: 2.110, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:36:29,053 - mmseg - INFO - Iter [2430/50000]	lr: 1.000e-04, eta: 1 day, 3:45:41, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:36:50,037 - mmseg - INFO - Iter [2440/50000]	lr: 1.000e-04, eta: 1 day, 3:45:20, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:37:11,026 - mmseg - INFO - Iter [2450/50000]	lr: 1.000e-04, eta: 1 day, 3:44:58, time: 2.099, data_time: 2.046, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:37:32,011 - mmseg - INFO - Iter [2460/50000]	lr: 1.000e-04, eta: 1 day, 3:44:37, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:37:52,994 - mmseg - INFO - Iter [2470/50000]	lr: 1.000e-04, eta: 1 day, 3:44:15, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:38:13,977 - mmseg - INFO - Iter [2480/50000]	lr: 1.000e-04, eta: 1 day, 3:43:54, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:38:34,970 - mmseg - INFO - Iter [2490/50000]	lr: 1.000e-04, eta: 1 day, 3:43:32, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:38:55,954 - mmseg - INFO - Saving checkpoint at 2500 iterations
+2025-05-23 16:38:56,371 - mmseg - INFO - Iter [2500/50000]	lr: 1.000e-04, eta: 1 day, 3:43:19, time: 2.140, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0003
+2025-05-23 16:39:17,361 - mmseg - INFO - Iter [2510/50000]	lr: 1.000e-04, eta: 1 day, 3:42:58, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:39:38,346 - mmseg - INFO - Iter [2520/50000]	lr: 1.000e-04, eta: 1 day, 3:42:36, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:39:59,334 - mmseg - INFO - Iter [2530/50000]	lr: 1.000e-04, eta: 1 day, 3:42:15, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:40:20,319 - mmseg - INFO - Iter [2540/50000]	lr: 1.000e-04, eta: 1 day, 3:41:53, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:40:41,300 - mmseg - INFO - Iter [2550/50000]	lr: 1.000e-04, eta: 1 day, 3:41:32, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:41:02,279 - mmseg - INFO - Iter [2560/50000]	lr: 1.000e-04, eta: 1 day, 3:41:10, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:41:23,268 - mmseg - INFO - Iter [2570/50000]	lr: 1.000e-04, eta: 1 day, 3:40:49, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:41:44,250 - mmseg - INFO - Iter [2580/50000]	lr: 1.000e-04, eta: 1 day, 3:40:27, time: 2.098, data_time: 2.046, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0006
+2025-05-23 16:42:05,241 - mmseg - INFO - Iter [2590/50000]	lr: 1.000e-04, eta: 1 day, 3:40:06, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:42:26,226 - mmseg - INFO - Iter [2600/50000]	lr: 1.000e-04, eta: 1 day, 3:39:44, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:42:47,204 - mmseg - INFO - Iter [2610/50000]	lr: 1.000e-04, eta: 1 day, 3:39:23, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:43:08,189 - mmseg - INFO - Iter [2620/50000]	lr: 1.000e-04, eta: 1 day, 3:39:01, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:43:29,174 - mmseg - INFO - Iter [2630/50000]	lr: 1.000e-04, eta: 1 day, 3:38:40, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:43:50,154 - mmseg - INFO - Iter [2640/50000]	lr: 1.000e-04, eta: 1 day, 3:38:18, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:44:11,159 - mmseg - INFO - Iter [2650/50000]	lr: 1.000e-04, eta: 1 day, 3:37:57, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:44:32,139 - mmseg - INFO - Iter [2660/50000]	lr: 1.000e-04, eta: 1 day, 3:37:36, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:44:53,129 - mmseg - INFO - Iter [2670/50000]	lr: 1.000e-04, eta: 1 day, 3:37:14, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0005
+2025-05-23 16:45:14,122 - mmseg - INFO - Iter [2680/50000]	lr: 1.000e-04, eta: 1 day, 3:36:53, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:45:35,121 - mmseg - INFO - Iter [2690/50000]	lr: 1.000e-04, eta: 1 day, 3:36:32, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:45:56,098 - mmseg - INFO - Iter [2700/50000]	lr: 1.000e-04, eta: 1 day, 3:36:10, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:46:17,081 - mmseg - INFO - Iter [2710/50000]	lr: 1.000e-04, eta: 1 day, 3:35:49, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0001, loss: 0.0004
+2025-05-23 16:46:38,063 - mmseg - INFO - Iter [2720/50000]	lr: 1.000e-04, eta: 1 day, 3:35:27, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:46:59,044 - mmseg - INFO - Iter [2730/50000]	lr: 1.000e-04, eta: 1 day, 3:35:06, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:47:20,024 - mmseg - INFO - Iter [2740/50000]	lr: 1.000e-04, eta: 1 day, 3:34:44, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:47:41,010 - mmseg - INFO - Iter [2750/50000]	lr: 1.000e-04, eta: 1 day, 3:34:23, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:48:01,998 - mmseg - INFO - Iter [2760/50000]	lr: 1.000e-04, eta: 1 day, 3:34:02, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:48:22,989 - mmseg - INFO - Iter [2770/50000]	lr: 1.000e-04, eta: 1 day, 3:33:40, time: 2.099, data_time: 2.046, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:48:43,967 - mmseg - INFO - Iter [2780/50000]	lr: 1.000e-04, eta: 1 day, 3:33:19, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.4500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:49:04,950 - mmseg - INFO - Iter [2790/50000]	lr: 1.000e-04, eta: 1 day, 3:32:57, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:49:25,956 - mmseg - INFO - Iter [2800/50000]	lr: 1.000e-04, eta: 1 day, 3:32:36, time: 2.101, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:49:46,952 - mmseg - INFO - Iter [2810/50000]	lr: 1.000e-04, eta: 1 day, 3:32:15, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:50:07,926 - mmseg - INFO - Iter [2820/50000]	lr: 1.000e-04, eta: 1 day, 3:31:54, time: 2.097, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:50:28,910 - mmseg - INFO - Iter [2830/50000]	lr: 1.000e-04, eta: 1 day, 3:31:32, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:50:49,940 - mmseg - INFO - Iter [2840/50000]	lr: 1.000e-04, eta: 1 day, 3:31:12, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:51:10,974 - mmseg - INFO - Iter [2850/50000]	lr: 1.000e-04, eta: 1 day, 3:30:51, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:51:32,004 - mmseg - INFO - Iter [2860/50000]	lr: 1.000e-04, eta: 1 day, 3:30:30, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:51:52,981 - mmseg - INFO - Iter [2870/50000]	lr: 1.000e-04, eta: 1 day, 3:30:09, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:52:13,964 - mmseg - INFO - Iter [2880/50000]	lr: 1.000e-04, eta: 1 day, 3:29:47, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:52:34,952 - mmseg - INFO - Iter [2890/50000]	lr: 1.000e-04, eta: 1 day, 3:29:26, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:52:55,939 - mmseg - INFO - Iter [2900/50000]	lr: 1.000e-04, eta: 1 day, 3:29:05, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:53:16,926 - mmseg - INFO - Iter [2910/50000]	lr: 1.000e-04, eta: 1 day, 3:28:43, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:53:37,908 - mmseg - INFO - Iter [2920/50000]	lr: 1.000e-04, eta: 1 day, 3:28:22, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:53:58,897 - mmseg - INFO - Iter [2930/50000]	lr: 1.000e-04, eta: 1 day, 3:28:01, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:54:19,885 - mmseg - INFO - Iter [2940/50000]	lr: 1.000e-04, eta: 1 day, 3:27:39, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:54:40,869 - mmseg - INFO - Iter [2950/50000]	lr: 1.000e-04, eta: 1 day, 3:27:18, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:55:01,851 - mmseg - INFO - Iter [2960/50000]	lr: 1.000e-04, eta: 1 day, 3:26:57, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:55:22,835 - mmseg - INFO - Iter [2970/50000]	lr: 1.000e-04, eta: 1 day, 3:26:35, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:55:43,816 - mmseg - INFO - Iter [2980/50000]	lr: 1.000e-04, eta: 1 day, 3:26:14, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:56:04,804 - mmseg - INFO - Iter [2990/50000]	lr: 1.000e-04, eta: 1 day, 3:25:52, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:56:25,786 - mmseg - INFO - Exp name: lanedt_test2.py
+2025-05-23 16:56:25,787 - mmseg - INFO - Iter [3000/50000]	lr: 1.000e-04, eta: 1 day, 3:25:31, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:56:46,771 - mmseg - INFO - Iter [3010/50000]	lr: 1.000e-04, eta: 1 day, 3:25:10, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:57:07,752 - mmseg - INFO - Iter [3020/50000]	lr: 1.000e-04, eta: 1 day, 3:24:48, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:57:28,735 - mmseg - INFO - Iter [3030/50000]	lr: 1.000e-04, eta: 1 day, 3:24:27, time: 2.098, data_time: 2.042, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 16:57:49,723 - mmseg - INFO - Iter [3040/50000]	lr: 1.000e-04, eta: 1 day, 3:24:06, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:58:10,707 - mmseg - INFO - Iter [3050/50000]	lr: 1.000e-04, eta: 1 day, 3:23:44, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:58:31,699 - mmseg - INFO - Iter [3060/50000]	lr: 1.000e-04, eta: 1 day, 3:23:23, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:58:52,684 - mmseg - INFO - Iter [3070/50000]	lr: 1.000e-04, eta: 1 day, 3:23:02, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:59:13,668 - mmseg - INFO - Iter [3080/50000]	lr: 1.000e-04, eta: 1 day, 3:22:40, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:59:34,654 - mmseg - INFO - Iter [3090/50000]	lr: 1.000e-04, eta: 1 day, 3:22:19, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 16:59:55,637 - mmseg - INFO - Iter [3100/50000]	lr: 1.000e-04, eta: 1 day, 3:21:58, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:00:16,626 - mmseg - INFO - Iter [3110/50000]	lr: 1.000e-04, eta: 1 day, 3:21:36, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0002, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:00:37,605 - mmseg - INFO - Iter [3120/50000]	lr: 1.000e-04, eta: 1 day, 3:21:15, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:00:58,628 - mmseg - INFO - Iter [3130/50000]	lr: 1.000e-04, eta: 1 day, 3:20:54, time: 2.102, data_time: 2.047, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:01:19,605 - mmseg - INFO - Iter [3140/50000]	lr: 1.000e-04, eta: 1 day, 3:20:33, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:01:40,593 - mmseg - INFO - Iter [3150/50000]	lr: 1.000e-04, eta: 1 day, 3:20:12, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:02:01,574 - mmseg - INFO - Iter [3160/50000]	lr: 1.000e-04, eta: 1 day, 3:19:50, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0005
+2025-05-23 17:02:22,562 - mmseg - INFO - Iter [3170/50000]	lr: 1.000e-04, eta: 1 day, 3:19:29, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:02:43,543 - mmseg - INFO - Iter [3180/50000]	lr: 1.000e-04, eta: 1 day, 3:19:08, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:03:04,530 - mmseg - INFO - Iter [3190/50000]	lr: 1.000e-04, eta: 1 day, 3:18:46, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:03:25,519 - mmseg - INFO - Iter [3200/50000]	lr: 1.000e-04, eta: 1 day, 3:18:25, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:03:46,500 - mmseg - INFO - Iter [3210/50000]	lr: 1.000e-04, eta: 1 day, 3:18:04, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0005
+2025-05-23 17:04:07,478 - mmseg - INFO - Iter [3220/50000]	lr: 1.000e-04, eta: 1 day, 3:17:42, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0006
+2025-05-23 17:04:28,465 - mmseg - INFO - Iter [3230/50000]	lr: 1.000e-04, eta: 1 day, 3:17:21, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0004, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0006
+2025-05-23 17:04:49,456 - mmseg - INFO - Iter [3240/50000]	lr: 1.000e-04, eta: 1 day, 3:17:00, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0005
+2025-05-23 17:05:10,443 - mmseg - INFO - Iter [3250/50000]	lr: 1.000e-04, eta: 1 day, 3:16:39, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0005
+2025-05-23 17:05:31,438 - mmseg - INFO - Iter [3260/50000]	lr: 1.000e-04, eta: 1 day, 3:16:17, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.3000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0005
+2025-05-23 17:05:52,427 - mmseg - INFO - Iter [3270/50000]	lr: 1.000e-04, eta: 1 day, 3:15:56, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 10.8000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:06:13,405 - mmseg - INFO - Iter [3280/50000]	lr: 1.000e-04, eta: 1 day, 3:15:35, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:06:34,397 - mmseg - INFO - Iter [3290/50000]	lr: 1.000e-04, eta: 1 day, 3:15:14, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:06:55,376 - mmseg - INFO - Iter [3300/50000]	lr: 1.000e-04, eta: 1 day, 3:14:52, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:07:16,359 - mmseg - INFO - Iter [3310/50000]	lr: 1.000e-04, eta: 1 day, 3:14:31, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:07:37,361 - mmseg - INFO - Iter [3320/50000]	lr: 1.000e-04, eta: 1 day, 3:14:10, time: 2.100, data_time: 2.045, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:07:58,348 - mmseg - INFO - Iter [3330/50000]	lr: 1.000e-04, eta: 1 day, 3:13:49, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:08:19,339 - mmseg - INFO - Iter [3340/50000]	lr: 1.000e-04, eta: 1 day, 3:13:27, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:08:40,329 - mmseg - INFO - Iter [3350/50000]	lr: 1.000e-04, eta: 1 day, 3:13:06, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:09:01,316 - mmseg - INFO - Iter [3360/50000]	lr: 1.000e-04, eta: 1 day, 3:12:45, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:09:22,302 - mmseg - INFO - Iter [3370/50000]	lr: 1.000e-04, eta: 1 day, 3:12:24, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:09:43,325 - mmseg - INFO - Iter [3380/50000]	lr: 1.000e-04, eta: 1 day, 3:12:03, time: 2.102, data_time: 2.048, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:10:04,307 - mmseg - INFO - Iter [3390/50000]	lr: 1.000e-04, eta: 1 day, 3:11:42, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:10:25,292 - mmseg - INFO - Iter [3400/50000]	lr: 1.000e-04, eta: 1 day, 3:11:20, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:10:46,280 - mmseg - INFO - Iter [3410/50000]	lr: 1.000e-04, eta: 1 day, 3:10:59, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:11:07,255 - mmseg - INFO - Iter [3420/50000]	lr: 1.000e-04, eta: 1 day, 3:10:38, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:11:28,241 - mmseg - INFO - Iter [3430/50000]	lr: 1.000e-04, eta: 1 day, 3:10:16, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:11:49,222 - mmseg - INFO - Iter [3440/50000]	lr: 1.000e-04, eta: 1 day, 3:09:55, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0000, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:12:10,201 - mmseg - INFO - Iter [3450/50000]	lr: 1.000e-04, eta: 1 day, 3:09:34, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:12:31,185 - mmseg - INFO - Iter [3460/50000]	lr: 1.000e-04, eta: 1 day, 3:09:12, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:12:52,170 - mmseg - INFO - Iter [3470/50000]	lr: 1.000e-04, eta: 1 day, 3:08:51, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:13:13,151 - mmseg - INFO - Iter [3480/50000]	lr: 1.000e-04, eta: 1 day, 3:08:30, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:13:34,140 - mmseg - INFO - Iter [3490/50000]	lr: 1.000e-04, eta: 1 day, 3:08:09, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:13:55,123 - mmseg - INFO - Iter [3500/50000]	lr: 1.000e-04, eta: 1 day, 3:07:47, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:14:16,112 - mmseg - INFO - Iter [3510/50000]	lr: 1.000e-04, eta: 1 day, 3:07:26, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:14:37,093 - mmseg - INFO - Iter [3520/50000]	lr: 1.000e-04, eta: 1 day, 3:07:05, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:14:58,079 - mmseg - INFO - Iter [3530/50000]	lr: 1.000e-04, eta: 1 day, 3:06:44, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:15:19,068 - mmseg - INFO - Iter [3540/50000]	lr: 1.000e-04, eta: 1 day, 3:06:22, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:15:40,049 - mmseg - INFO - Iter [3550/50000]	lr: 1.000e-04, eta: 1 day, 3:06:01, time: 2.098, data_time: 2.042, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:16:01,039 - mmseg - INFO - Iter [3560/50000]	lr: 1.000e-04, eta: 1 day, 3:05:40, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:16:22,024 - mmseg - INFO - Iter [3570/50000]	lr: 1.000e-04, eta: 1 day, 3:05:19, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:16:43,003 - mmseg - INFO - Iter [3580/50000]	lr: 1.000e-04, eta: 1 day, 3:04:57, time: 2.098, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:17:03,990 - mmseg - INFO - Iter [3590/50000]	lr: 1.000e-04, eta: 1 day, 3:04:36, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:17:24,975 - mmseg - INFO - Iter [3600/50000]	lr: 1.000e-04, eta: 1 day, 3:04:15, time: 2.098, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:17:45,966 - mmseg - INFO - Iter [3610/50000]	lr: 1.000e-04, eta: 1 day, 3:03:54, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:18:07,003 - mmseg - INFO - Iter [3620/50000]	lr: 1.000e-04, eta: 1 day, 3:03:33, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:18:28,044 - mmseg - INFO - Iter [3630/50000]	lr: 1.000e-04, eta: 1 day, 3:03:13, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:18:49,083 - mmseg - INFO - Iter [3640/50000]	lr: 1.000e-04, eta: 1 day, 3:02:52, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:19:10,123 - mmseg - INFO - Iter [3650/50000]	lr: 1.000e-04, eta: 1 day, 3:02:32, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:19:31,165 - mmseg - INFO - Iter [3660/50000]	lr: 1.000e-04, eta: 1 day, 3:02:11, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:19:52,207 - mmseg - INFO - Iter [3670/50000]	lr: 1.000e-04, eta: 1 day, 3:01:51, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:20:13,248 - mmseg - INFO - Iter [3680/50000]	lr: 1.000e-04, eta: 1 day, 3:01:30, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:20:34,287 - mmseg - INFO - Iter [3690/50000]	lr: 1.000e-04, eta: 1 day, 3:01:09, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:20:55,335 - mmseg - INFO - Iter [3700/50000]	lr: 1.000e-04, eta: 1 day, 3:00:49, time: 2.105, data_time: 2.044, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:21:16,379 - mmseg - INFO - Iter [3710/50000]	lr: 1.000e-04, eta: 1 day, 3:00:29, time: 2.104, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:21:37,425 - mmseg - INFO - Iter [3720/50000]	lr: 1.000e-04, eta: 1 day, 3:00:08, time: 2.105, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:21:58,460 - mmseg - INFO - Iter [3730/50000]	lr: 1.000e-04, eta: 1 day, 2:59:47, time: 2.103, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:22:19,507 - mmseg - INFO - Iter [3740/50000]	lr: 1.000e-04, eta: 1 day, 2:59:27, time: 2.105, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0002
+2025-05-23 17:22:40,555 - mmseg - INFO - Iter [3750/50000]	lr: 1.000e-04, eta: 1 day, 2:59:06, time: 2.105, data_time: 2.045, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:23:01,595 - mmseg - INFO - Iter [3760/50000]	lr: 1.000e-04, eta: 1 day, 2:58:46, time: 2.104, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:23:22,638 - mmseg - INFO - Iter [3770/50000]	lr: 1.000e-04, eta: 1 day, 2:58:25, time: 2.104, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:23:43,668 - mmseg - INFO - Iter [3780/50000]	lr: 1.000e-04, eta: 1 day, 2:58:05, time: 2.103, data_time: 2.043, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:24:04,675 - mmseg - INFO - Iter [3790/50000]	lr: 1.000e-04, eta: 1 day, 2:57:44, time: 2.101, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:24:25,665 - mmseg - INFO - Iter [3800/50000]	lr: 1.000e-04, eta: 1 day, 2:57:22, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:24:46,658 - mmseg - INFO - Iter [3810/50000]	lr: 1.000e-04, eta: 1 day, 2:57:01, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:25:07,650 - mmseg - INFO - Iter [3820/50000]	lr: 1.000e-04, eta: 1 day, 2:56:40, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:25:28,697 - mmseg - INFO - Iter [3830/50000]	lr: 1.000e-04, eta: 1 day, 2:56:20, time: 2.105, data_time: 2.049, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:25:49,692 - mmseg - INFO - Iter [3840/50000]	lr: 1.000e-04, eta: 1 day, 2:55:59, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:26:10,686 - mmseg - INFO - Iter [3850/50000]	lr: 1.000e-04, eta: 1 day, 2:55:37, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:26:31,671 - mmseg - INFO - Iter [3860/50000]	lr: 1.000e-04, eta: 1 day, 2:55:16, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:26:52,656 - mmseg - INFO - Iter [3870/50000]	lr: 1.000e-04, eta: 1 day, 2:54:55, time: 2.098, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:27:13,669 - mmseg - INFO - Iter [3880/50000]	lr: 1.000e-04, eta: 1 day, 2:54:34, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:27:34,657 - mmseg - INFO - Iter [3890/50000]	lr: 1.000e-04, eta: 1 day, 2:54:13, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 10.9500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0001, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:27:55,644 - mmseg - INFO - Iter [3900/50000]	lr: 1.000e-04, eta: 1 day, 2:53:52, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.2500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:28:16,650 - mmseg - INFO - Iter [3910/50000]	lr: 1.000e-04, eta: 1 day, 2:53:31, time: 2.101, data_time: 2.045, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:28:37,641 - mmseg - INFO - Iter [3920/50000]	lr: 1.000e-04, eta: 1 day, 2:53:09, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.5500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:28:58,686 - mmseg - INFO - Iter [3930/50000]	lr: 1.000e-04, eta: 1 day, 2:52:49, time: 2.104, data_time: 2.051, memory: 1038, batch_positives: 12.0000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0003
+2025-05-23 17:29:19,680 - mmseg - INFO - Iter [3940/50000]	lr: 1.000e-04, eta: 1 day, 2:52:28, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.4000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:29:40,665 - mmseg - INFO - Iter [3950/50000]	lr: 1.000e-04, eta: 1 day, 2:52:07, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 12.1500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:30:01,657 - mmseg - INFO - Iter [3960/50000]	lr: 1.000e-04, eta: 1 day, 2:51:45, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:30:22,646 - mmseg - INFO - Iter [3970/50000]	lr: 1.000e-04, eta: 1 day, 2:51:24, time: 2.099, data_time: 2.045, memory: 1038, batch_positives: 11.1000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0003, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:30:43,635 - mmseg - INFO - Iter [3980/50000]	lr: 1.000e-04, eta: 1 day, 2:51:03, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:31:04,628 - mmseg - INFO - Iter [3990/50000]	lr: 1.000e-04, eta: 1 day, 2:50:42, time: 2.099, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:31:25,631 - mmseg - INFO - Exp name: lanedt_test2.py
+2025-05-23 17:31:25,631 - mmseg - INFO - Iter [4000/50000]	lr: 1.000e-04, eta: 1 day, 2:50:21, time: 2.100, data_time: 2.043, memory: 1038, batch_positives: 11.8500, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004
+2025-05-23 17:31:46,622 - mmseg - INFO - Iter [4010/50000]	lr: 1.000e-04, eta: 1 day, 2:50:00, time: 2.099, data_time: 2.044, memory: 1038, batch_positives: 11.7000, batch_negatives: 450.0000, cls_loss: 0.0001, reg_losses_x: 0.0002, reg_losses_z: 0.0000, reg_losses_vis: 0.0000, loss: 0.0004

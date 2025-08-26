@@ -34,6 +34,7 @@ python tools/test.py configs/openlane/anchor3dlane_iter.py pretrained/openlane_a
 bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_temporal.pth 8 --show-dir output_openlane --show #报错
 
 
+
 export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 bash tools/dist_test.sh configs/openlane/anchor3dlane_iter_r50.py pretrained/openlanev2_anchor3dlane_iter_r50x2.pth 8 --show-dir output_openlane_deform --show
 
@@ -116,17 +117,18 @@ export PYTHONPATH=$PYTHONPATH:./gen-efficientnet-pytorch
 nohup bash tools/dist_train.sh configs/openlane/lanedt_iter.py 2 --auto-resume  >> lanedt_openlane_iter8.log 2>&1 & 
 
 openlane结果测试：gt绘制有问题
-bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_iter.pth 2 --show-dir results/openlane_raw --show --raw
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_iter.pth 8 --show-dir results/openlane_raw --show --raw
+bash tools/dist_test.sh configs/openlane/anchor3dlane_iter.py pretrained/openlane_anchor3dlane_iter.pth 2 --show-dir results/anchor3dlane/openlane --show
 bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/latest.pth 8 --show-dir results/lanedt/openlane  --show
 all:
 bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/latest.pth 8 --show-dir results/lanedt/openlane  --show
 分场景：
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/all   >> lanedt_openlane_all.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/curve   >> lanedt_openlane_curve.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/extreme_weather   >> lanedt_openlane_extreme_weather.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/intersection   >> lanedt_openlane_intersection.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/night  >> lanedt_openlane_night.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/updown   >> lanedt_openlane_updown.log 2>&1 & 
-nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_3000.pth 8 --show-dir results/lanedt/openlane/merge_split_case   >> lanedt_openlane_merge_split_case.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/all   >> lanedt_openlane_all3.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/curve   >> lanedt_openlane_curve3.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/extreme_weather   >> lanedt_openlane_extreme_weather3.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/intersection   >> lanedt_openlane_intersection3.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/night  >> lanedt_openlane_nigh3t.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/updown   >> lanedt_openlane_updown3.log 2>&1 & 
+nohup bash tools/dist_test.sh configs/openlane/lanedt_iter.py output/openlane/lanedt_iter/iter_4000.pth 8 --show-dir results/lanedt/openlane/merge_split_case   >> lanedt_openlane_merge_split_case3.log 2>&1 & 
 
 #注意:gt的修改可以通过修改/home/zhaohui1.wang/github/Anchor3DLane/data/OpenLane/data_lists/wzh.txt来进行获得
